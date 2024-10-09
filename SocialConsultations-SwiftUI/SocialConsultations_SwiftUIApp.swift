@@ -11,7 +11,7 @@ import SwiftUI
 struct SocialConsultations_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }
