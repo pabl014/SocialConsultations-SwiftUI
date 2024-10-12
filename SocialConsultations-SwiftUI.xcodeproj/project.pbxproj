@@ -6,17 +6,56 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FE5C360F2CBAEB9D00E84CCC /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35EE2CBAEB9D00E84CCC /* AuthenticationView.swift */; };
+		FE5C36102CBAEB9D00E84CCC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35EF2CBAEB9D00E84CCC /* SignInView.swift */; };
+		FE5C36112CBAEB9D00E84CCC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F02CBAEB9D00E84CCC /* SignUpView.swift */; };
+		FE5C36122CBAEB9D00E84CCC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F22CBAEB9D00E84CCC /* CardView.swift */; };
+		FE5C36132CBAEB9D00E84CCC /* ImageBase64View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F32CBAEB9D00E84CCC /* ImageBase64View.swift */; };
+		FE5C36142CBAEB9D00E84CCC /* ForumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F52CBAEB9D00E84CCC /* ForumView.swift */; };
+		FE5C36152CBAEB9D00E84CCC /* HeaderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F72CBAEB9D00E84CCC /* HeaderCardView.swift */; };
+		FE5C36162CBAEB9D00E84CCC /* HomeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F82CBAEB9D00E84CCC /* HomeCellView.swift */; };
+		FE5C36172CBAEB9D00E84CCC /* ConsultationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35FA2CBAEB9D00E84CCC /* ConsultationDetailView.swift */; };
+		FE5C36182CBAEB9D00E84CCC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35FB2CBAEB9D00E84CCC /* HomeView.swift */; };
+		FE5C36192CBAEB9D00E84CCC /* PollsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35FD2CBAEB9D00E84CCC /* PollsView.swift */; };
+		FE5C361A2CBAEB9D00E84CCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35FF2CBAEB9D00E84CCC /* SettingsView.swift */; };
+		FE5C361B2CBAEB9D00E84CCC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36012CBAEB9D00E84CCC /* ProfileView.swift */; };
+		FE5C361C2CBAEB9D00E84CCC /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36032CBAEB9D00E84CCC /* TabbarView.swift */; };
+		FE5C361D2CBAEB9D00E84CCC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36052CBAEB9D00E84CCC /* RootView.swift */; };
+		FE5C361E2CBAEB9D00E84CCC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36072CBAEB9D00E84CCC /* Constants.swift */; };
+		FE5C361F2CBAEB9D00E84CCC /* GradientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36082CBAEB9D00E84CCC /* GradientTest.swift */; };
+		FE5C36202CBAEB9D00E84CCC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C360B2CBAEB9D00E84CCC /* ContentView.swift */; };
+		FE5C36212CBAEB9D00E84CCC /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C360C2CBAEB9D00E84CCC /* OnboardingView.swift */; };
+		FE5C36222CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C360D2CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift */; };
+		FE5C36232CBAEB9D00E84CCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE5C35EC2CBAEB9D00E84CCC /* Preview Assets.xcassets */; };
+		FE5C36242CBAEB9D00E84CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE5C360A2CBAEB9D00E84CCC /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		FE5C35EC2CBAEB9D00E84CCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FE5C35EE2CBAEB9D00E84CCC /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		FE5C35EF2CBAEB9D00E84CCC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		FE5C35F02CBAEB9D00E84CCC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		FE5C35F22CBAEB9D00E84CCC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		FE5C35F32CBAEB9D00E84CCC /* ImageBase64View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBase64View.swift; sourceTree = "<group>"; };
+		FE5C35F52CBAEB9D00E84CCC /* ForumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumView.swift; sourceTree = "<group>"; };
+		FE5C35F72CBAEB9D00E84CCC /* HeaderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCardView.swift; sourceTree = "<group>"; };
+		FE5C35F82CBAEB9D00E84CCC /* HomeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellView.swift; sourceTree = "<group>"; };
+		FE5C35FA2CBAEB9D00E84CCC /* ConsultationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationDetailView.swift; sourceTree = "<group>"; };
+		FE5C35FB2CBAEB9D00E84CCC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FE5C35FD2CBAEB9D00E84CCC /* PollsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsView.swift; sourceTree = "<group>"; };
+		FE5C35FF2CBAEB9D00E84CCC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FE5C36012CBAEB9D00E84CCC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FE5C36032CBAEB9D00E84CCC /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
+		FE5C36052CBAEB9D00E84CCC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		FE5C36072CBAEB9D00E84CCC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FE5C36082CBAEB9D00E84CCC /* GradientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTest.swift; sourceTree = "<group>"; };
+		FE5C360A2CBAEB9D00E84CCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FE5C360B2CBAEB9D00E84CCC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FE5C360C2CBAEB9D00E84CCC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		FE5C360D2CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialConsultations_SwiftUIApp.swift; sourceTree = "<group>"; };
 		FECD353E2CB568DA002A0777 /* SocialConsultations-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialConsultations-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		FECD35402CB568DA002A0777 /* SocialConsultations-SwiftUI */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "SocialConsultations-SwiftUI";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FECD353B2CB568DA002A0777 /* Frameworks */ = {
@@ -29,10 +68,135 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE5C35ED2CBAEB9D00E84CCC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C35EC2CBAEB9D00E84CCC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FE5C35F12CBAEB9D00E84CCC /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C35EE2CBAEB9D00E84CCC /* AuthenticationView.swift */,
+				FE5C35EF2CBAEB9D00E84CCC /* SignInView.swift */,
+				FE5C35F02CBAEB9D00E84CCC /* SignUpView.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		FE5C35F42CBAEB9D00E84CCC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C35F22CBAEB9D00E84CCC /* CardView.swift */,
+				FE5C35F32CBAEB9D00E84CCC /* ImageBase64View.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FE5C35F62CBAEB9D00E84CCC /* Forum */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C35F52CBAEB9D00E84CCC /* ForumView.swift */,
+			);
+			path = Forum;
+			sourceTree = "<group>";
+		};
+		FE5C35F92CBAEB9D00E84CCC /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C35F72CBAEB9D00E84CCC /* HeaderCardView.swift */,
+				FE5C35F82CBAEB9D00E84CCC /* HomeCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FE5C35FC2CBAEB9D00E84CCC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C35F92CBAEB9D00E84CCC /* Components */,
+				FE5C35FA2CBAEB9D00E84CCC /* ConsultationDetailView.swift */,
+				FE5C35FB2CBAEB9D00E84CCC /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FE5C35FE2CBAEB9D00E84CCC /* Polls */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C35FD2CBAEB9D00E84CCC /* PollsView.swift */,
+			);
+			path = Polls;
+			sourceTree = "<group>";
+		};
+		FE5C36002CBAEB9D00E84CCC /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C35FF2CBAEB9D00E84CCC /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FE5C36022CBAEB9D00E84CCC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C36002CBAEB9D00E84CCC /* Settings */,
+				FE5C36012CBAEB9D00E84CCC /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FE5C36042CBAEB9D00E84CCC /* Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C36032CBAEB9D00E84CCC /* TabbarView.swift */,
+			);
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		FE5C36062CBAEB9D00E84CCC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C35F12CBAEB9D00E84CCC /* Authentication */,
+				FE5C35F42CBAEB9D00E84CCC /* Components */,
+				FE5C35F62CBAEB9D00E84CCC /* Forum */,
+				FE5C35FC2CBAEB9D00E84CCC /* Home */,
+				FE5C35FE2CBAEB9D00E84CCC /* Polls */,
+				FE5C36022CBAEB9D00E84CCC /* Profile */,
+				FE5C36042CBAEB9D00E84CCC /* Tabbar */,
+				FE5C36052CBAEB9D00E84CCC /* RootView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		FE5C36092CBAEB9D00E84CCC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C36072CBAEB9D00E84CCC /* Constants.swift */,
+				FE5C36082CBAEB9D00E84CCC /* GradientTest.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		FE5C360E2CBAEB9D00E84CCC /* SocialConsultations-SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C35ED2CBAEB9D00E84CCC /* Preview Content */,
+				FE5C36062CBAEB9D00E84CCC /* Screens */,
+				FE5C36092CBAEB9D00E84CCC /* Utils */,
+				FE5C360A2CBAEB9D00E84CCC /* Assets.xcassets */,
+				FE5C360B2CBAEB9D00E84CCC /* ContentView.swift */,
+				FE5C360C2CBAEB9D00E84CCC /* OnboardingView.swift */,
+				FE5C360D2CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift */,
+			);
+			path = "SocialConsultations-SwiftUI";
+			sourceTree = "<group>";
+		};
 		FECD35352CB568DA002A0777 = {
 			isa = PBXGroup;
 			children = (
-				FECD35402CB568DA002A0777 /* SocialConsultations-SwiftUI */,
+				FE5C360E2CBAEB9D00E84CCC /* SocialConsultations-SwiftUI */,
 				FECD353F2CB568DA002A0777 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,9 +223,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				FECD35402CB568DA002A0777 /* SocialConsultations-SwiftUI */,
 			);
 			name = "SocialConsultations-SwiftUI";
 			packageProductDependencies = (
@@ -109,6 +270,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE5C36232CBAEB9D00E84CCC /* Preview Assets.xcassets in Resources */,
+				FE5C36242CBAEB9D00E84CCC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +282,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE5C360F2CBAEB9D00E84CCC /* AuthenticationView.swift in Sources */,
+				FE5C36102CBAEB9D00E84CCC /* SignInView.swift in Sources */,
+				FE5C36112CBAEB9D00E84CCC /* SignUpView.swift in Sources */,
+				FE5C36122CBAEB9D00E84CCC /* CardView.swift in Sources */,
+				FE5C36132CBAEB9D00E84CCC /* ImageBase64View.swift in Sources */,
+				FE5C36142CBAEB9D00E84CCC /* ForumView.swift in Sources */,
+				FE5C36152CBAEB9D00E84CCC /* HeaderCardView.swift in Sources */,
+				FE5C36162CBAEB9D00E84CCC /* HomeCellView.swift in Sources */,
+				FE5C36172CBAEB9D00E84CCC /* ConsultationDetailView.swift in Sources */,
+				FE5C36182CBAEB9D00E84CCC /* HomeView.swift in Sources */,
+				FE5C36192CBAEB9D00E84CCC /* PollsView.swift in Sources */,
+				FE5C361A2CBAEB9D00E84CCC /* SettingsView.swift in Sources */,
+				FE5C361B2CBAEB9D00E84CCC /* ProfileView.swift in Sources */,
+				FE5C361C2CBAEB9D00E84CCC /* TabbarView.swift in Sources */,
+				FE5C361D2CBAEB9D00E84CCC /* RootView.swift in Sources */,
+				FE5C361E2CBAEB9D00E84CCC /* Constants.swift in Sources */,
+				FE5C361F2CBAEB9D00E84CCC /* GradientTest.swift in Sources */,
+				FE5C36202CBAEB9D00E84CCC /* ContentView.swift in Sources */,
+				FE5C36212CBAEB9D00E84CCC /* OnboardingView.swift in Sources */,
+				FE5C36222CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
