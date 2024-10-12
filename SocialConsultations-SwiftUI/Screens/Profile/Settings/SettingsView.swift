@@ -12,7 +12,15 @@ struct SettingsView: View {
     @Binding var showSignInView: Bool
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            Button(role: .destructive) {
+                showSignInView = true
+            } label: {
+                Text("Log out")
+            }
+            
+        }
+        .navigationTitle("Settings")
     }
 }
 

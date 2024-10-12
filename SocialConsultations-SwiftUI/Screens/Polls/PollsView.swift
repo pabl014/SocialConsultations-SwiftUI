@@ -9,10 +9,13 @@ import SwiftUI
 
 struct PollsView: View {
     var body: some View {
-        Text("PollsView")
+        CardView()
+            .navigationTitle("Polls")
     }
 }
 
 #Preview {
-    PollsView()
+    NavigationStack {
+        PollsView()
+    }
 }

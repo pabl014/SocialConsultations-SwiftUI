@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct ForumView: View {
+    
     var body: some View {
-        Text("ForumView")
+        NavigationStack {
+            Text("Forum View")
+                .navigationTitle("Forum")
+        }
+        
     }
+
 }
 
 #Preview {
-    ForumView()
+    NavigationStack {
+        ForumView()
+    }
 }
