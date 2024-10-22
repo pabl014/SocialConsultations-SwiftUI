@@ -10,8 +10,8 @@ import SwiftUI
 struct GradientTest: View {
     @State private var isAnimating = false
     
-    let colors1 = (0..<9).map { _ in [Color.green, .blue, .cyan].randomElement()! }
-    let colors2 = (0..<9).map { _ in [Color.white, .blue, .cyan].randomElement()! }
+    let colors1 = (0..<9).map { _ in [Color(hex: "#87CEEB"),Color(hex: "#E0F7FA"), .cyan].randomElement()! }
+    let colors2 = (0..<9).map { _ in [Color.cyan, Color(hex: "#87CEEB"), .cyan].randomElement()! }
     
     var body: some View {
         MeshGradient(
@@ -34,4 +34,5 @@ struct GradientTest: View {
 
 #Preview {
     GradientTest()
+        .ignoresSafeArea(.all)
 }

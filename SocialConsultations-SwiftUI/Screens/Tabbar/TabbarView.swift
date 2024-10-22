@@ -26,7 +26,7 @@ struct TabbarView: View {
             }
             .tabItem {
                 Image(systemName: "bubble.left.and.bubble.right")
-                Text("Consultations")
+                Text("Forums")
             }
             
             NavigationStack {

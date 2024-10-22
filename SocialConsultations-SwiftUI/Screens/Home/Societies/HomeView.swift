@@ -9,25 +9,12 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var selectedCat: CategoryContext = .current
+    
     @State var searchText: String = ""
     
     var body: some View {
         NavigationStack {
             ScrollView(.vertical) {
-                
-                VStack(spacing: 16) {
-                    Picker("Selected Category", selection: $selectedCat) {
-                        ForEach(CategoryContext.allCases) { content in
-                            Text(content.title)
-                        }
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .padding(.horizontal, 2)
-                    .padding(.bottom, 16)
-                }
-                .padding()
-                
                 VStack(alignment: .leading, spacing: 8) {
                     Text("Near you")
                         .font(.headline)
@@ -38,7 +25,7 @@ struct HomeView: View {
                             ForEach(0..<5) { _ in
                                 HStack() {
                                     NavigationLink {
-                                        ConsultationDetailView()
+                                        ConsultationsView()
                                     } label: {
                                         HeaderCardView()
                                     }
@@ -60,7 +47,7 @@ struct HomeView: View {
                     
                     ForEach(0..<5) { _ in
                         NavigationLink {
-                            ConsultationDetailView()
+                            ConsultationsView()
                         } label: {
                             HomeCellView()
                         }
@@ -73,7 +60,7 @@ struct HomeView: View {
             .searchable(text: $searchText)
             
         }
-        .navigationTitle("Consultations")
+        .navigationTitle("Societies")
     }
 }
 

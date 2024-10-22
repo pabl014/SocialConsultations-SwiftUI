@@ -21,18 +21,18 @@ struct HomeCellView: View {
                     ImageBase64View(base64String: Constants.example64)
                         .frame(width: 120, height: 120)
                         .clipped()
-                        .cornerRadius(10)
+                        .itemCornerRadius(10)
                         .padding()
                     
                     VStack(alignment: .leading) {
-                        Text("Wiejska street renovation")
+                        Text("Bialystok Residents Society")
                             .font(.headline)
                             .lineLimit(2)
                         
-                        Text("Author: Javier Diaz")
+                        Text("Admin: Javier Diaz")
                             .font(.subheadline)
                             .foregroundColor(.gray)
-                            .padding(.top, -1)
+                            .padding(.top, 2)
                     }
                     .padding(.leading, 5)
                     

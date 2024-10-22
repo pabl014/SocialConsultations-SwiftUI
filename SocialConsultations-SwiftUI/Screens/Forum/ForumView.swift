@@ -9,14 +9,24 @@ import SwiftUI
 
 struct ForumView: View {
     
+    @State private var searchText: String = ""
+    
     var body: some View {
         NavigationStack {
-            Text("Forum View")
-                .navigationTitle("Forum")
+            List {
+                ForEach(0..<20) { _ in
+                    NavigationLink {
+                        ForumDetailView()
+                    } label: {
+                        ForumCell()
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+            }
+            .searchable(text: $searchText)
+            .navigationTitle("Forums")
         }
-        
     }
-
 }
 
 #Preview {

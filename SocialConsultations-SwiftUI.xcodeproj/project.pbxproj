@@ -10,7 +10,6 @@
 		FE5C360F2CBAEB9D00E84CCC /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35EE2CBAEB9D00E84CCC /* AuthenticationView.swift */; };
 		FE5C36102CBAEB9D00E84CCC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35EF2CBAEB9D00E84CCC /* SignInView.swift */; };
 		FE5C36112CBAEB9D00E84CCC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F02CBAEB9D00E84CCC /* SignUpView.swift */; };
-		FE5C36122CBAEB9D00E84CCC /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F22CBAEB9D00E84CCC /* CardView.swift */; };
 		FE5C36132CBAEB9D00E84CCC /* ImageBase64View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F32CBAEB9D00E84CCC /* ImageBase64View.swift */; };
 		FE5C36142CBAEB9D00E84CCC /* ForumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F52CBAEB9D00E84CCC /* ForumView.swift */; };
 		FE5C36152CBAEB9D00E84CCC /* HeaderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F72CBAEB9D00E84CCC /* HeaderCardView.swift */; };
@@ -29,6 +28,15 @@
 		FE5C36222CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C360D2CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift */; };
 		FE5C36232CBAEB9D00E84CCC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE5C35EC2CBAEB9D00E84CCC /* Preview Assets.xcassets */; };
 		FE5C36242CBAEB9D00E84CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE5C360A2CBAEB9D00E84CCC /* Assets.xcassets */; };
+		FE5C36272CBAEFA500E84CCC /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36262CBAEF9C00E84CCC /* View+Ext.swift */; };
+		FE5C36672CBC4BC300E84CCC /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36662CBC4BC300E84CCC /* TestView.swift */; };
+		FE76CD492CBD71830087B7CB /* ConsultationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76CD482CBD71830087B7CB /* ConsultationsView.swift */; };
+		FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */; };
+		FEC79F0C2CBE915200956B15 /* ForumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F0B2CBE915200956B15 /* ForumDetailView.swift */; };
+		FEC79F0E2CBE9ACC00956B15 /* CategoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F0D2CBE9AC600956B15 /* CategoryContext.swift */; };
+		FEC79F112CBEA64C00956B15 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F102CBEA64C00956B15 /* PostCell.swift */; };
+		FEC79F132CBEBB5800956B15 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F122CBEBB5200956B15 /* Color+Ext.swift */; };
+		FEC79F152CBEC89F00956B15 /* ForumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F142CBEC89F00956B15 /* ForumCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +44,6 @@
 		FE5C35EE2CBAEB9D00E84CCC /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FE5C35EF2CBAEB9D00E84CCC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		FE5C35F02CBAEB9D00E84CCC /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		FE5C35F22CBAEB9D00E84CCC /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		FE5C35F32CBAEB9D00E84CCC /* ImageBase64View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBase64View.swift; sourceTree = "<group>"; };
 		FE5C35F52CBAEB9D00E84CCC /* ForumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumView.swift; sourceTree = "<group>"; };
 		FE5C35F72CBAEB9D00E84CCC /* HeaderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCardView.swift; sourceTree = "<group>"; };
@@ -54,6 +61,15 @@
 		FE5C360B2CBAEB9D00E84CCC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FE5C360C2CBAEB9D00E84CCC /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		FE5C360D2CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialConsultations_SwiftUIApp.swift; sourceTree = "<group>"; };
+		FE5C36262CBAEF9C00E84CCC /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		FE5C36662CBC4BC300E84CCC /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		FE76CD482CBD71830087B7CB /* ConsultationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsView.swift; sourceTree = "<group>"; };
+		FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsDetailView.swift; sourceTree = "<group>"; };
+		FEC79F0B2CBE915200956B15 /* ForumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumDetailView.swift; sourceTree = "<group>"; };
+		FEC79F0D2CBE9AC600956B15 /* CategoryContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryContext.swift; sourceTree = "<group>"; };
+		FEC79F102CBEA64C00956B15 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		FEC79F122CBEBB5200956B15 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		FEC79F142CBEC89F00956B15 /* ForumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumCell.swift; sourceTree = "<group>"; };
 		FECD353E2CB568DA002A0777 /* SocialConsultations-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialConsultations-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -89,8 +105,8 @@
 		FE5C35F42CBAEB9D00E84CCC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FE5C35F22CBAEB9D00E84CCC /* CardView.swift */,
 				FE5C35F32CBAEB9D00E84CCC /* ImageBase64View.swift */,
+				FE5C36662CBC4BC300E84CCC /* TestView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -99,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				FE5C35F52CBAEB9D00E84CCC /* ForumView.swift */,
+				FEC79F0B2CBE915200956B15 /* ForumDetailView.swift */,
+				FEC79F0F2CBEA61A00956B15 /* Components */,
 			);
 			path = Forum;
 			sourceTree = "<group>";
@@ -115,9 +133,9 @@
 		FE5C35FC2CBAEB9D00E84CCC /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FE76CD462CBD712C0087B7CB /* Societies */,
+				FE76CD472CBD714E0087B7CB /* Consultations */,
 				FE5C35F92CBAEB9D00E84CCC /* Components */,
-				FE5C35FA2CBAEB9D00E84CCC /* ConsultationDetailView.swift */,
-				FE5C35FB2CBAEB9D00E84CCC /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -126,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5C35FD2CBAEB9D00E84CCC /* PollsView.swift */,
+				FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */,
 			);
 			path = Polls;
 			sourceTree = "<group>";
@@ -141,8 +160,8 @@
 		FE5C36022CBAEB9D00E84CCC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				FE5C36002CBAEB9D00E84CCC /* Settings */,
 				FE5C36012CBAEB9D00E84CCC /* ProfileView.swift */,
+				FE5C36002CBAEB9D00E84CCC /* Settings */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -158,14 +177,13 @@
 		FE5C36062CBAEB9D00E84CCC /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FE5C36052CBAEB9D00E84CCC /* RootView.swift */,
+				FE5C36042CBAEB9D00E84CCC /* Tabbar */,
 				FE5C35F12CBAEB9D00E84CCC /* Authentication */,
-				FE5C35F42CBAEB9D00E84CCC /* Components */,
-				FE5C35F62CBAEB9D00E84CCC /* Forum */,
 				FE5C35FC2CBAEB9D00E84CCC /* Home */,
+				FE5C35F62CBAEB9D00E84CCC /* Forum */,
 				FE5C35FE2CBAEB9D00E84CCC /* Polls */,
 				FE5C36022CBAEB9D00E84CCC /* Profile */,
-				FE5C36042CBAEB9D00E84CCC /* Tabbar */,
-				FE5C36052CBAEB9D00E84CCC /* RootView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -173,8 +191,10 @@
 		FE5C36092CBAEB9D00E84CCC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				FEC79F0D2CBE9AC600956B15 /* CategoryContext.swift */,
 				FE5C36072CBAEB9D00E84CCC /* Constants.swift */,
 				FE5C36082CBAEB9D00E84CCC /* GradientTest.swift */,
+				FE5C36252CBAEF8E00E84CCC /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -182,15 +202,51 @@
 		FE5C360E2CBAEB9D00E84CCC /* SocialConsultations-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				FE5C35ED2CBAEB9D00E84CCC /* Preview Content */,
-				FE5C36062CBAEB9D00E84CCC /* Screens */,
-				FE5C36092CBAEB9D00E84CCC /* Utils */,
-				FE5C360A2CBAEB9D00E84CCC /* Assets.xcassets */,
+				FE5C360D2CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift */,
 				FE5C360B2CBAEB9D00E84CCC /* ContentView.swift */,
 				FE5C360C2CBAEB9D00E84CCC /* OnboardingView.swift */,
-				FE5C360D2CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift */,
+				FE5C360A2CBAEB9D00E84CCC /* Assets.xcassets */,
+				FE5C36062CBAEB9D00E84CCC /* Screens */,
+				FE5C36092CBAEB9D00E84CCC /* Utils */,
+				FE5C35F42CBAEB9D00E84CCC /* Components */,
+				FE5C35ED2CBAEB9D00E84CCC /* Preview Content */,
 			);
 			path = "SocialConsultations-SwiftUI";
+			sourceTree = "<group>";
+		};
+		FE5C36252CBAEF8E00E84CCC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FEC79F122CBEBB5200956B15 /* Color+Ext.swift */,
+				FE5C36262CBAEF9C00E84CCC /* View+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FE76CD462CBD712C0087B7CB /* Societies */ = {
+			isa = PBXGroup;
+			children = (
+				FE5C35FB2CBAEB9D00E84CCC /* HomeView.swift */,
+			);
+			path = Societies;
+			sourceTree = "<group>";
+		};
+		FE76CD472CBD714E0087B7CB /* Consultations */ = {
+			isa = PBXGroup;
+			children = (
+				FE76CD482CBD71830087B7CB /* ConsultationsView.swift */,
+				FE5C35FA2CBAEB9D00E84CCC /* ConsultationDetailView.swift */,
+			);
+			path = Consultations;
+			sourceTree = "<group>";
+		};
+		FEC79F0F2CBEA61A00956B15 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FEC79F142CBEC89F00956B15 /* ForumCell.swift */,
+				FEC79F102CBEA64C00956B15 /* PostCell.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FECD35352CB568DA002A0777 = {
@@ -284,24 +340,32 @@
 			files = (
 				FE5C360F2CBAEB9D00E84CCC /* AuthenticationView.swift in Sources */,
 				FE5C36102CBAEB9D00E84CCC /* SignInView.swift in Sources */,
+				FE5C36672CBC4BC300E84CCC /* TestView.swift in Sources */,
+				FEC79F152CBEC89F00956B15 /* ForumCell.swift in Sources */,
+				FEC79F0E2CBE9ACC00956B15 /* CategoryContext.swift in Sources */,
 				FE5C36112CBAEB9D00E84CCC /* SignUpView.swift in Sources */,
-				FE5C36122CBAEB9D00E84CCC /* CardView.swift in Sources */,
 				FE5C36132CBAEB9D00E84CCC /* ImageBase64View.swift in Sources */,
 				FE5C36142CBAEB9D00E84CCC /* ForumView.swift in Sources */,
 				FE5C36152CBAEB9D00E84CCC /* HeaderCardView.swift in Sources */,
 				FE5C36162CBAEB9D00E84CCC /* HomeCellView.swift in Sources */,
 				FE5C36172CBAEB9D00E84CCC /* ConsultationDetailView.swift in Sources */,
+				FE76CD492CBD71830087B7CB /* ConsultationsView.swift in Sources */,
+				FEC79F132CBEBB5800956B15 /* Color+Ext.swift in Sources */,
 				FE5C36182CBAEB9D00E84CCC /* HomeView.swift in Sources */,
 				FE5C36192CBAEB9D00E84CCC /* PollsView.swift in Sources */,
 				FE5C361A2CBAEB9D00E84CCC /* SettingsView.swift in Sources */,
 				FE5C361B2CBAEB9D00E84CCC /* ProfileView.swift in Sources */,
+				FEC79F112CBEA64C00956B15 /* PostCell.swift in Sources */,
 				FE5C361C2CBAEB9D00E84CCC /* TabbarView.swift in Sources */,
+				FE5C36272CBAEFA500E84CCC /* View+Ext.swift in Sources */,
 				FE5C361D2CBAEB9D00E84CCC /* RootView.swift in Sources */,
 				FE5C361E2CBAEB9D00E84CCC /* Constants.swift in Sources */,
+				FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */,
 				FE5C361F2CBAEB9D00E84CCC /* GradientTest.swift in Sources */,
 				FE5C36202CBAEB9D00E84CCC /* ContentView.swift in Sources */,
 				FE5C36212CBAEB9D00E84CCC /* OnboardingView.swift in Sources */,
 				FE5C36222CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift in Sources */,
+				FEC79F0C2CBE915200956B15 /* ForumDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

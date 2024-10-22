@@ -19,7 +19,7 @@ struct HeaderCardView: View {
             
             VStack(alignment: .leading) {
                 VStack(alignment: .leading){
-                    Text("Social Consultations about healthcare in Poland")
+                    Text("Society of City Center residents")
                         .font(.headline)
                         .lineLimit(2)
                         .padding(.bottom, 5)
@@ -28,7 +28,7 @@ struct HeaderCardView: View {
                 }
                 
                 HStack {
-                    Text("Author: Marcos Alonso")
+                    Text("Admin: Marcos Alonso")
                         .font(.subheadline)
                         .foregroundColor(.gray)
                     

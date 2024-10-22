@@ -14,13 +14,13 @@ struct ConsultationDetailView: View {
         ScrollView(.vertical) {
             firstSection
                 .background(Color(UIColor.secondarySystemBackground))
-                .cornerRadius(20)
+                .itemCornerRadius(20)
                 .shadow(radius: 5)
                 .padding()
             
             infoSection
                 .background(Color(UIColor.secondarySystemBackground))
-                .cornerRadius(20)
+                .itemCornerRadius(20)
                 .shadow(radius: 5)
                 .padding()
 
@@ -36,11 +36,20 @@ struct ConsultationDetailView: View {
         
         VStack(alignment: .leading) {
             // Image Section
-            
-            ImageBase64View(base64String: Constants.example64)
-                .frame(height: 250)
-                .clipped()
-                .cornerRadius(20)
+            TabView {
+                ForEach(0..<3) { index in
+                    ImageBase64View(base64String: Constants.example64) // Przykładowy obraz
+                        .frame(height: 250)
+                        .clipped()
+                        .itemCornerRadius(20)
+                }
+            }
+            .frame(height: 250)
+            .tabViewStyle(PageTabViewStyle()) // Styl stron dla przewijania
+//            ImageBase64View(base64String: Constants.example64)
+//                .frame(height: 250)
+//                .clipped()
+//                .itemCornerRadius(20)
             
             
             // Content Section
@@ -108,7 +117,7 @@ struct ConsultationDetailView: View {
                 
                 MapView()
                     .frame(height: 250)
-                    .cornerRadius(10)
+                    .itemCornerRadius(10)
                     .clipped()
             }
             .padding()
