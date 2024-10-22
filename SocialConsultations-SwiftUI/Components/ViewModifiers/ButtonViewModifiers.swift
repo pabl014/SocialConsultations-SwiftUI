@@ -55,18 +55,11 @@ extension View {
 }
 
 
-struct ButtonViewModifiers: View {
-    var body: some View {
-        Text("Default button")
-            .defaultButtonStyle()
-            .padding(.bottom)
-        
-        Text("Secondary Button")
-            .secondaryButtonStyle()
-        
-    }
-}
-
 #Preview {
-    ButtonViewModifiers()
+    Text("Default button")
+        .defaultButtonStyle()
+        .padding(.bottom)
+    
+    Text("Secondary Button")
+        .secondaryButtonStyle()
 }

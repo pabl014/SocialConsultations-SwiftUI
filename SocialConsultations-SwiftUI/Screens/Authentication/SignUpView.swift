@@ -16,41 +16,33 @@ struct SignUpView: View {
     @State private var repeatPassword: String = ""
     
     var body: some View {
-        VStack {
-            TextField("Email...", text: $email)
-                .padding()
-                .background(.gray.opacity(0.4))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+        ZStack {
             
-            SecureField("Password...", text: $password)
-                .padding()
-                .background(.gray.opacity(0.4))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+            Color(hex: "#F2F2F2")
+                .ignoresSafeArea()
             
-            SecureField("Repeat Password...", text: $password)
-                .padding()
-                .background(.gray.opacity(0.4))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            
-            
-            Button(action: {
-                showSignInView = false
-            }) {
-                Text("Sign Up")
-                    .font(.headline)
-                    .foregroundStyle(.white)
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(.blue)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            VStack(spacing: 16) {
+                TextField("Email...", text: $email)
+                    .defaultTextFieldStyle()
+                
+                SecureField("Password...", text: $password)
+                    .defaultTextFieldStyle()
+                
+                SecureField("Repeat Password...", text: $password)
+                    .defaultTextFieldStyle()
+                
+                Button(action: {
+                    showSignInView = false
+                }) {
+                    Text("Sign Up")
+                        .defaultButtonStyle()
+                }
+                
+                Spacer()
             }
-            
-            Spacer()
-            
-           
+            .navigationTitle("Sign Up")
+            .padding(.top)
         }
-        .padding()
-        .navigationTitle("Sign Up")
     }
 }
 
