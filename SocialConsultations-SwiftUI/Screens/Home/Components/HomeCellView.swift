@@ -39,7 +39,7 @@ struct HomeCellView: View {
                     Spacer()
                 }
             }
-            .padding()
+            .padding(.horizontal)
         }
         //.background(Color(.systemGroupedBackground))
     }

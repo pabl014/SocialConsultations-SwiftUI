@@ -37,6 +37,7 @@
 		FEC79F112CBEA64C00956B15 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F102CBEA64C00956B15 /* PostCell.swift */; };
 		FEC79F132CBEBB5800956B15 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F122CBEBB5200956B15 /* Color+Ext.swift */; };
 		FEC79F152CBEC89F00956B15 /* ForumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F142CBEC89F00956B15 /* ForumCell.swift */; };
+		FEFCFF292CC830C80031119B /* ButtonViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		FEC79F122CBEBB5200956B15 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		FEC79F142CBEC89F00956B15 /* ForumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumCell.swift; sourceTree = "<group>"; };
 		FECD353E2CB568DA002A0777 /* SocialConsultations-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialConsultations-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			children = (
 				FE5C35F32CBAEB9D00E84CCC /* ImageBase64View.swift */,
 				FE5C36662CBC4BC300E84CCC /* TestView.swift */,
+				FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				FE5C361E2CBAEB9D00E84CCC /* Constants.swift in Sources */,
 				FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */,
 				FE5C361F2CBAEB9D00E84CCC /* GradientTest.swift in Sources */,
+				FEFCFF292CC830C80031119B /* ButtonViewModifiers.swift in Sources */,
 				FE5C36202CBAEB9D00E84CCC /* ContentView.swift in Sources */,
 				FE5C36212CBAEB9D00E84CCC /* OnboardingView.swift in Sources */,
 				FE5C36222CBAEB9D00E84CCC /* SocialConsultations_SwiftUIApp.swift in Sources */,

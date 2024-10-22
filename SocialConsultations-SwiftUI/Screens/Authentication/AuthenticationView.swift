@@ -12,43 +12,40 @@ struct AuthenticationView: View {
     @Binding var showSignInView: Bool
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe.europe.africa")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 200, height: 200)
-                .foregroundStyle(.blue)
+        ZStack {
             
-            Text("Social Consultations")
-                .font(.title)
-                .bold()
-                .padding(.bottom, 50)
+            Color(hex: "#F2F2F2")
+                .ignoresSafeArea()
             
-            NavigationLink {
-                SignInView(showSignInView: $showSignInView)
-            } label: {
-                Text("Log In")
-                    .font(.headline)
-                    .foregroundStyle(.white)
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(.blue)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-            }
-            
-            NavigationLink {
-                SignUpView(showSignInView: $showSignInView)
-            } label: {
-                Text("Sign Up")
-                    .font(.headline)
-                    .foregroundStyle(.white)
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(.blue)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+            VStack {
+                Image(systemName: "globe.europe.africa")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200, height: 200)
+                    .foregroundStyle(.blue)
+                
+                Text("Social Consultations")
+                    .font(.title)
+                    .bold()
+                    .padding(.bottom, 50)
+                
+                VStack(spacing: 16) {
+                    NavigationLink {
+                        SignInView(showSignInView: $showSignInView)
+                    } label: {
+                        Text("Log In")
+                            .defaultButtonStyle()
+                    }
+                    
+                    NavigationLink {
+                        SignUpView(showSignInView: $showSignInView)
+                    } label: {
+                        Text("Sign Up")
+                            .secondaryButtonStyle()
+                    }
+                }
             }
         }
-        .padding()
     }
 }
 

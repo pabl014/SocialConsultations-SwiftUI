@@ -15,35 +15,32 @@ struct SignInView: View {
     @State private var password = ""
     
     var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             TextField("Email...", text: $email)
                 .padding()
+                .frame(height: 50)
                 .background(.gray.opacity(0.4))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding(.horizontal)
             
             SecureField("Password...", text: $password)
                 .padding()
+                .frame(height: 50)
                 .background(.gray.opacity(0.4))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                .padding(.horizontal)
             
             Button(action: {
                 showSignInView = false
             }) {
-                Text("Sign In")
-                    .font(.headline)
-                    .foregroundStyle(.white)
-                    .frame(height: 55)
-                    .frame(maxWidth: .infinity)
-                    .background(.blue)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                Text("Log In")
+                    .defaultButtonStyle()
             }
             
             Spacer()
-            
-           
         }
-        .padding()
-        .navigationTitle("Sign In")
+        .navigationTitle("Log In")
+        .padding(.top)
         
     }
 }

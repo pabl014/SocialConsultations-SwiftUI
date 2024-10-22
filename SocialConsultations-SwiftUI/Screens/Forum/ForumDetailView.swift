@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ForumDetailView: View {
+    
+    @State private var isShowingAddPostSheet: Bool = false
+    @State private var respondText: String = "Write your response..."
+    
+    
     var body: some View {
         ZStack {
             ScrollView(.vertical) {
@@ -37,7 +42,7 @@ struct ForumDetailView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        // Action to navigate to the next view
+                        isShowingAddPostSheet.toggle()
                     }) {
                         Image(systemName: "plus")
                             .font(.system(size: 25))
@@ -48,6 +53,9 @@ struct ForumDetailView: View {
                             .shadow(radius: 10)
                     }
                     .padding()
+                    .sheet(isPresented: $isShowingAddPostSheet) {
+                        NewRespondSheet(newRespondText: $respondText)
+                    }
                 }
             }
         }
@@ -105,7 +113,35 @@ struct ForumDetailView: View {
     }
 }
 
-
+struct NewRespondSheet: View {
+    
+    @Binding var newRespondText: String
+    @Environment(\.dismiss) var dismiss
+    
+    var body: some View {
+        NavigationView {
+            VStack {
+                TextEditor(text: $newRespondText)
+                    .frame(height: 250)
+                    .padding()
+                    //.background(Color(hex: "#F2F2F2"))
+                    .itemCornerRadius(20)
+                
+                Spacer()
+            }
+            .navigationBarTitle("New respond", displayMode: .inline)
+            .navigationBarItems(
+                leading: Button("Cancel") {
+                    dismiss()
+                },
+                trailing: Button("Upload") {
+                    dismiss()
+                    self.newRespondText = "Add respond text..."
+                }
+            )
+        }
+    }
+}
 
 #Preview {
     ForumDetailView()
