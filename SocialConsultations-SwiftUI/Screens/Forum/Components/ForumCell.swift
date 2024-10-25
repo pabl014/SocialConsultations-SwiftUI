@@ -17,7 +17,7 @@ struct ForumCell: View {
         HStack(alignment: .center, spacing: 16) {
             ImageBase64View(base64String: Constants.example64)
                 .frame(width: 64, height: 64)
-                .itemCornerRadius(20)
+                .itemCornerRadius(12)
             
             VStack(alignment: .leading) {
                 Text("Electric cars in city")
@@ -45,10 +45,6 @@ struct ForumCell: View {
                 Text("Electric cars in city")
                     .font(.headline)
                     .foregroundColor(.primary)
-                
-                Text("Social Consultations about the state of the city")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
                 
                 Text("Society of Bialystok residents")
                     .font(.subheadline)

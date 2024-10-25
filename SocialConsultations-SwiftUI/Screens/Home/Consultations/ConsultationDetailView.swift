@@ -10,6 +10,8 @@ import MapKit
 
 struct ConsultationDetailView: View {
     
+    @State private var isSheetPresented = false
+    
     var body: some View {
         ScrollView(.vertical) {
             firstSection
@@ -23,6 +25,22 @@ struct ConsultationDetailView: View {
                 .itemCornerRadius(20)
                 .shadow(radius: 5)
                 .padding()
+            
+            Button {
+                isSheetPresented.toggle()
+            } label: {
+                Text("See discussion")
+                    .defaultButtonStyle()
+                    .padding()
+            }
+            .background(Color(UIColor.secondarySystemBackground))
+            .itemCornerRadius(20)
+            .shadow(radius: 5)
+            .padding()
+            .sheet(isPresented: $isSheetPresented) {
+                DiscussionView()
+                    .presentationDetents([.medium, .large])
+            }
 
         }
         //.background(LinearGradient(colors: [.blue, .blue, .cyan, .white, .white], startPoint: .bottomLeading, endPoint: .topTrailing))
