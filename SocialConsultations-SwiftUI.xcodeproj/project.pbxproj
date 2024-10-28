@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FE461BEA2CCBBFA4004CDBEC /* DiscussionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE461BE92CCBBFA4004CDBEC /* DiscussionView.swift */; };
+		FE4E4FB52CCFF9C800EDA659 /* LoginRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E4FB42CCFF9C800EDA659 /* LoginRequestBody.swift */; };
+		FE4E4FB72CCFF9F500EDA659 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E4FB62CCFF9F500EDA659 /* NetworkManager.swift */; };
+		FE4E4FB92CD003BA00EDA659 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E4FB82CD003BA00EDA659 /* Secrets.swift */; };
 		FE5C360F2CBAEB9D00E84CCC /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35EE2CBAEB9D00E84CCC /* AuthenticationView.swift */; };
 		FE5C36102CBAEB9D00E84CCC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35EF2CBAEB9D00E84CCC /* SignInView.swift */; };
 		FE5C36112CBAEB9D00E84CCC /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35F02CBAEB9D00E84CCC /* SignUpView.swift */; };
@@ -44,6 +47,9 @@
 
 /* Begin PBXFileReference section */
 		FE461BE92CCBBFA4004CDBEC /* DiscussionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionView.swift; sourceTree = "<group>"; };
+		FE4E4FB42CCFF9C800EDA659 /* LoginRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestBody.swift; sourceTree = "<group>"; };
+		FE4E4FB62CCFF9F500EDA659 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FE4E4FB82CD003BA00EDA659 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		FE5C35EC2CBAEB9D00E84CCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE5C35EE2CBAEB9D00E84CCC /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		FE5C35EF2CBAEB9D00E84CCC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
@@ -90,9 +96,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE4E4FB32CCFF87400EDA659 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE4E4FB42CCFF9C800EDA659 /* LoginRequestBody.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		FE5866562CCFF3A20023A364 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				FE4E4FB62CCFF9F500EDA659 /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -205,8 +220,9 @@
 		FE5C36092CBAEB9D00E84CCC /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				FEC79F0D2CBE9AC600956B15 /* CategoryContext.swift */,
+				FE4E4FB82CD003BA00EDA659 /* Secrets.swift */,
 				FE5C36072CBAEB9D00E84CCC /* Constants.swift */,
+				FEC79F0D2CBE9AC600956B15 /* CategoryContext.swift */,
 				FE5C36082CBAEB9D00E84CCC /* GradientTest.swift */,
 				FE5C36252CBAEF8E00E84CCC /* Extensions */,
 			);
@@ -220,10 +236,11 @@
 				FE5C360B2CBAEB9D00E84CCC /* ContentView.swift */,
 				FE5C360C2CBAEB9D00E84CCC /* OnboardingView.swift */,
 				FE5C360A2CBAEB9D00E84CCC /* Assets.xcassets */,
-				FE5C36092CBAEB9D00E84CCC /* Utils */,
-				FE5C35F42CBAEB9D00E84CCC /* Components */,
+				FE4E4FB32CCFF87400EDA659 /* Models */,
 				FE5866562CCFF3A20023A364 /* Managers */,
 				FE5C36062CBAEB9D00E84CCC /* Screens */,
+				FE5C35F42CBAEB9D00E84CCC /* Components */,
+				FE5C36092CBAEB9D00E84CCC /* Utils */,
 				FE5C35ED2CBAEB9D00E84CCC /* Preview Content */,
 			);
 			path = "SocialConsultations-SwiftUI";
@@ -364,9 +381,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE5C360F2CBAEB9D00E84CCC /* AuthenticationView.swift in Sources */,
+				FE4E4FB52CCFF9C800EDA659 /* LoginRequestBody.swift in Sources */,
 				FE5C36102CBAEB9D00E84CCC /* SignInView.swift in Sources */,
 				FE5C36672CBC4BC300E84CCC /* TestView.swift in Sources */,
 				FEC79F152CBEC89F00956B15 /* ForumCell.swift in Sources */,
+				FE4E4FB92CD003BA00EDA659 /* Secrets.swift in Sources */,
 				FEC79F0E2CBE9ACC00956B15 /* CategoryContext.swift in Sources */,
 				FE5C36112CBAEB9D00E84CCC /* SignUpView.swift in Sources */,
 				FE5C36132CBAEB9D00E84CCC /* ImageBase64View.swift in Sources */,
@@ -377,6 +396,7 @@
 				FE76CD492CBD71830087B7CB /* ConsultationsView.swift in Sources */,
 				FEC79F132CBEBB5800956B15 /* Color+Ext.swift in Sources */,
 				FEFCFF2C2CC839030031119B /* TextFieldViewModifiers.swift in Sources */,
+				FE4E4FB72CCFF9F500EDA659 /* NetworkManager.swift in Sources */,
 				FE5C36182CBAEB9D00E84CCC /* HomeView.swift in Sources */,
 				FE5C36192CBAEB9D00E84CCC /* PollsView.swift in Sources */,
 				FE5C361A2CBAEB9D00E84CCC /* SettingsView.swift in Sources */,
