@@ -39,6 +39,9 @@ struct SignInView: View {
             .navigationTitle("Log In")
             .padding(.top)
         }
+        .onTapGesture {
+            dismissKeyboard()
+        }
         
     }
 }

@@ -90,6 +90,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE5866562CCFF3A20023A364 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		FE5C35ED2CBAEB9D00E84CCC /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,9 +220,10 @@
 				FE5C360B2CBAEB9D00E84CCC /* ContentView.swift */,
 				FE5C360C2CBAEB9D00E84CCC /* OnboardingView.swift */,
 				FE5C360A2CBAEB9D00E84CCC /* Assets.xcassets */,
-				FE5C36062CBAEB9D00E84CCC /* Screens */,
 				FE5C36092CBAEB9D00E84CCC /* Utils */,
 				FE5C35F42CBAEB9D00E84CCC /* Components */,
+				FE5866562CCFF3A20023A364 /* Managers */,
+				FE5C36062CBAEB9D00E84CCC /* Screens */,
 				FE5C35ED2CBAEB9D00E84CCC /* Preview Content */,
 			);
 			path = "SocialConsultations-SwiftUI";

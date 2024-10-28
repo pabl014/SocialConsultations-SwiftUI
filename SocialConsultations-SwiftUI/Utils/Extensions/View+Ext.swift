@@ -9,7 +9,11 @@ import SwiftUI
 
 extension View {
     
-    public func itemCornerRadius(_ radius: CGFloat) -> some View {
+    func itemCornerRadius(_ radius: CGFloat) -> some View {
         self.clipShape(RoundedRectangle(cornerRadius: radius))
+    }
+    
+    func dismissKeyboard() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
