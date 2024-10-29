@@ -9,11 +9,14 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @StateObject private var viewModel = SettingsViewModel()
+    
     @Binding var showSignInView: Bool
     
     var body: some View {
         List {
             Button(role: .destructive) {
+                viewModel.logout()
                 showSignInView = true
             } label: {
                 Text("Log out")

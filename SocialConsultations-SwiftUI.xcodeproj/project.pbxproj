@@ -42,6 +42,7 @@
 		FEAD2DCF2CD14293005716D9 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DCE2CD14293005716D9 /* SignInViewModel.swift */; };
 		FEAD2DD12CD1540C005716D9 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DD02CD15407005716D9 /* String+Ext.swift */; };
 		FEAD2DD42CD158CE005716D9 /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DD32CD158CE005716D9 /* ErrorMessage.swift */; };
+		FEAD2DD62CD168F3005716D9 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DD52CD168F3005716D9 /* SettingsViewModel.swift */; };
 		FEC79F0C2CBE915200956B15 /* ForumDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F0B2CBE915200956B15 /* ForumDetailView.swift */; };
 		FEC79F0E2CBE9ACC00956B15 /* CategoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F0D2CBE9AC600956B15 /* CategoryContext.swift */; };
 		FEC79F112CBEA64C00956B15 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F102CBEA64C00956B15 /* PostCell.swift */; };
@@ -87,6 +88,7 @@
 		FEAD2DCE2CD14293005716D9 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		FEAD2DD02CD15407005716D9 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		FEAD2DD32CD158CE005716D9 /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		FEAD2DD52CD168F3005716D9 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		FEC79F0B2CBE915200956B15 /* ForumDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumDetailView.swift; sourceTree = "<group>"; };
 		FEC79F0D2CBE9AC600956B15 /* CategoryContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryContext.swift; sourceTree = "<group>"; };
 		FEC79F102CBEA64C00956B15 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -121,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */,
-				FE4E4FB62CCFF9F500EDA659 /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -196,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5C35FF2CBAEB9D00E84CCC /* SettingsView.swift */,
+				FEAD2DD52CD168F3005716D9 /* SettingsViewModel.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -227,6 +229,7 @@
 				FE5C35F62CBAEB9D00E84CCC /* Forum */,
 				FE5C35FE2CBAEB9D00E84CCC /* Polls */,
 				FE5C36022CBAEB9D00E84CCC /* Profile */,
+				FE4E4FB62CCFF9F500EDA659 /* NetworkManager.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -426,6 +429,7 @@
 				FE5C36132CBAEB9D00E84CCC /* ImageBase64View.swift in Sources */,
 				FE5C36142CBAEB9D00E84CCC /* ForumView.swift in Sources */,
 				FE5C36152CBAEB9D00E84CCC /* HeaderCardView.swift in Sources */,
+				FEAD2DD62CD168F3005716D9 /* SettingsViewModel.swift in Sources */,
 				FEAD2DD42CD158CE005716D9 /* ErrorMessage.swift in Sources */,
 				FE5C36162CBAEB9D00E84CCC /* HomeCellView.swift in Sources */,
 				FE5C36172CBAEB9D00E84CCC /* ConsultationDetailView.swift in Sources */,
