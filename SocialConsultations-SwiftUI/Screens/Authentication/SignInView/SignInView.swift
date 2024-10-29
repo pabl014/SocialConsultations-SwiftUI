@@ -9,25 +9,28 @@ import SwiftUI
 
 struct SignInView: View {
     
+    @StateObject private var viewModel = SignInViewModel()
     @Binding var showSignInView: Bool
-    
-    @State private var email = ""
-    @State private var password = ""
     
     var body: some View {
         ZStack {
-            
             Color(hex: Constants.SCWhite)
                 .ignoresSafeArea()
             
             VStack(spacing: 16) {
-                TextField("Email...", text: $email)
+                TextField("Email...", text: $viewModel.email)
                     .defaultTextFieldStyle()
                 
-                SecureField("Password...", text: $password)
+                SecureField("Password...", text: $viewModel.password)
                     .defaultTextFieldStyle()
                 
                 Button(action: {
+//                    Task {
+//                        await viewModel.login()
+//                        if viewModel.errorMessage == nil {
+//                            showSignInView = false
+//                        }
+//                    }
                     showSignInView = false
                 }) {
                     Text("Log In")
@@ -42,6 +45,9 @@ struct SignInView: View {
         .onTapGesture {
             dismissKeyboard()
         }
+        .alert(item: $viewModel.errorMessage) { errorMessage in
+            Alert(title: Text("Error"), message: Text(errorMessage.message), dismissButton: .default(Text("OK")))
+        }
         
     }
 }
@@ -50,5 +56,4 @@ struct SignInView: View {
     NavigationStack {
         SignInView(showSignInView: .constant(false))
     }
-    
 }
