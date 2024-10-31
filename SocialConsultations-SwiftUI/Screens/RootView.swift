@@ -10,6 +10,7 @@ import SwiftUI
 struct RootView: View {
     
     @State private var showSignInView: Bool = true
+    @AppStorage("authToken") private var authToken: String?
     
     var body: some View {
         ZStack {
@@ -19,7 +20,7 @@ struct RootView: View {
         }
         .onAppear {
 //            let authUser = try? AuthenticationManager.shared.getAuthenticatedUser()
-//            self.showSignInView = authUser == nil ? true : false
+            self.showSignInView = authToken == nil ? true : false
         }
         .fullScreenCover(isPresented: $showSignInView) {
             NavigationStack {

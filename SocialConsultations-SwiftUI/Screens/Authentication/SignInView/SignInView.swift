@@ -25,13 +25,13 @@ struct SignInView: View {
                     .defaultTextFieldStyle()
                 
                 Button(action: {
-//                    Task {
-//                        await viewModel.login()
-//                        if viewModel.errorMessage == nil {
-//                            showSignInView = false
-//                        }
-//                    }
-                    showSignInView = false
+                    Task {
+                        await viewModel.login()
+                        if viewModel.errorMessage == nil {
+                            showSignInView = false
+                        }
+                    }
+                    // showSignInView = false
                 }) {
                     Text("Log In")
                         .defaultButtonStyle()

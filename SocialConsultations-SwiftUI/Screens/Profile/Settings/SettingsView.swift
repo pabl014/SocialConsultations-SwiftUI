@@ -10,6 +10,7 @@ import SwiftUI
 struct SettingsView: View {
     
     @StateObject private var viewModel = SettingsViewModel()
+    @AppStorage("authToken") private var authToken: String?
     
     @Binding var showSignInView: Bool
     
@@ -20,6 +21,16 @@ struct SettingsView: View {
                 showSignInView = true
             } label: {
                 Text("Log out")
+            }
+            
+            if let token = authToken {
+                Text("Auth Token: \(token)")
+                    .font(.footnote)
+                    .foregroundColor(.gray)
+            } else {
+                Text("No Auth Token found")
+                    .font(.footnote)
+                    .foregroundColor(.gray)
             }
             
         }
