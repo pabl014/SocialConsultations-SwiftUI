@@ -55,4 +55,9 @@ extension String {
             return self
         }
     }
+    
+    func toISO8601Date() -> Date? {
+        let iso8601Formatter = ISO8601DateFormatter()
+        return iso8601Formatter.date(from: self)
+    }
 }
