@@ -31,7 +31,6 @@ extension String {
         return self == other
     }
     
-    
     func toPrettyDateString() -> String {
         
         let components = self.split { $0 == "-" || $0 == "T" }
@@ -56,8 +55,12 @@ extension String {
         }
     }
     
-    func toISO8601Date() -> Date? {
-        let iso8601Formatter = ISO8601DateFormatter()
-        return iso8601Formatter.date(from: self)
+    func fromISO8601toDate() -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // safe config for ISO
+        
+        return dateFormatter.date(from: self)
     }
 }

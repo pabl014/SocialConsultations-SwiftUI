@@ -46,8 +46,7 @@ struct EditProfileSheet: View {
         .onAppear {
             newName = viewModel.user?.name ?? ""
             newSurname = viewModel.user?.surname ?? ""
-            newBirthDate = viewModel.user?.birthDate.toISO8601Date() ?? Date()
-            
+            newBirthDate = viewModel.user?.birthDate.fromISO8601toDate() ?? Date()            
         }
         .alert(item: $viewModel.errorMessage) { errorMessage in
             Alert(title: Text("Error"), message: Text(errorMessage.message), dismissButton: .default(Text("OK")))
