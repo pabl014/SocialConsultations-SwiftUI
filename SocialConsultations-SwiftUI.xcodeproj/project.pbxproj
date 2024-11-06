@@ -53,6 +53,7 @@
 		FEC79F112CBEA64C00956B15 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F102CBEA64C00956B15 /* PostCell.swift */; };
 		FEC79F132CBEBB5800956B15 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F122CBEBB5200956B15 /* Color+Ext.swift */; };
 		FEC79F152CBEC89F00956B15 /* ForumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F142CBEC89F00956B15 /* ForumCell.swift */; };
+		FED9175B2CDB87BE008F908F /* EditProfileSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9175A2CDB87BE008F908F /* EditProfileSheet.swift */; };
 		FEFCFF292CC830C80031119B /* ButtonViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */; };
 		FEFCFF2C2CC839030031119B /* TextFieldViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */; };
 /* End PBXBuildFile section */
@@ -105,6 +106,7 @@
 		FEC79F122CBEBB5200956B15 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 		FEC79F142CBEC89F00956B15 /* ForumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumCell.swift; sourceTree = "<group>"; };
 		FECD353E2CB568DA002A0777 /* SocialConsultations-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialConsultations-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FED9175A2CDB87BE008F908F /* EditProfileSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSheet.swift; sourceTree = "<group>"; };
 		FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModifiers.swift; sourceTree = "<group>"; };
 		FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -210,6 +212,7 @@
 			children = (
 				FEAD2DD52CD168F3005716D9 /* SettingsViewModel.swift */,
 				FE5C35FF2CBAEB9D00E84CCC /* SettingsView.swift */,
+				FED9175A2CDB87BE008F908F /* EditProfileSheet.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				FEC79F152CBEC89F00956B15 /* ForumCell.swift in Sources */,
 				FE4E4FB92CD003BA00EDA659 /* Secrets.swift in Sources */,
 				FEC79F0E2CBE9ACC00956B15 /* CategoryContext.swift in Sources */,
+				FED9175B2CDB87BE008F908F /* EditProfileSheet.swift in Sources */,
 				FE5C36112CBAEB9D00E84CCC /* SignUpView.swift in Sources */,
 				FEAD2DE22CD18167005716D9 /* SignUpViewModel.swift in Sources */,
 				FE5C36132CBAEB9D00E84CCC /* ImageBase64View.swift in Sources */,
