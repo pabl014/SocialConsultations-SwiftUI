@@ -92,4 +92,36 @@ final class AuthenticationManager {
             throw error
         }
     }
+    
+    func resetPassword(email: String) async throws {
+        
+        let endpoint = Secrets.resetPasswordURL
+        
+        guard let url = URL(string: endpoint) else {
+            throw URLError(.badURL)
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let jsonBody = "\"\(email)\""
+        request.httpBody = jsonBody.data(using: .utf8)
+        
+        if let body = request.httpBody, let bodyString = String(data: body, encoding: .utf8) {
+            print("Body being sent: \(bodyString)")
+        }
+        
+        do {
+            
+            let (_, response) = try await URLSession.shared.data(for: request)
+            
+            guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 204 else {
+                throw AuthenticationError.invalidEmail
+            }
+
+        } catch {
+            throw error
+        }
+    }
 }

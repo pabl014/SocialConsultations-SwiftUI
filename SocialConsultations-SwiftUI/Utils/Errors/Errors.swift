@@ -12,6 +12,7 @@ enum AuthenticationError: Error, LocalizedError {
     case failedToEncodeRequestBody
     case failedToDecodeResponse
     case serverError(String)
+    case invalidEmail
 
     var errorDescription: String? {
         switch self {
@@ -23,6 +24,9 @@ enum AuthenticationError: Error, LocalizedError {
             return "Failed to decode server response."
         case .serverError(let message):
             return message
+        case .invalidEmail:
+            return "No account is associated with this email."
         }
     }
 }
+

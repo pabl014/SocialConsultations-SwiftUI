@@ -9,8 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @State var searchText: String = ""
-    
     var body: some View {
 
         ZStack {
@@ -20,6 +18,30 @@ struct HomeView: View {
             
             NavigationStack {
                 ScrollView(.vertical) {
+                    
+                    HStack(spacing: 8) {
+                        
+                        Spacer()
+                        
+                        Button {
+                            //
+                        } label: {
+                            HStack{
+                                Image(systemName: "magnifyingglass")
+                                Text("Search more...")
+                            }
+                            .font(.callout)
+                            .frame(minWidth: 35)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 100)
+                            .background(.gray.opacity(0.4))
+                            .clipShape(RoundedRectangle(cornerRadius: 16))
+                            .padding(.horizontal)
+                        }
+                        
+                        Spacer()
+                    }
+                    
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Near you")
                             .font(.headline)
@@ -65,10 +87,9 @@ struct HomeView: View {
                     .padding(.top, 16)
                     
                 }
-                .searchable(text: $searchText)
-                
             }
-            .navigationTitle("Societies")
+            .navigationTitle("Communities")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

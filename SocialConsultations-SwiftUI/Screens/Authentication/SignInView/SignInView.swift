@@ -24,8 +24,8 @@ struct SignInView: View {
                 SecureField("Password...", text: $viewModel.password)
                     .defaultTextFieldStyle()
                 
-                Button {
-                    //
+                NavigationLink {
+                    ForgotPasswordView()
                 } label: {
                     Text("I forgot my password")
                         .padding(.leading, 20)

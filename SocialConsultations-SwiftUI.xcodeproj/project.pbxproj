@@ -54,6 +54,9 @@
 		FEC79F132CBEBB5800956B15 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F122CBEBB5200956B15 /* Color+Ext.swift */; };
 		FEC79F152CBEC89F00956B15 /* ForumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC79F142CBEC89F00956B15 /* ForumCell.swift */; };
 		FED9175B2CDB87BE008F908F /* EditProfileSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9175A2CDB87BE008F908F /* EditProfileSheet.swift */; };
+		FED9175D2CDB88E5008F908F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9175C2CDB88E5008F908F /* ForgotPasswordView.swift */; };
+		FED917602CDB893D008F908F /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9175F2CDB893D008F908F /* ForgotPasswordViewModel.swift */; };
+		FED917622CDBA715008F908F /* CheckEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917612CDBA715008F908F /* CheckEmailView.swift */; };
 		FEFCFF292CC830C80031119B /* ButtonViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */; };
 		FEFCFF2C2CC839030031119B /* TextFieldViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */; };
 /* End PBXBuildFile section */
@@ -107,6 +110,9 @@
 		FEC79F142CBEC89F00956B15 /* ForumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForumCell.swift; sourceTree = "<group>"; };
 		FECD353E2CB568DA002A0777 /* SocialConsultations-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SocialConsultations-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FED9175A2CDB87BE008F908F /* EditProfileSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileSheet.swift; sourceTree = "<group>"; };
+		FED9175C2CDB88E5008F908F /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		FED9175F2CDB893D008F908F /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
+		FED917612CDBA715008F908F /* CheckEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailView.swift; sourceTree = "<group>"; };
 		FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModifiers.swift; sourceTree = "<group>"; };
 		FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -313,6 +319,7 @@
 			children = (
 				FEAD2DCE2CD14293005716D9 /* SignInViewModel.swift */,
 				FE5C35EF2CBAEB9D00E84CCC /* SignInView.swift */,
+				FED9175E2CDB891E008F908F /* ForgotPassword */,
 			);
 			path = SignInView;
 			sourceTree = "<group>";
@@ -359,6 +366,16 @@
 				FECD353E2CB568DA002A0777 /* SocialConsultations-SwiftUI.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		FED9175E2CDB891E008F908F /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				FED9175F2CDB893D008F908F /* ForgotPasswordViewModel.swift */,
+				FED9175C2CDB88E5008F908F /* ForgotPasswordView.swift */,
+				FED917612CDBA715008F908F /* CheckEmailView.swift */,
+			);
+			path = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		FEFCFF2A2CC838E50031119B /* ViewModifiers */ = {
@@ -455,6 +472,7 @@
 				FE5C36112CBAEB9D00E84CCC /* SignUpView.swift in Sources */,
 				FEAD2DE22CD18167005716D9 /* SignUpViewModel.swift in Sources */,
 				FE5C36132CBAEB9D00E84CCC /* ImageBase64View.swift in Sources */,
+				FED917622CDBA715008F908F /* CheckEmailView.swift in Sources */,
 				FE5C36142CBAEB9D00E84CCC /* ForumView.swift in Sources */,
 				FE5C36152CBAEB9D00E84CCC /* HeaderCardView.swift in Sources */,
 				FEAD2DD62CD168F3005716D9 /* SettingsViewModel.swift in Sources */,
@@ -467,6 +485,7 @@
 				FEAD2DD82CD1768F005716D9 /* UserRequest.swift in Sources */,
 				FE5C36182CBAEB9D00E84CCC /* HomeView.swift in Sources */,
 				FE19B4AC2CD930E400FCD3A8 /* User.swift in Sources */,
+				FED917602CDB893D008F908F /* ForgotPasswordViewModel.swift in Sources */,
 				FE5C36192CBAEB9D00E84CCC /* PollsView.swift in Sources */,
 				FE5C361A2CBAEB9D00E84CCC /* SettingsView.swift in Sources */,
 				FE461BEA2CCBBFA4004CDBEC /* DiscussionView.swift in Sources */,
@@ -477,6 +496,7 @@
 				FEAD2DC62CD1368A005716D9 /* AuthenticationManager.swift in Sources */,
 				FE5C361C2CBAEB9D00E84CCC /* TabbarView.swift in Sources */,
 				FE5C36272CBAEFA500E84CCC /* View+Ext.swift in Sources */,
+				FED9175D2CDB88E5008F908F /* ForgotPasswordView.swift in Sources */,
 				FE5C361D2CBAEB9D00E84CCC /* RootView.swift in Sources */,
 				FE5C361E2CBAEB9D00E84CCC /* Constants.swift in Sources */,
 				FEAD2DCA2CD13E46005716D9 /* Errors.swift in Sources */,
