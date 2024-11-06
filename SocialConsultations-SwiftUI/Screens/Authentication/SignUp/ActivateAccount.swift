@@ -14,11 +14,11 @@ struct ActivateAccount: View {
     
     var body: some View {
         VStack {
-            Text("Account Activation")
+            Text("Account Confirmation")
                 .font(.largeTitle)
                 .padding()
             
-            Text("Please check your email to activate your account.")
+            Text("Please check your email to confirm your account.")
             
             Button("Back to Login") {
                 dismiss()

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE19B4AC2CD930E400FCD3A8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19B4AB2CD930E400FCD3A8 /* User.swift */; };
+		FE19B4AE2CD931ED00FCD3A8 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19B4AD2CD931ED00FCD3A8 /* UserManager.swift */; };
+		FE19B4B22CD933F100FCD3A8 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE19B4B12CD933F100FCD3A8 /* ProfileViewModel.swift */; };
 		FE461BEA2CCBBFA4004CDBEC /* DiscussionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE461BE92CCBBFA4004CDBEC /* DiscussionView.swift */; };
 		FE4E4FB52CCFF9C800EDA659 /* LoginRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E4FB42CCFF9C800EDA659 /* LoginRequestBody.swift */; };
-		FE4E4FB72CCFF9F500EDA659 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E4FB62CCFF9F500EDA659 /* NetworkManager.swift */; };
 		FE4E4FB92CD003BA00EDA659 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4E4FB82CD003BA00EDA659 /* Secrets.swift */; };
 		FE5C360F2CBAEB9D00E84CCC /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35EE2CBAEB9D00E84CCC /* AuthenticationView.swift */; };
 		FE5C36102CBAEB9D00E84CCC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35EF2CBAEB9D00E84CCC /* SignInView.swift */; };
@@ -56,9 +58,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE19B4AB2CD930E400FCD3A8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FE19B4AD2CD931ED00FCD3A8 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		FE19B4B12CD933F100FCD3A8 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		FE461BE92CCBBFA4004CDBEC /* DiscussionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscussionView.swift; sourceTree = "<group>"; };
 		FE4E4FB42CCFF9C800EDA659 /* LoginRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestBody.swift; sourceTree = "<group>"; };
-		FE4E4FB62CCFF9F500EDA659 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FE4E4FB82CD003BA00EDA659 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		FE5C35EC2CBAEB9D00E84CCC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FE5C35EE2CBAEB9D00E84CCC /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			children = (
 				FE4E4FB42CCFF9C800EDA659 /* LoginRequestBody.swift */,
 				FEAD2DD72CD1768F005716D9 /* UserRequest.swift */,
+				FE19B4AB2CD930E400FCD3A8 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -129,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */,
-				FE4E4FB62CCFF9F500EDA659 /* NetworkManager.swift */,
+				FE19B4AD2CD931ED00FCD3A8 /* UserManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -203,8 +208,8 @@
 		FE5C36002CBAEB9D00E84CCC /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				FE5C35FF2CBAEB9D00E84CCC /* SettingsView.swift */,
 				FEAD2DD52CD168F3005716D9 /* SettingsViewModel.swift */,
+				FE5C35FF2CBAEB9D00E84CCC /* SettingsView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -212,6 +217,7 @@
 		FE5C36022CBAEB9D00E84CCC /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				FE19B4B12CD933F100FCD3A8 /* ProfileViewModel.swift */,
 				FE5C36012CBAEB9D00E84CCC /* ProfileView.swift */,
 				FE5C36002CBAEB9D00E84CCC /* Settings */,
 			);
@@ -454,15 +460,16 @@
 				FE76CD492CBD71830087B7CB /* ConsultationsView.swift in Sources */,
 				FEC79F132CBEBB5800956B15 /* Color+Ext.swift in Sources */,
 				FEFCFF2C2CC839030031119B /* TextFieldViewModifiers.swift in Sources */,
-				FE4E4FB72CCFF9F500EDA659 /* NetworkManager.swift in Sources */,
 				FEAD2DD82CD1768F005716D9 /* UserRequest.swift in Sources */,
 				FE5C36182CBAEB9D00E84CCC /* HomeView.swift in Sources */,
+				FE19B4AC2CD930E400FCD3A8 /* User.swift in Sources */,
 				FE5C36192CBAEB9D00E84CCC /* PollsView.swift in Sources */,
 				FE5C361A2CBAEB9D00E84CCC /* SettingsView.swift in Sources */,
 				FE461BEA2CCBBFA4004CDBEC /* DiscussionView.swift in Sources */,
 				FE5C361B2CBAEB9D00E84CCC /* ProfileView.swift in Sources */,
 				FEAD2DCF2CD14293005716D9 /* SignInViewModel.swift in Sources */,
 				FEC79F112CBEA64C00956B15 /* PostCell.swift in Sources */,
+				FE19B4AE2CD931ED00FCD3A8 /* UserManager.swift in Sources */,
 				FEAD2DC62CD1368A005716D9 /* AuthenticationManager.swift in Sources */,
 				FE5C361C2CBAEB9D00E84CCC /* TabbarView.swift in Sources */,
 				FE5C36272CBAEFA500E84CCC /* View+Ext.swift in Sources */,
@@ -471,6 +478,7 @@
 				FEAD2DCA2CD13E46005716D9 /* Errors.swift in Sources */,
 				FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */,
 				FE5C361F2CBAEB9D00E84CCC /* GradientTest.swift in Sources */,
+				FE19B4B22CD933F100FCD3A8 /* ProfileViewModel.swift in Sources */,
 				FEFCFF292CC830C80031119B /* ButtonViewModifiers.swift in Sources */,
 				FEB397052CD234DB00124200 /* Date+Ext.swift in Sources */,
 				FEB397082CD24C0D00124200 /* ActivateAccount.swift in Sources */,

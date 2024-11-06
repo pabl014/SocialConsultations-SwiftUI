@@ -17,12 +17,21 @@ struct SignInView: View {
             Color(hex: Constants.SCWhite)
                 .ignoresSafeArea()
             
-            VStack(spacing: 16) {
+            VStack(alignment: .leading, spacing: 16) {
                 TextField("Email...", text: $viewModel.email)
                     .defaultTextFieldStyle()
                 
                 SecureField("Password...", text: $viewModel.password)
                     .defaultTextFieldStyle()
+                
+                Button {
+                    //
+                } label: {
+                    Text("I forgot my password")
+                        .padding(.leading, 20)
+                        .font(.subheadline)
+                }
+
                 
                 Button(action: {
                     Task {

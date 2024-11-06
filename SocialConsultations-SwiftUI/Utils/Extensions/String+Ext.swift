@@ -30,4 +30,29 @@ extension String {
     func matches(_ other: String) -> Bool {
         return self == other
     }
+    
+    
+    func toPrettyDateString() -> String {
+        
+        let components = self.split { $0 == "-" || $0 == "T" }
+        
+        guard components.count >= 3 else { return self } // returns original string, if format is bad
+        
+        let months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ]
+        
+        let year = components[0]
+        let monthIndex = Int(components[1]) ?? 1
+        let day = components[2].trimmingCharacters(in: .whitespaces)
+        
+        // Data format to "1 January 1998"
+        if monthIndex >= 1 && monthIndex <= 12 {
+            let month = months[monthIndex - 1]
+            return "\(day) \(month) \(year)"
+        } else {
+            return self
+        }
+    }
 }
