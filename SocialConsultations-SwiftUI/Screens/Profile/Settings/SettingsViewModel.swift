@@ -26,16 +26,23 @@ final class SettingsViewModel: ObservableObject {
         }
     }
     
-    func updateUserProfileIfNeeded(name: String, surname: String, birthDate: String) async {
+    func updateUserProfileIfNeeded(name: String, surname: String, birthDate: String, avatar: FileDataForCreationDto?) async {
         guard let userId = user?.id else { return }
         
         let nameChanged = !name.isEmpty && name != user?.name
         let surnameChanged = !surname.isEmpty && surname != user?.surname
         let birthDateChanged = !birthDate.isEmpty && birthDate != user?.birthDate
+        let avatarChanged = avatar != nil
         
-        if nameChanged || surnameChanged || birthDateChanged {
+        if nameChanged || surnameChanged || birthDateChanged || avatarChanged {
             do {
-                try await UserManager.shared.updateUserProfile(userId: userId, name: nameChanged ? name : nil, surname: surnameChanged ? surname : nil, birthDate: birthDateChanged ? birthDate : nil)
+                try await UserManager.shared.updateUserProfile(
+                    userId: userId, name: nameChanged ? name : nil,
+                    surname: surnameChanged ? surname : nil,
+                    birthDate: birthDateChanged ? birthDate : nil,
+                    avatar: avatarChanged ? avatar : nil
+                )
+                
                 await fetchCurrentUser() // Reload user data
             } catch {
                 errorMessage = ErrorMessage(message: error.localizedDescription)

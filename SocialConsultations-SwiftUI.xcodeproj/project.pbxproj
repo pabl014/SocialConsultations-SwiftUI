@@ -57,6 +57,8 @@
 		FED9175D2CDB88E5008F908F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9175C2CDB88E5008F908F /* ForgotPasswordView.swift */; };
 		FED917602CDB893D008F908F /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9175F2CDB893D008F908F /* ForgotPasswordViewModel.swift */; };
 		FED917622CDBA715008F908F /* CheckEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917612CDBA715008F908F /* CheckEmailView.swift */; };
+		FED917642CDBBF87008F908F /* FileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917632CDBBF87008F908F /* FileData.swift */; };
+		FED917662CDBC72E008F908F /* FileDataForCreationDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917652CDBC72E008F908F /* FileDataForCreationDto.swift */; };
 		FEFCFF292CC830C80031119B /* ButtonViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */; };
 		FEFCFF2C2CC839030031119B /* TextFieldViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */; };
 /* End PBXBuildFile section */
@@ -113,6 +115,8 @@
 		FED9175C2CDB88E5008F908F /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		FED9175F2CDB893D008F908F /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		FED917612CDBA715008F908F /* CheckEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailView.swift; sourceTree = "<group>"; };
+		FED917632CDBBF87008F908F /* FileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileData.swift; sourceTree = "<group>"; };
+		FED917652CDBC72E008F908F /* FileDataForCreationDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDataForCreationDto.swift; sourceTree = "<group>"; };
 		FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModifiers.swift; sourceTree = "<group>"; };
 		FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -134,6 +138,8 @@
 				FE4E4FB42CCFF9C800EDA659 /* LoginRequestBody.swift */,
 				FEAD2DD72CD1768F005716D9 /* UserRequest.swift */,
 				FE19B4AB2CD930E400FCD3A8 /* User.swift */,
+				FED917632CDBBF87008F908F /* FileData.swift */,
+				FED917652CDBC72E008F908F /* FileDataForCreationDto.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -471,6 +477,7 @@
 				FED9175B2CDB87BE008F908F /* EditProfileSheet.swift in Sources */,
 				FE5C36112CBAEB9D00E84CCC /* SignUpView.swift in Sources */,
 				FEAD2DE22CD18167005716D9 /* SignUpViewModel.swift in Sources */,
+				FED917642CDBBF87008F908F /* FileData.swift in Sources */,
 				FE5C36132CBAEB9D00E84CCC /* ImageBase64View.swift in Sources */,
 				FED917622CDBA715008F908F /* CheckEmailView.swift in Sources */,
 				FE5C36142CBAEB9D00E84CCC /* ForumView.swift in Sources */,
@@ -499,6 +506,7 @@
 				FED9175D2CDB88E5008F908F /* ForgotPasswordView.swift in Sources */,
 				FE5C361D2CBAEB9D00E84CCC /* RootView.swift in Sources */,
 				FE5C361E2CBAEB9D00E84CCC /* Constants.swift in Sources */,
+				FED917662CDBC72E008F908F /* FileDataForCreationDto.swift in Sources */,
 				FEAD2DCA2CD13E46005716D9 /* Errors.swift in Sources */,
 				FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */,
 				FE5C361F2CBAEB9D00E84CCC /* GradientTest.swift in Sources */,

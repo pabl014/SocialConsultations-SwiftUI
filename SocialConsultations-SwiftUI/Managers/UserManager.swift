@@ -29,7 +29,10 @@ final class UserManager {
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
         request.setValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
-        request.setValue("application/json", forHTTPHeaderField: "Accept")
+        // request.setValue("application/json", forHTTPHeaderField: "Accept")
+        request.setValue("application/vnd.socialconsultations.user.full+json", forHTTPHeaderField: "Accept")
+        
+        
         
         let (data, response) = try await URLSession.shared.data(for: request)
         
@@ -37,23 +40,24 @@ final class UserManager {
             throw URLError(.badServerResponse)
         }
         
-        // print JSON data to the console
-        if let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
-           let prettyData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted),
-           let jsonString = String(data: prettyData, encoding: .utf8) {
-            print("Received JSON data:\n\(jsonString)")
-        } else {
-            print("Could not parse JSON data")
-        }
+//        // print JSON data to the console
+//        if let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
+//           let prettyData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted),
+//           let jsonString = String(data: prettyData, encoding: .utf8) {
+//            print("Received JSON data:\n\(jsonString)")
+//        } else {
+//            print("Could not parse JSON data")
+//        }
         
         
         let user = try JSONDecoder().decode(User.self, from: data)
         print(user)
+//        print(authToken)
         return user
     }
     
     
-    func updateUserProfile(userId: Int, name: String?, surname: String?, birthDate: String?) async throws {
+    func updateUserProfile(userId: Int, name: String?, surname: String?, birthDate: String?, avatar: FileDataForCreationDto?) async throws {
         
         let endpoint = Secrets.usersURL + "/" + String(userId)
         
@@ -102,24 +106,48 @@ final class UserManager {
             ])
         }
         
+        if let avatar = avatar {
+            body.append([
+                "operationType": 0,
+                "path": "/avatar",
+                "op": "replace",
+                "from": "",
+                "value": [
+                    "data": avatar.data,
+                    "description": avatar.description,
+                    "type": avatar.type
+                ]
+            ])
+        }
+        
         let jsonData = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
         
-        if let jsonString = String(data: jsonData, encoding: .utf8) {
-            print("Wysyłane body: \(jsonString)")
-        }
+//        if let jsonString = String(data: jsonData, encoding: .utf8) {
+//            print("Wysyłane body: \(jsonString)")
+//        }
         
         request.httpBody = jsonData// konwersja obiektu body (tablica slownikow [String:Any] na dane JSON, ktore moga byc uzyte do httpBody
         
-        print("PROBA ZMIANY")
+//        print("PROBA ZMIANY")
         
         let (_, response) = try await URLSession.shared.data(for: request)
         
-        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            print("bad response")
+//        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+//            print("bad response")
+//            throw URLError(.badServerResponse)
+//        }
+        if let httpResponse = response as? HTTPURLResponse {
+            print("Response status code: \(httpResponse.statusCode)")
+            guard httpResponse.statusCode == 200 else {
+                print("Bad response with status code: \(httpResponse.statusCode)")
+                throw URLError(.badServerResponse)
+            }
+        } else {
+            print("Failed to cast response to HTTPURLResponse")
             throw URLError(.badServerResponse)
         }
         
-        print("Kod statusu odpowiedzi: \(httpResponse.statusCode)")
+//        print("Kod statusu odpowiedzi: \(httpResponse.statusCode)")
     }
     
 }

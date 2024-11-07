@@ -15,5 +15,5 @@ struct User: Codable {
     let email: String
     let confirmed: Bool
     let confirmationCode: String
-    let avatar: String?
+    let avatar: FileData?
 }
