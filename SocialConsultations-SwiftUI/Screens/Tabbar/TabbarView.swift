@@ -14,7 +14,8 @@ struct TabbarView: View {
     var body: some View {
         TabView {
             NavigationStack {
-                HomeView()
+                // HomeView()
+                TestHomeView()
             }
             .tabItem {
                 Image(systemName: "house")

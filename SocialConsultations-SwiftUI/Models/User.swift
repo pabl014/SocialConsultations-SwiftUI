@@ -14,6 +14,6 @@ struct User: Codable {
     let birthDate: String
     let email: String
     let confirmed: Bool
-    let confirmationCode: String
+    let confirmationCode: String?
     let avatar: FileData?
 }
