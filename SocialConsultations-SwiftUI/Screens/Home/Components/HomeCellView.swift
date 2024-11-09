@@ -18,7 +18,7 @@ struct HomeCellView: View {
                     .frame(height: 150)
                 
                 HStack {
-                    ImageBase64View(base64String: Constants.example64)
+                    ImageBase64View(base64String: Base64examples.example64)
                         .frame(width: 120, height: 120)
                         .clipped()
                         .itemCornerRadius(10)

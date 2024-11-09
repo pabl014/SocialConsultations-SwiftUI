@@ -56,7 +56,7 @@ struct ConsultationDetailView: View {
             // Image Section
             TabView {
                 ForEach(0..<3) { index in
-                    ImageBase64View(base64String: Constants.example64) // Przykładowy obraz
+                    ImageBase64View(base64String: Base64examples.example64) // Przykładowy obraz
                         .frame(height: 250)
                         .clipped()
                         .itemCornerRadius(20)

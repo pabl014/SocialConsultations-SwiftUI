@@ -69,7 +69,7 @@ struct PollsView: View {
                     .foregroundStyle(.secondary)
                     .frame(height: 140)
                     .overlay(
-                        ImageBase64View(base64String: Constants.example64)
+                        ImageBase64View(base64String: Base64examples.example64)
                             .clipped()
                             .cornerRadius(12)
                     )

@@ -36,8 +36,8 @@ struct EditProfileSheet: View {
                         Image(uiImage: uiImage)
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 100, height: 100)
                             .clipShape(Circle())
+                            .frame(width: 120, height: 120)
                             .padding()
                         
                         Button("Remove Avatar") {

@@ -15,7 +15,7 @@ struct ForumCell: View {
     
     var version1: some View {
         HStack(alignment: .center, spacing: 16) {
-            ImageBase64View(base64String: Constants.example64)
+            ImageBase64View(base64String: Base64examples.example64)
                 .frame(width: 64, height: 64)
                 .itemCornerRadius(12)
             
@@ -36,7 +36,7 @@ struct ForumCell: View {
     
     var version2: some View {
         HStack(alignment: .center, spacing: 16) {
-            ImageBase64View(base64String: Constants.example64)
+            ImageBase64View(base64String: Base64examples.example64)
                 .frame(width: 64, height: 64)
                 .clipShape(RoundedRectangle(cornerRadius: 12))
                 .shadow(radius: 5)

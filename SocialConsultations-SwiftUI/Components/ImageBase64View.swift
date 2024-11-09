@@ -28,16 +28,21 @@ struct ImageBase64View: View {
                                 .aspectRatio(contentMode: resizingMode)
                                 .allowsHitTesting(false)
                         } else {
-                            Image(systemName: "photo")
-                                .resizable()
-                                //.aspectRatio(contentMode: resizingMode)
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color.gray.opacity(0.2))
+                                .overlay(
+                                    Text("No Image")
+                                        .foregroundColor(.gray)
+                                        .font(.caption)
+                                )
+                                .aspectRatio(contentMode: resizingMode)
                                 .allowsHitTesting(false)
                         }
                     }
                 }
                     .onAppear {
                         // Simulate loading process
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                             isLoading = false
                         }
                     }
@@ -64,13 +69,38 @@ struct LoadingView: View {
 
 #Preview {
     
-     
-    let img: String = Constants.example64
-    // let badImg: String = Constants.bad64
+    let img: String = Base64examples.example64
+    let img2: String = Base64examples.example64_2
+    let img3: String = Base64examples.example64_3
+    let badImg: String = Base64examples.bad64
     
-    ImageBase64View(base64String: img)
-        .clipShape(RoundedRectangle(cornerRadius: 30))
-        .padding(40)
-        .padding(.vertical, 60)
+    ScrollView(.horizontal){
+        HStack {
+            ImageBase64View(base64String: img3)
+                .clipShape(RoundedRectangle(cornerRadius: 30))
+                .frame(width: 300, height: 300)
+                .padding(10)
+                .padding(.vertical, 60)
+            
+            ImageBase64View(base64String: badImg)
+                .clipShape(RoundedRectangle(cornerRadius: 30))
+                .frame(width: 300, height: 300)
+                .padding(10)
+                .padding(.vertical, 60)
+            
+            ImageBase64View(base64String: img)
+                .clipShape(RoundedRectangle(cornerRadius: 30))
+                .frame(width: 300, height: 300)
+                .padding(10)
+                .padding(.vertical, 60)
+            
+            
+            ImageBase64View(base64String: img2)
+                .clipShape(RoundedRectangle(cornerRadius: 30))
+                .frame(width: 300, height: 300)
+                .padding(10)
+                .padding(.vertical, 60)
+        }
         
+    }
 }

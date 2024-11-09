@@ -15,12 +15,14 @@ struct TabbarView: View {
         TabView {
             NavigationStack {
                 // HomeView()
-                TestHomeView()
+                //TestHomeView()
+                CommunitiesView()
             }
             .tabItem {
                 Image(systemName: "house")
                 Text("Home")
             }
+            .tag(0)
             
             NavigationStack {
                 ForumView()
@@ -29,6 +31,7 @@ struct TabbarView: View {
                 Image(systemName: "bubble.left.and.bubble.right")
                 Text("Forums")
             }
+            .tag(1)
             
             NavigationStack {
                 PollsView()
@@ -37,6 +40,7 @@ struct TabbarView: View {
                 Image(systemName: "chart.pie.fill")
                 Text("Polls")
             }
+            .tag(2)
             
             NavigationStack {
                 ProfileView(showSignInView: $showSignInView)
@@ -45,6 +49,7 @@ struct TabbarView: View {
                 Image(systemName: "person.fill")
                 Text("Profile")
             }
+            .tag(3)
             
         }
     }

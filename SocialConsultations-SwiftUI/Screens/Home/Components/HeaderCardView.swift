@@ -11,7 +11,7 @@ struct HeaderCardView: View {
     
     var body: some View {
         VStack {
-            ImageBase64View(base64String: Constants.example64)
+            ImageBase64View(base64String: Base64examples.example64)
                 .scaledToFill()
                 .frame(height: 200)
                 .clipped()

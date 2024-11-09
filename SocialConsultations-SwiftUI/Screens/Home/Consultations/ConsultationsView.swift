@@ -15,7 +15,7 @@ struct ConsultationsView: View {
         ScrollView(.vertical) {
             
             VStack(alignment: .leading) {
-                ImageBase64View(base64String: Constants.example64)
+                ImageBase64View(base64String: Base64examples.example64)
                     .frame(height: 250)
                     .clipped()
                     .itemCornerRadius(20)
