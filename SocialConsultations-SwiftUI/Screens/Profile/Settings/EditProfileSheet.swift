@@ -25,7 +25,9 @@ struct EditProfileSheet: View {
             Form {
                 Section(header: Text("User data")) {
                     TextField("New name...", text: $newName)
+                        .autocorrectionDisabled()
                     TextField("New surname...", text: $newSurname)
+                        .autocorrectionDisabled()
                     DatePicker("Birthday", selection: $newBirthDate, in: ...Date(), displayedComponents: .date)
                 }
                 

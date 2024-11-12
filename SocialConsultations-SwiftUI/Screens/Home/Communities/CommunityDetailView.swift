@@ -37,7 +37,7 @@ struct CommunityDetailView: View {
                 .padding()
                 
                 VStack(alignment: .leading) {
-                    Text("Consultations")
+                    Text("Issues")
                         .bold()
                         .font(.title2)
                     

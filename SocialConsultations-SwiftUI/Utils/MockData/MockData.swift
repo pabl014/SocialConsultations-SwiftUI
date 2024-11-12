@@ -38,7 +38,7 @@ struct MockData {
     
     static let mockCommunity2: Community = Community(
         id: 2,
-        name: "No avatar Community",
+        name: "No avatar Community of Jagiellonia",
         description: "This is a sample community description.",
         avatar: nil,
         background: nil,
@@ -58,7 +58,7 @@ struct MockData {
         ],
         latitude: 37.7749,
         longitude: -122.4194,
-        isPublic: true,
+        isPublic: false,
         links: [
             Link(href: "https://example.com", rel: "self", method: "GET")
         ]

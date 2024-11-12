@@ -20,6 +20,7 @@ struct SignInView: View {
             VStack(alignment: .leading, spacing: 16) {
                 TextField("Email...", text: $viewModel.email)
                     .defaultTextFieldStyle()
+                    .keyboardType(.emailAddress)
                 
                 SecureField("Password...", text: $viewModel.password)
                     .defaultTextFieldStyle()

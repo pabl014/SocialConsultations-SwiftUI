@@ -13,9 +13,12 @@ struct CommunitiesView: View {
     
     var body: some View {
         ZStack {
+            Color(hex: "#F2F2F2")
+                .ignoresSafeArea()
+            
             ScrollView(.vertical) {
                 VStack(alignment: .leading, spacing: 16) {
-                    searchButton
+                    blankSpace
 
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Near you")
@@ -65,30 +68,25 @@ struct CommunitiesView: View {
         }
         .navigationTitle("Communities")
         .navigationBarTitleDisplayMode(.automatic)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                NavigationLink {
+                    AdvancedSearchView()
+                } label: {
+                    HStack {
+                        Image(systemName: "magnifyingglass")
+                        Text("Search")
+                    }
+                    .font(.title3)
+                }
+            }
+        }
     }
     
-    var searchButton: some View {
+    var blankSpace: some View {
         HStack(spacing: 8) {
             Spacer()
-            
-            Button {
-                // Akcja wyszukiwania
-            } label: {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                    Text("Search more...")
-                }
-                .font(.callout)
-                .frame(minWidth: 35)
-                .padding(.vertical, 8)
-                .padding(.horizontal, 110)
-                .background(Color.gray.opacity(0.4))
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-            }
-            
-            Spacer()
         }
-        .padding(.top, 16)
     }
     
     var nearYouScrollView: some View {
@@ -99,6 +97,9 @@ struct CommunitiesView: View {
                         CommunityDetailView(community: community)
                     } label: {
                         CommunityCardView(community: community)
+                            .contextMenu {
+                                Text(community.description)
+                            }
                     }
                     .buttonStyle(PlainButtonStyle())
                     .frame(height: 320)
@@ -110,12 +111,15 @@ struct CommunitiesView: View {
     }
     
     var communitiesList: some View {
-        VStack(spacing: 16) {
+        LazyVStack(spacing: 16) {
             ForEach(viewModel.communities, id: \.id) { community in
                 NavigationLink {
                     CommunityDetailView(community: community)
                 } label: {
                     CommunityCellView(community: community)
+                        .contextMenu {
+                            Text(community.description)
+                        }
                 }
                 .buttonStyle(PlainButtonStyle())
             }

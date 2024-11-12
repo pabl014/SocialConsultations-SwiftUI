@@ -24,28 +24,35 @@ struct CommunityCellView: View {
                     ImageBase64View(base64String: community.avatar?.data)
                         .frame(width: 120, height: 120)
                         .clipped()
-                        .cornerRadius(10)
+                        .itemCornerRadius(10)
                         .padding()
                     
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 12) {
                         Text(community.name)
                             //.font(.headline)
                             .font(.system(size: 20, weight: .semibold))
                             .lineLimit(2)
                         
-                        if let firstAdmin = community.administrators.first {
-                            Text("Admin: \(firstAdmin.name) \(firstAdmin.surname)")
+                        if community.isPublic {
+                            Text("Public")
                                 .font(.subheadline)
-                                .foregroundColor(.gray)
-                                .padding(.top, 2)
+                                .foregroundColor(.green)
                         } else {
-                            Text("Community")
+                            Text("Private")
                                 .font(.subheadline)
-                                .foregroundColor(.gray)
-                                .padding(.top, 2)
+                                .foregroundColor(.red)
+                        }
+                        
+                        VStack {
+                            HStack {
+                                Image(systemName: "person.3.fill")
+                                    .foregroundColor(.gray)
+                                Text(String(community.members.count))
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                            }
                         }
                     }
-                    .padding(.leading, 5)
                     
                     Spacer()
                 }

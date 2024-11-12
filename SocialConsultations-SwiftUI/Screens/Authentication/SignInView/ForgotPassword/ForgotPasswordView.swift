@@ -22,6 +22,7 @@ struct ForgotPasswordView: View {
             } else {
                 TextField("Email...", text: $email)
                     .defaultTextFieldStyle()
+                    .keyboardType(.emailAddress)
                 
                 Button {
                     Task {

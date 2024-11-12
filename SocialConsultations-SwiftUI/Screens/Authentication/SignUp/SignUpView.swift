@@ -26,12 +26,15 @@ struct SignUpView: View {
                 VStack(spacing: 16) {
                     TextField("Email...", text: $viewModel.email)
                         .defaultTextFieldStyle()
+                        .keyboardType(.emailAddress)
                     
                     TextField("Enter your name...", text: $viewModel.name)
                         .defaultTextFieldStyle()
+                        .autocorrectionDisabled()
                     
                     TextField("Enter your surname...", text: $viewModel.surname)
                         .defaultTextFieldStyle()
+                        .autocorrectionDisabled()
                     
                     DatePicker("Birthdate", selection: $viewModel.birthDate, in: ...Date(), displayedComponents: .date)
                         .padding(.horizontal, 20)

@@ -33,21 +33,21 @@ struct CommunityCardView: View {
                     }
                     
                     HStack {
-                        if let admin = community.administrators.first {
-                            Text("Admin: \(admin.name) \(admin.surname) ")
+                        if community.isPublic {
+                            Text("Public")
                                 .font(.subheadline)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.green)
                         } else {
-                            Text("Admin: Unknown")
+                            Text("Private")
                                 .font(.subheadline)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.red)
                         }
                         
                         Spacer()
                         
-                        Image(systemName: "message")
+                        Image(systemName: "person.3.fill")
                             .foregroundColor(.gray)
-                        Text("392") // Możesz zastąpić to dynamiczną liczbą wiadomości, jeśli jest dostępna w modelu
+                        Text(String(community.members.count)) // Możesz zastąpić to dynamiczną liczbą wiadomości, jeśli jest dostępna w modelu
                             .font(.subheadline)
                             .foregroundColor(.gray)
                     }
@@ -59,7 +59,7 @@ struct CommunityCardView: View {
             .cornerRadius(20)
             .shadow(radius: 5)
             .padding(.horizontal)
-            .frame(width: 300)
+            .frame(width: 300, height: 300)
         }
 }
 
