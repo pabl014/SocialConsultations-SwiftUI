@@ -11,6 +11,7 @@ import Foundation
 final class CommunitiesViewModel: ObservableObject {
     
     @Published var communities: [Community] = []
+    @Published var closestCommunities: [Community] = []
     @Published var isLoading = false
     
     func loadCommunities() async {

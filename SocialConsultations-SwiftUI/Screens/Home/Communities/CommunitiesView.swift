@@ -71,7 +71,7 @@ struct CommunitiesView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
-                    AdvancedSearchView()
+                    SearchCommunitiesView()
                 } label: {
                     HStack {
                         Image(systemName: "magnifyingglass")
