@@ -27,7 +27,7 @@ struct SearchCommunitiesView: View {
                         let community = viewModel.results[index]
                         
                         NavigationLink {
-                            // DetailView(community: community)
+                            CommunityDetailView(community: nil, communityID: community.id)
                         } label: {
                             Text(community.name)
                         }

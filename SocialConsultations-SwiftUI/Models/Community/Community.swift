@@ -20,5 +20,5 @@ struct Community: Codable {
     let latitude: Float
     let longitude: Float
     let isPublic: Bool
-    let links: [Link]
+    let links: [Link]?
 }
