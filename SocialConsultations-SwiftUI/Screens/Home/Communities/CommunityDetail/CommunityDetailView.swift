@@ -78,14 +78,15 @@ struct CommunityDetailView: View {
         }
         .navigationTitle(viewModel.community?.name ?? community?.name ?? "Community")
         .onAppear {
-            Task {
-                if viewModel.community == nil, let communityID = communityID {
+            if viewModel.community == nil, let communityID = communityID {
+                Task {
                     await viewModel.fetchCommunityDetails(id: communityID)
-                } else {
-                    viewModel.community = community
                 }
+            } else if viewModel.community == nil {
+                viewModel.community = community
             }
         }
+
     }
 }
 

@@ -34,6 +34,11 @@ struct CommunitiesView: View {
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
                                 .padding()
+                        } else if !viewModel.locationAccessGranted {
+                            Text("Location is restricted or denied, change it in settings")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                                .padding()
                         } else {
                             nearYouScrollView
                         }
@@ -59,10 +64,16 @@ struct CommunitiesView: View {
                 Task {
                     await viewModel.loadCommunities()
                 }
+                Task {
+                    await viewModel.loadClosestCommunities()
+                }
             }
             .onAppear {
                 Task {
                     await viewModel.loadCommunities()
+                }
+                Task {
+                    await viewModel.loadClosestCommunities()
                 }
             }
         }
@@ -81,6 +92,9 @@ struct CommunitiesView: View {
                 }
             }
         }
+        .onAppear {
+            viewModel.initializeLocationServices()
+        }
     }
     
     var blankSpace: some View {
@@ -92,7 +106,7 @@ struct CommunitiesView: View {
     var nearYouScrollView: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 10) {
-                ForEach(viewModel.communities, id: \.id) { community in
+                ForEach(viewModel.closestCommunities, id: \.id) { community in
                     NavigationLink {
                         CommunityDetailView(community: community, communityID: nil)
                     } label: {

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 final class CommunityManager {
     
@@ -34,6 +35,20 @@ final class CommunityManager {
         let communities = try decoder.decode(CommunityResponse.self, from: data)
         
         return communities.value
+    }
+    
+    func fetchClosestCommunities(at location: CLLocationCoordinate2D) async throws -> Community {
+        
+        let latitude = location.latitude
+        let longitude = location.longitude
+        
+        let urlString = Secrets.communitiesURL
+        
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        
+        return MockData.mockCommunity
     }
     
     func searchCommunities(withName name: String, pageNumber: Int, pageSize: Int) async throws -> [CommunityDTO] {
