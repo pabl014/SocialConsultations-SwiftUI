@@ -69,6 +69,7 @@
 		FED917942CDD12AD008F908F /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917932CDD12AD008F908F /* Issue.swift */; };
 		FED917962CDD1308008F908F /* CommunityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917952CDD1307008F908F /* CommunityManager.swift */; };
 		FED917982CDD1808008F908F /* TestHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917972CDD1808008F908F /* TestHomeView.swift */; };
+		FEF735722CE76C5F00213E28 /* AdminRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF735712CE76C5F00213E28 /* AdminRowCell.swift */; };
 		FEF806F22CDE3F9500669E66 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F12CDE3F9500669E66 /* Link.swift */; };
 		FEF806F52CDE3FDC00669E66 /* CommunityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */; };
 		FEF807522CDFD2FB00669E66 /* CommunitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF807512CDFD2FB00669E66 /* CommunitiesView.swift */; };
@@ -146,6 +147,7 @@
 		FED917932CDD12AD008F908F /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		FED917952CDD1307008F908F /* CommunityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityManager.swift; sourceTree = "<group>"; };
 		FED917972CDD1808008F908F /* TestHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHomeView.swift; sourceTree = "<group>"; };
+		FEF735712CE76C5F00213E28 /* AdminRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRowCell.swift; sourceTree = "<group>"; };
 		FEF806F12CDE3F9500669E66 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityResponse.swift; sourceTree = "<group>"; };
 		FEF807512CDFD2FB00669E66 /* CommunitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesView.swift; sourceTree = "<group>"; };
@@ -466,6 +468,7 @@
 				FE63C5EE2CE4BF3500197B26 /* CommunityDetail */,
 				FEF807552CDFD47700669E66 /* CommunityCardView.swift */,
 				FEF8075D2CDFD96D00669E66 /* CommunityCellView.swift */,
+				FEF735712CE76C5F00213E28 /* AdminRowCell.swift */,
 			);
 			path = Communities;
 			sourceTree = "<group>";
@@ -609,6 +612,7 @@
 				FE5C36182CBAEB9D00E84CCC /* HomeView.swift in Sources */,
 				FED917602CDB893D008F908F /* ForgotPasswordViewModel.swift in Sources */,
 				FE5C36192CBAEB9D00E84CCC /* PollsView.swift in Sources */,
+				FEF735722CE76C5F00213E28 /* AdminRowCell.swift in Sources */,
 				FE5C361A2CBAEB9D00E84CCC /* SettingsView.swift in Sources */,
 				FED917982CDD1808008F908F /* TestHomeView.swift in Sources */,
 				FE461BEA2CCBBFA4004CDBEC /* DiscussionView.swift in Sources */,

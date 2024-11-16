@@ -52,7 +52,7 @@ final class UserManager {
         
         let user = try JSONDecoder().decode(User.self, from: data)
         //print(user)
-        //print(authToken)
+        print(authToken)
         return user
     }
     

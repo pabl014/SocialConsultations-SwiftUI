@@ -9,8 +9,9 @@ import Foundation
 
 struct JoinRequest: Codable {
     let id: Int
-    let user: User
-    let community: Community
+    let user: User?
+    let userId: Int?
+    let community: Community?
     let status: InviteStatus
     
 }

@@ -15,7 +15,8 @@ struct MockData {
         avatar: FileData(id: 1, data: Base64examples.example64, description: "Community Avatar", type: 0),
         background: FileData(id: 2, data: Base64examples.example64_3, description: "Community Background", type: 0),
         administrators: [
-            User(id: 1, name: "Admin", surname: "User", birthDate: "1985-06-15", email: "admin@example.com", confirmed: true, confirmationCode: nil, avatar: nil)
+            User(id: 1, name: "Admin", surname: "User", birthDate: "1985-06-15", email: "admin@example.com", confirmed: true, confirmationCode: nil, avatar: nil),
+            User(id: 10, name: "Admin2", surname: "Userovski", birthDate: "1985-06-15", email: "admin@example.com", confirmed: true, confirmationCode: nil, avatar: FileData(id: 3, data: Base64examples.example64_3, description: "Member One Avatar", type: 0))
         ],
         members: [
             User(id: 2, name: "Member", surname: "One", birthDate: "1990-04-20", email: "member1@example.com", confirmed: true, confirmationCode: nil, avatar: FileData(id: 3, data: "base64EncodedStringForAvatar1", description: "Member One Avatar", type: 0)),
@@ -26,7 +27,7 @@ struct MockData {
             Issue(id: 2)
         ],
         joinRequests: [
-            JoinRequest(id: 1, user: User(id: 4, name: "Requester", surname: "One", birthDate: "2000-03-10", email: "requester1@example.com", confirmed: false, confirmationCode: "REQ123", avatar: nil), community: Community(id: 1, name: "", description: "", avatar: nil, background: nil, administrators: [], members: [], issues: [], joinRequests: [], latitude: 0.0, longitude: 0.0, isPublic: true, links: []), status: .pending)
+            JoinRequest(id: 1, user: User(id: 4, name: "Requester", surname: "One", birthDate: "2000-03-10", email: "requester1@example.com", confirmed: false, confirmationCode: "REQ123", avatar: nil), userId: 4, community: Community(id: 1, name: "", description: "", avatar: nil, background: nil, administrators: [], members: [], issues: [], joinRequests: [], latitude: 0.0, longitude: 0.0, isPublic: true, links: []), status: .pending)
         ],
         latitude: 37.7749,
         longitude: -122.4194,
@@ -54,7 +55,7 @@ struct MockData {
             Issue(id: 2)
         ],
         joinRequests: [
-            JoinRequest(id: 1, user: User(id: 4, name: "Requester", surname: "One", birthDate: "2000-03-10", email: "requester1@example.com", confirmed: false, confirmationCode: "REQ123", avatar: nil), community: Community(id: 1, name: "", description: "", avatar: nil, background: nil, administrators: [], members: [], issues: [], joinRequests: [], latitude: 0.0, longitude: 0.0, isPublic: true, links: []), status: .pending)
+            JoinRequest(id: 1, user: User(id: 7, name: "Requester", surname: "One", birthDate: "2000-03-10", email: "requester1@example.com", confirmed: false, confirmationCode: "REQ123", avatar: nil), userId: 7, community: Community(id: 1, name: "", description: "", avatar: nil, background: nil, administrators: [], members: [], issues: [], joinRequests: [], latitude: 0.0, longitude: 0.0, isPublic: true, links: []), status: .pending)
         ],
         latitude: 37.7749,
         longitude: -122.4194,
