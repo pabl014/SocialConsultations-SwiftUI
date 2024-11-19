@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CommunityDTO: Codable {
+struct CommunityDTO: Codable, Equatable {
     let id: Int
     let name: String
 }

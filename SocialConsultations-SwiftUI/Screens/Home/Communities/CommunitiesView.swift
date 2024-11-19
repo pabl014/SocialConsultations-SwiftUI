@@ -108,7 +108,7 @@ struct CommunitiesView: View {
             HStack(spacing: 10) {
                 ForEach(viewModel.closestCommunities, id: \.id) { community in
                     NavigationLink {
-                        CommunityDetailView(community: community, communityID: nil)
+                        CommunityDetailView(communityID: community.id)
                     } label: {
                         CommunityCardView(community: community)
                             .contextMenu {
@@ -128,7 +128,7 @@ struct CommunitiesView: View {
         LazyVStack(spacing: 16) {
             ForEach(viewModel.communities, id: \.id) { community in
                 NavigationLink {
-                    CommunityDetailView(community: community, communityID: nil)
+                    CommunityDetailView(communityID: community.id)
                 } label: {
                     CommunityCellView(community: community)
                         .contextMenu {

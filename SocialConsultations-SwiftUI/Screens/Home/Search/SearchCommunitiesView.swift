@@ -21,30 +21,27 @@ struct SearchCommunitiesView: View {
                     noResults
                 }
             } else {
-                List {
-                    ForEach(viewModel.results.indices, id: \.self) { index in
-                        
-                        let community = viewModel.results[index]
-                        
-                        NavigationLink {
-                            CommunityDetailView(community: nil, communityID: community.id)
-                        } label: {
-                            Text(community.name)
-                        }
-                        .onAppear {
-                            if index == viewModel.results.count - 1 { // last element
-                                Task {
-                                    await viewModel.loadMoreResults(name: searchText)
-                                }
+                
+                List(viewModel.results, id: \.id) { community in
+                    NavigationLink {
+                        CommunityDetailView(communityID: community.id)
+                    } label: {
+                        Text(community.name)
+                    }
+                    .onAppear {
+                        if community == viewModel.results.last { // ostatni element
+                            Task {
+                                await viewModel.loadMoreResults(name: searchText)
                             }
                         }
                     }
-                    
-                    if viewModel.isLoadingPage {
-                        ProgressView()
-                            .frame(maxWidth: .infinity)
-                    }
                 }
+                
+                if viewModel.isLoadingPage {
+                    ProgressView()
+                        .frame(maxWidth: .infinity)
+                }
+                
             }
         }
         .searchable(text: $searchText)

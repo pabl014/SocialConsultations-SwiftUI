@@ -79,6 +79,7 @@
 		FEF8075E2CDFD96D00669E66 /* CommunityCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF8075D2CDFD96D00669E66 /* CommunityCellView.swift */; };
 		FEF807612CDFE77B00669E66 /* CommunityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF807602CDFE77B00669E66 /* CommunityDetailView.swift */; };
 		FEF807632CDFECED00669E66 /* Base64examples.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF807622CDFECDE00669E66 /* Base64examples.swift */; };
+		FEF97F412CE8DC7D0090B160 /* ExpandableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF97F402CE8DC7D0090B160 /* ExpandableView.swift */; };
 		FEFCFF292CC830C80031119B /* ButtonViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */; };
 		FEFCFF2C2CC839030031119B /* TextFieldViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */; };
 /* End PBXBuildFile section */
@@ -157,6 +158,7 @@
 		FEF8075D2CDFD96D00669E66 /* CommunityCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCellView.swift; sourceTree = "<group>"; };
 		FEF807602CDFE77B00669E66 /* CommunityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailView.swift; sourceTree = "<group>"; };
 		FEF807622CDFECDE00669E66 /* Base64examples.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64examples.swift; sourceTree = "<group>"; };
+		FEF97F402CE8DC7D0090B160 /* ExpandableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableView.swift; sourceTree = "<group>"; };
 		FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModifiers.swift; sourceTree = "<group>"; };
 		FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -236,6 +238,7 @@
 				FE63C5F12CE4C08400197B26 /* Search */,
 				FE76CD472CBD714E0087B7CB /* Consultations */,
 				FE5C35F92CBAEB9D00E84CCC /* Components */,
+				FEF97F402CE8DC7D0090B160 /* ExpandableView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -605,6 +608,7 @@
 				FEAD2DD42CD158CE005716D9 /* ErrorMessage.swift in Sources */,
 				FE5C36162CBAEB9D00E84CCC /* HomeCellView.swift in Sources */,
 				FE5C36172CBAEB9D00E84CCC /* ConsultationDetailView.swift in Sources */,
+				FEF97F412CE8DC7D0090B160 /* ExpandableView.swift in Sources */,
 				FE76CD492CBD71830087B7CB /* ConsultationsView.swift in Sources */,
 				FEF807522CDFD2FB00669E66 /* CommunitiesView.swift in Sources */,
 				FEC79F132CBEBB5800956B15 /* Color+Ext.swift in Sources */,
