@@ -16,11 +16,10 @@ struct ProfileView: View {
     var body: some View {
         VStack {
             if isLoading {
-                LoadingView() // Ekran ładowania
+                LoadingView()
                     .frame(width: 100, height: 100)
                     .padding()
             } else {
-                // Wyświetl avatar lub placeholder po załadowaniu danych użytkownika
                 ImageBase64View(base64String: viewModel.user?.avatar?.data)
                     .clipShape(Circle())
                     .frame(width: 100, height: 100)
@@ -35,7 +34,7 @@ struct ProfileView: View {
         .onAppear {
             Task {
                 await viewModel.fetchCurrentUser()
-                isLoading = false // Wyłącz ekran ładowania po pobraniu danych
+                isLoading = false
             }
         }
         .navigationTitle("Profile")
