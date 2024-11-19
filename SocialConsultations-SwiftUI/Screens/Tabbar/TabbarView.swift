@@ -25,11 +25,11 @@ struct TabbarView: View {
             .tag(0)
             
             NavigationStack {
-                ForumView()
+                SearchCommunitiesView()
             }
             .tabItem {
-                Image(systemName: "bubble.left.and.bubble.right")
-                Text("Forums")
+                Image(systemName: "magnifyingglass")
+                Text("Search")
             }
             .tag(1)
             

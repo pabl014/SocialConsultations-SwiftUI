@@ -41,7 +41,7 @@ struct CommunityDetailView: View {
                     //                        .scrollIndicators(.hidden)
                     //                    }
                     
-                    ExpandableView(lat: Double(loadedCommunity.latitude), long: Double(loadedCommunity.longitude))
+                    ExpandableMapView(lat: Double(loadedCommunity.latitude), long: Double(loadedCommunity.longitude))
                     
                     
                     
@@ -116,7 +116,7 @@ struct CommunityDetailView: View {
                     await viewModel.sendJoinRequest()
                 }
             } label: {
-                RequestStatus(imageName: "person.badge.plus", text: "Join Community")
+                RequestStatus(imageName: "person.badge.plus", text: "Join")
             }
             .disabled(!viewModel.canJoinCommunity())
         }

@@ -8,7 +8,7 @@
 import SwiftUI
 import MapKit
 
-struct ExpandableView: View {
+struct ExpandableMapView: View {
     
     @State private var isExpanded: Bool = false
     
@@ -44,7 +44,7 @@ struct ExpandableView: View {
 }
 
 #Preview {
-    ExpandableView(lat: 52.23072, long: 21.016317)
+    ExpandableMapView(lat: 52.23072, long: 21.016317)
 }
 
 

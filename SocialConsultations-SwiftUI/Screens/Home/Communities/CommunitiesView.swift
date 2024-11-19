@@ -82,13 +82,13 @@ struct CommunitiesView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 NavigationLink {
-                    SearchCommunitiesView()
+                    AboutProjectView()
                 } label: {
                     HStack {
-                        Image(systemName: "magnifyingglass")
-                        Text("Search")
+                        Image(systemName: "info.circle")
+                        Text("About")
                     }
-                    .font(.title3)
+                    .font(.subheadline)
                 }
             }
         }
@@ -143,7 +143,7 @@ struct CommunitiesView: View {
 }
 
 #Preview {
-    NavigationStack {
-        CommunitiesView()
-    }
+//    NavigationStack {
+//        CommunitiesView()
+//    }
 }
