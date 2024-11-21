@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct CommunityDetailView: View {
     
     let communityID: Int
@@ -43,6 +41,14 @@ struct CommunityDetailView: View {
                     
                     ExpandableMapView(lat: Double(loadedCommunity.latitude), long: Double(loadedCommunity.longitude))
                     
+                    if viewModel.isAdmin() {
+                        NavigationLink {
+                            JoinRequestsView(joinRequests: loadedCommunity.joinRequests, communityId: loadedCommunity.id)
+                        } label: {
+                            Text("See join requests")
+                                .secondaryButtonStyle()
+                        }
+                    }
                     
                     
                     if viewModel.isMember() || viewModel.isAdmin() {

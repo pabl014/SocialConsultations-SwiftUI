@@ -43,7 +43,7 @@ struct TabbarView: View {
             .tag(2)
             
             NavigationStack {
-                ProfileView(showSignInView: $showSignInView)
+                CurrentUserProfileView(showSignInView: $showSignInView)
             }
             .tabItem {
                 Image(systemName: "person.fill")

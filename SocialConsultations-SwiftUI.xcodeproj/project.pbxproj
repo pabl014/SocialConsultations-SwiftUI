@@ -22,7 +22,7 @@
 		FE5C36182CBAEB9D00E84CCC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35FB2CBAEB9D00E84CCC /* HomeView.swift */; };
 		FE5C36192CBAEB9D00E84CCC /* PollsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35FD2CBAEB9D00E84CCC /* PollsView.swift */; };
 		FE5C361A2CBAEB9D00E84CCC /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C35FF2CBAEB9D00E84CCC /* SettingsView.swift */; };
-		FE5C361B2CBAEB9D00E84CCC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36012CBAEB9D00E84CCC /* ProfileView.swift */; };
+		FE5C361B2CBAEB9D00E84CCC /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36012CBAEB9D00E84CCC /* CurrentUserProfileView.swift */; };
 		FE5C361C2CBAEB9D00E84CCC /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36032CBAEB9D00E84CCC /* TabbarView.swift */; };
 		FE5C361D2CBAEB9D00E84CCC /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36052CBAEB9D00E84CCC /* RootView.swift */; };
 		FE5C361E2CBAEB9D00E84CCC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5C36072CBAEB9D00E84CCC /* Constants.swift */; };
@@ -82,6 +82,9 @@
 		FEF97F412CE8DC7D0090B160 /* ExpandableMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF97F402CE8DC7D0090B160 /* ExpandableMapView.swift */; };
 		FEF97F452CECF3BD0090B160 /* AboutProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF97F442CECF3BD0090B160 /* AboutProjectView.swift */; };
 		FEF97F492CECF6630090B160 /* SectionViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF97F482CECF6630090B160 /* SectionViewModifier.swift */; };
+		FEF97F4B2CED352F0090B160 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF97F4A2CED352F0090B160 /* UserProfileView.swift */; };
+		FEF97F4D2CED3CAA0090B160 /* JoinRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF97F4C2CED3CAA0090B160 /* JoinRequestsView.swift */; };
+		FEF97F502CED4BF00090B160 /* JoinRequestsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF97F4F2CED4BF00090B160 /* JoinRequestsViewModel.swift */; };
 		FEFCFF292CC830C80031119B /* ButtonViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */; };
 		FEFCFF2C2CC839030031119B /* TextFieldViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */; };
 /* End PBXBuildFile section */
@@ -103,7 +106,7 @@
 		FE5C35FB2CBAEB9D00E84CCC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FE5C35FD2CBAEB9D00E84CCC /* PollsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsView.swift; sourceTree = "<group>"; };
 		FE5C35FF2CBAEB9D00E84CCC /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		FE5C36012CBAEB9D00E84CCC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FE5C36012CBAEB9D00E84CCC /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 		FE5C36032CBAEB9D00E84CCC /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
 		FE5C36052CBAEB9D00E84CCC /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		FE5C36072CBAEB9D00E84CCC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -163,6 +166,9 @@
 		FEF97F402CE8DC7D0090B160 /* ExpandableMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableMapView.swift; sourceTree = "<group>"; };
 		FEF97F442CECF3BD0090B160 /* AboutProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutProjectView.swift; sourceTree = "<group>"; };
 		FEF97F482CECF6630090B160 /* SectionViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewModifier.swift; sourceTree = "<group>"; };
+		FEF97F4A2CED352F0090B160 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		FEF97F4C2CED3CAA0090B160 /* JoinRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequestsView.swift; sourceTree = "<group>"; };
+		FEF97F4F2CED4BF00090B160 /* JoinRequestsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRequestsViewModel.swift; sourceTree = "<group>"; };
 		FEFCFF282CC830C80031119B /* ButtonViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewModifiers.swift; sourceTree = "<group>"; };
 		FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -270,7 +276,8 @@
 			isa = PBXGroup;
 			children = (
 				FE19B4B12CD933F100FCD3A8 /* ProfileViewModel.swift */,
-				FE5C36012CBAEB9D00E84CCC /* ProfileView.swift */,
+				FE5C36012CBAEB9D00E84CCC /* CurrentUserProfileView.swift */,
+				FEF97F4A2CED352F0090B160 /* UserProfileView.swift */,
 				FE5C36002CBAEB9D00E84CCC /* Settings */,
 			);
 			path = Profile;
@@ -344,6 +351,7 @@
 			children = (
 				FE63C5F92CE4DB6500197B26 /* CommunityDetailViewModel.swift */,
 				FEF807602CDFE77B00669E66 /* CommunityDetailView.swift */,
+				FEF97F4E2CED4BD20090B160 /* JoinRequests */,
 			);
 			path = CommunityDetail;
 			sourceTree = "<group>";
@@ -516,6 +524,15 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		FEF97F4E2CED4BD20090B160 /* JoinRequests */ = {
+			isa = PBXGroup;
+			children = (
+				FEF97F4F2CED4BF00090B160 /* JoinRequestsViewModel.swift */,
+				FEF97F4C2CED3CAA0090B160 /* JoinRequestsView.swift */,
+			);
+			path = JoinRequests;
+			sourceTree = "<group>";
+		};
 		FEFCFF2A2CC838E50031119B /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -629,6 +646,7 @@
 				FED917902CDD10B6008F908F /* UserRequest.swift in Sources */,
 				FEAD2DD42CD158CE005716D9 /* ErrorMessage.swift in Sources */,
 				FE5C36162CBAEB9D00E84CCC /* HomeCellView.swift in Sources */,
+				FEF97F502CED4BF00090B160 /* JoinRequestsViewModel.swift in Sources */,
 				FE5C36172CBAEB9D00E84CCC /* ConsultationDetailView.swift in Sources */,
 				FEF97F412CE8DC7D0090B160 /* ExpandableMapView.swift in Sources */,
 				FE76CD492CBD71830087B7CB /* ConsultationsView.swift in Sources */,
@@ -642,7 +660,8 @@
 				FE5C361A2CBAEB9D00E84CCC /* SettingsView.swift in Sources */,
 				FED917982CDD1808008F908F /* TestHomeView.swift in Sources */,
 				FE461BEA2CCBBFA4004CDBEC /* DiscussionView.swift in Sources */,
-				FE5C361B2CBAEB9D00E84CCC /* ProfileView.swift in Sources */,
+				FEF97F4B2CED352F0090B160 /* UserProfileView.swift in Sources */,
+				FE5C361B2CBAEB9D00E84CCC /* CurrentUserProfileView.swift in Sources */,
 				FEAD2DCF2CD14293005716D9 /* SignInViewModel.swift in Sources */,
 				FEC79F112CBEA64C00956B15 /* PostCell.swift in Sources */,
 				FEF8075A2CDFD5A000669E66 /* MockData.swift in Sources */,
@@ -657,6 +676,7 @@
 				FEF806F52CDE3FDC00669E66 /* CommunityResponse.swift in Sources */,
 				FE5C361E2CBAEB9D00E84CCC /* Constants.swift in Sources */,
 				FEAD2DCA2CD13E46005716D9 /* Errors.swift in Sources */,
+				FEF97F4D2CED3CAA0090B160 /* JoinRequestsView.swift in Sources */,
 				FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */,
 				FEF807562CDFD47700669E66 /* CommunityCardView.swift in Sources */,
 				FED917942CDD12AD008F908F /* Issue.swift in Sources */,

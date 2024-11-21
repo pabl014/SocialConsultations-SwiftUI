@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct CurrentUserProfileView: View {
     
     @Binding var showSignInView: Bool
     @StateObject private var viewModel = ProfileViewModel()
@@ -56,6 +56,6 @@ struct ProfileView: View {
 
 #Preview {
     NavigationStack {
-        ProfileView(showSignInView: .constant(false))
+        CurrentUserProfileView(showSignInView: .constant(false))
     }
 }

@@ -10,14 +10,23 @@ import Foundation
 struct JoinRequest: Codable {
     let id: Int
     let user: User?
-    let userId: Int?
-    let community: Community?
-    let status: InviteStatus
+    let userId: Int
+    //let community: Community?
+    var status: InviteStatus
     
 }
 
-enum InviteStatus: Int, Codable {
+enum InviteStatus: Int, Codable, CaseIterable {
     case pending = 0
     case accepted = 1
     case rejected = 2
+
+    var displayName: String {
+        switch self {
+        case .pending: return "Pending"
+        case .accepted: return "Accepted"
+        case .rejected: return "Rejected"
+        }
+    }
 }
+

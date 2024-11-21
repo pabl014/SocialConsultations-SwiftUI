@@ -16,7 +16,7 @@ struct Community: Codable {
     let administrators: [User]
     let members: [User]
     let issues: [Issue]
-    let joinRequests: [JoinRequest]
+    var joinRequests: [JoinRequest]
     let latitude: Float
     let longitude: Float
     let isPublic: Bool

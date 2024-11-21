@@ -21,4 +21,12 @@ final class ProfileViewModel: ObservableObject {
             errorMessage = ErrorMessage(message: error.localizedDescription)
         }
     }
+    
+    func fetchUser(with id: Int) async {
+        do {
+            self.user = try await UserManager.shared.fetchUserData(userId: id)
+        } catch {
+            errorMessage = ErrorMessage(message: error.localizedDescription)
+        }
+    }
 }

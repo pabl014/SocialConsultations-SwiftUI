@@ -125,4 +125,39 @@ final class CommunityManager {
             throw URLError(.badServerResponse)
         }
     }
+    
+    func updateJoinRequestStatus(communityId: Int, joinRequestId: Int, status: InviteStatus) async throws {
+        
+        var urlString: String
+    
+        switch status {
+        case .accepted:
+            urlString = "\(Secrets.communitiesURL)/\(communityId)/joinrequests/\(joinRequestId)/accept"
+        case .rejected:
+            urlString = "\(Secrets.communitiesURL)/\(communityId)/joinrequests/\(joinRequestId)/reject"
+        case .pending:
+            throw URLError(.badURL)
+        }
+        
+        print("URL: \(urlString)")
+        
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        
+        guard let authToken else {
+            throw URLError(.userAuthenticationRequired)
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST" 
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
+        
+        let (_, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+            throw URLError(.badServerResponse)
+        }
+    }
 }
