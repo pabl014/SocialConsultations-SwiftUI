@@ -87,7 +87,7 @@ struct JoinRequestsView: View {
 
 #Preview {
     NavigationStack {
-        JoinRequestsView(joinRequests: MockData.mockCommunity.joinRequests, communityId: 2)
+        JoinRequestsView(joinRequests: MockData.mockCommunityDetail.joinRequests, communityId: 2)
     }
 }
 

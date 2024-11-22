@@ -48,15 +48,15 @@ struct UserProfileView: View {
 struct UserProfileView_Preview: View {
     var body: some View {
         VStack {
-            ImageBase64View(base64String: MockData.mockUser.avatar?.data)
+            ImageBase64View(base64String: MockData.mockUser1.avatar?.data)
                 .clipShape(Circle())
                 .frame(width: 100, height: 100)
                 .padding()
             
-            Text(MockData.mockUser.name)
-            Text(MockData.mockUser.surname)
-            Text(MockData.mockUser.email)
-            Text(MockData.mockUser.birthDate.toPrettyDateString())
+            Text(MockData.mockUser1.name)
+            Text(MockData.mockUser1.surname)
+            Text(MockData.mockUser1.email)
+            Text(MockData.mockUser1.birthDate.toPrettyDateString())
         }
         .navigationTitle("User Profile")
     }

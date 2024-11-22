@@ -62,8 +62,8 @@ struct CommunityCellView: View {
     }
 }
 
-//#Preview {
-//    CommunityCellView(community: MockData.mockCommunity)
-//    CommunityCellView(community: MockData.mockCommunity2)
-//    CommunityCellView(community: MockData.mockCommunity)
-//}
+#Preview {
+    CommunityCellView(community: MockData.mockCommunityHome1)
+    CommunityCellView(community: MockData.mockCommunityHome2)
+    CommunityCellView(community: MockData.mockCommunityHome3)
+}

@@ -63,21 +63,34 @@ struct CommunityCardView: View {
         }
 }
 
-//#Preview {
-//    
-//    CommunityCardView(community: MockData.mockCommunity2)
-//    
-//    ScrollView(.horizontal) {
-//        HStack {
-//            ForEach(0..<5) { _ in
-//                CommunityCardView(community: MockData.mockCommunity)
-//            }
-//        }
-//        .frame(height: 320)
-//    }
-//    .background(Color(.systemGroupedBackground))
-//    .scrollIndicators(.hidden)
-//    .edgesIgnoringSafeArea(.horizontal)
-//
-//}
+#Preview {
+    ScrollView(.vertical) {
+        CommunityCardView(community: MockData.mockCommunityHome3)
+        
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(0..<5) { _ in
+                    CommunityCardView(community: MockData.mockCommunityHome2)
+                }
+            }
+            .frame(height: 320)
+        }
+        .background(Color(.systemGroupedBackground))
+        .scrollIndicators(.hidden)
+        .edgesIgnoringSafeArea(.horizontal)
+        
+        ScrollView(.horizontal) {
+            HStack {
+                ForEach(0..<5) { _ in
+                    CommunityCardView(community: MockData.mockCommunityHome1)
+                }
+            }
+            .frame(height: 320)
+        }
+        .background(Color(.systemGroupedBackground))
+        .scrollIndicators(.hidden)
+        .edgesIgnoringSafeArea(.horizontal)
+    }
+
+}
 

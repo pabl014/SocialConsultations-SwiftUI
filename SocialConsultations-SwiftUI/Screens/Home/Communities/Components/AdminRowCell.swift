@@ -34,7 +34,7 @@ struct AdminRowCell: View {
     ScrollView(.horizontal){
         HStack(spacing: 20) {
             ForEach(1...5, id: \.self) { _ in
-                AdminRowCell(admin: MockData.mockCommunity.administrators.first!)
+                AdminRowCell(admin: MockData.mockCommunityDetail.administrators.first!)
             }
         }
         .padding(.horizontal, 24)
