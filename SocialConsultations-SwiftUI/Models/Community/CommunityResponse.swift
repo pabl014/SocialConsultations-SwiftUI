@@ -10,3 +10,4 @@ import Foundation
 struct CommunityResponse: Codable {
     let value: [Community]
 }
+

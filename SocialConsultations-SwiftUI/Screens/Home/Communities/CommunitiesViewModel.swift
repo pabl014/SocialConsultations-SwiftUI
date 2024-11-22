@@ -11,9 +11,12 @@ import CoreLocation
 
 final class CommunitiesViewModel: NSObject, ObservableObject {
     
-    @Published var communities: [Community] = []
-    @Published var closestCommunities: [Community] = []
+    @Published var communities: [CommunityHome] = []
+    @Published var closestCommunities: [CommunityHome] = []
     @Published var isLoading = false
+    
+    private var currentPage: Int = 1
+    private var canLoadMorePages: Bool = true
     
     @Published var lastKnownLocation: CLLocationCoordinate2D? {
         didSet {
@@ -32,14 +35,31 @@ final class CommunitiesViewModel: NSObject, ObservableObject {
     
     @MainActor
     func loadCommunities() async {
+        
+        guard !isLoading && canLoadMorePages else { return }
+        
         isLoading = true
+        
         do {
-            self.communities = []
-            self.communities = try await CommunityManager.shared.fetchCommunities()
+            let communitiesBlock = try await CommunityManager.shared.fetchCommunities(pageNumber: currentPage, pageSize: 3)
+            self.communities.append(contentsOf: communitiesBlock)
+            canLoadMorePages = !communitiesBlock.isEmpty
+            if canLoadMorePages {
+                currentPage += 1
+            }
         } catch {
             print("Failed to fetch communities:", error)
+            canLoadMorePages = false
         }
         isLoading = false
+    }
+    
+    @MainActor
+    func refreshCommunities() async {
+        currentPage = 1
+        canLoadMorePages = true
+        self.communities = []
+        await loadCommunities()
     }
     
     @MainActor
@@ -53,8 +73,7 @@ final class CommunitiesViewModel: NSObject, ObservableObject {
         initializeLocationServices()
         do {
             self.closestCommunities = []
-            self.closestCommunities = try await CommunityManager.shared.fetchCommunities()
-            //self.closestCommunities = try await CommunityManager.shared.fetchClosestCommunities(at: location)
+            self.closestCommunities = try await CommunityManager.shared.fetchClosestCommunities(at: location)
         } catch {
             print("Failed to fetch closest communities:", error)
         }

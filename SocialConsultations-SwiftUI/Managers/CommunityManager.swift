@@ -16,9 +16,9 @@ final class CommunityManager {
     
     @AppStorage("authToken") private var authToken: String?
     
-    func fetchCommunities() async throws -> [Community] {
+    func fetchCommunities(pageNumber: Int, pageSize: Int) async throws -> [CommunityHome] {
         
-        let urlString = Secrets.communitiesURL
+        let urlString = "\(Secrets.communitiesURL)?PageNumber=\(pageNumber)&PageSize=\(pageSize)&Fields=Id,Name,Description,Avatar,Members,Latitude,Longitude,IsPublic"
         
         guard let url = URL(string: urlString) else {
             throw URLError(.badURL)
@@ -35,23 +35,52 @@ final class CommunityManager {
         }
         
         let decoder = JSONDecoder()
-        let communities = try decoder.decode(CommunityResponse.self, from: data)
+        let communities = try decoder.decode(CommunityHomeResponse.self, from: data)
         
         return communities.value
     }
     
-    func fetchClosestCommunities(at location: CLLocationCoordinate2D) async throws -> Community {
+    func fetchClosestCommunities(at location: CLLocationCoordinate2D) async throws -> [CommunityHome] {
         
-        let latitude = location.latitude
-        let longitude = location.longitude
+        let latitude: Double = Double(location.latitude)
+        let longitude: Double = Double(location.longitude)
         
-        let urlString = Secrets.communitiesURL
+        let urlString = Secrets.closestURL
         
         guard let url = URL(string: urlString) else {
             throw URLError(.badURL)
         }
         
-        return MockData.mockCommunity
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let body: [String: Any] = [
+            "longitude": longitude,
+            "latitude": latitude,
+            "maxDistanceKm": 100,
+            "fields": ["Id", "Name", "Description", "Avatar", "Members", "Latitude", "Longitude", "IsPublic"]
+        ]
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: body, options: [])
+            request.httpBody = jsonData
+        } catch {
+            throw URLError(.cannotParseResponse)
+        }
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+            throw URLError(.badServerResponse)
+        }
+        
+        do {
+            let closestCommunities = try JSONDecoder().decode([CommunityHome].self, from: data)
+            return closestCommunities
+        } catch {
+            throw URLError(.cannotDecodeContentData)
+        }
     }
     
     func searchCommunities(withName name: String, pageNumber: Int, pageSize: Int) async throws -> [CommunityDTO] {

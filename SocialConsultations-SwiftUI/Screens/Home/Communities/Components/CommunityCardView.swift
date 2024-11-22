@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CommunityCardView: View {
     
-    let community: Community
+    let community: CommunityHome
         
         var body: some View {
             VStack {
@@ -63,21 +63,21 @@ struct CommunityCardView: View {
         }
 }
 
-#Preview {
-    
-    CommunityCardView(community: MockData.mockCommunity2)
-    
-    ScrollView(.horizontal) {
-        HStack {
-            ForEach(0..<5) { _ in
-                CommunityCardView(community: MockData.mockCommunity)
-            }
-        }
-        .frame(height: 320)
-    }
-    .background(Color(.systemGroupedBackground))
-    .scrollIndicators(.hidden)
-    .edgesIgnoringSafeArea(.horizontal)
-
-}
+//#Preview {
+//    
+//    CommunityCardView(community: MockData.mockCommunity2)
+//    
+//    ScrollView(.horizontal) {
+//        HStack {
+//            ForEach(0..<5) { _ in
+//                CommunityCardView(community: MockData.mockCommunity)
+//            }
+//        }
+//        .frame(height: 320)
+//    }
+//    .background(Color(.systemGroupedBackground))
+//    .scrollIndicators(.hidden)
+//    .edgesIgnoringSafeArea(.horizontal)
+//
+//}
 

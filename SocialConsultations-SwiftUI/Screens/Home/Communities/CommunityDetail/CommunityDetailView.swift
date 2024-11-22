@@ -150,7 +150,7 @@ struct CommunityDetailView: View {
 
 #Preview {
     NavigationStack {
-        CommunityDetailView(communityID: 1)
+        CommunityDetailView(communityID: MockData.mockCommunity.id)
     }
 }
 

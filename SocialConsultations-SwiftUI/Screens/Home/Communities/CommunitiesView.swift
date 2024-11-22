@@ -62,7 +62,7 @@ struct CommunitiesView: View {
             }
             .refreshable {
                 Task {
-                    await viewModel.loadCommunities()
+                    await viewModel.refreshCommunities()
                 }
                 Task {
                     await viewModel.loadClosestCommunities()
@@ -136,6 +136,13 @@ struct CommunitiesView: View {
                         }
                 }
                 .buttonStyle(PlainButtonStyle())
+                .onAppear {
+                    if community == viewModel.communities.last && !viewModel.isLoading {
+                        Task {
+                            await viewModel.loadCommunities()
+                        }
+                    }
+                }
             }
         }
         .padding(.horizontal)
