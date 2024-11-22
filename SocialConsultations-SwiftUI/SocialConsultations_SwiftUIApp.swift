@@ -9,6 +9,11 @@ import SwiftUI
 
 @main
 struct SocialConsultations_SwiftUIApp: App {
+    
+    init() {
+        UIView.appearance().overrideUserInterfaceStyle = .light
+    }
+    
     var body: some Scene {
         WindowGroup {
             RootView()
