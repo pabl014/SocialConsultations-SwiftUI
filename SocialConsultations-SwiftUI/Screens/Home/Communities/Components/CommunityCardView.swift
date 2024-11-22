@@ -60,6 +60,10 @@ struct CommunityCardView: View {
             .shadow(radius: 5)
             .padding(.horizontal)
             .frame(width: 300, height: 300)
+            .onAppear {
+                // Debugging: Wydrukuj dane w konsoli
+                print("CommunityCardView - \(community.name): \(community.members.count) members")
+            }
         }
 }
 

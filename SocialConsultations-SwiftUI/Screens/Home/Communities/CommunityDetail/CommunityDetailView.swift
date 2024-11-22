@@ -166,6 +166,20 @@ struct CommunityHeader: View {
                 .itemCornerRadius(20)
 
             VStack(alignment: .leading, spacing: 10) {
+                
+//                HStack {
+//                    if let admin = community.administrators.first {
+//                        
+//                        Text("Admin:")
+//                            .font(.callout)
+//                            .foregroundColor(.secondary)
+//                        
+//                        Text("\(admin.name) \(admin.surname)")
+//                            .font(.callout)
+//                            .foregroundColor(.secondary)
+//                    }
+//                }
+                
                 Text(community.description)
                     .font(.body)
                     .foregroundColor(.primary)
