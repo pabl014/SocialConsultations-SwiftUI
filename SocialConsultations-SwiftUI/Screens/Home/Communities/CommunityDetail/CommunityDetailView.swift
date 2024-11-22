@@ -156,7 +156,7 @@ struct CommunityDetailView: View {
 
 struct CommunityHeader: View {
     
-    let community: Community
+    let community: CommunityDetail
 
     var body: some View {
         VStack(alignment: .leading) {

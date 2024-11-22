@@ -445,8 +445,8 @@
 		FED9178A2CDD10B6008F908F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FEE06BCF2CEFFA110093BE3F /* CommunityDetail */,
 				FEE06BCE2CEFEE830093BE3F /* Home */,
+				FEE06BCF2CEFFA110093BE3F /* CommunityDetail */,
 				FEE06BCD2CEFED100093BE3F /* Search */,
 				FED917852CDD10B6008F908F /* FileData.swift */,
 				FED917862CDD10B6008F908F /* FileDataForCreationDto.swift */,
@@ -455,7 +455,7 @@
 				FED917892CDD10B6008F908F /* UserRequest.swift */,
 				FED917912CDD10D2008F908F /* JoinRequests.swift */,
 				FED917932CDD12AD008F908F /* Issue.swift */,
-				FEF806F32CDE3FA300669E66 /* Community */,
+				FEF806F32CDE3FA300669E66 /* Community - nieuzywane */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -487,14 +487,14 @@
 			path = CommunityDetail;
 			sourceTree = "<group>";
 		};
-		FEF806F32CDE3FA300669E66 /* Community */ = {
+		FEF806F32CDE3FA300669E66 /* Community - nieuzywane */ = {
 			isa = PBXGroup;
 			children = (
 				FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */,
 				FED917842CDD10B6008F908F /* Community.swift */,
 				FEF806F12CDE3F9500669E66 /* Link.swift */,
 			);
-			path = Community;
+			path = "Community - nieuzywane";
 			sourceTree = "<group>";
 		};
 		FEF807502CDFD2D500669E66 /* Communities */ = {

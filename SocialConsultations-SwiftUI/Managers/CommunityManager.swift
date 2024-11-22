@@ -107,9 +107,9 @@ final class CommunityManager {
         return responseDTO.value
     }
     
-    func fetchCommunityDetails(withId id: Int) async throws -> Community {
+    func fetchCommunityDetails(withId id: Int) async throws -> CommunityDetail {
         
-        let urlString = "\(Secrets.communitiesURL)/\(id)"
+        let urlString = "\(Secrets.communitiesURL)/\(id)?Fields=Id,Name,Description,Background,Administrators,Members,Issues,JoinRequests,Latitude,Longitude,IsPublic"
         
         guard let url = URL(string: urlString) else {
             throw URLError(.badURL)
@@ -126,7 +126,7 @@ final class CommunityManager {
         }
         
         let decoder = JSONDecoder()
-        let community = try decoder.decode(Community.self, from: data)
+        let community = try decoder.decode(CommunityDetail.self, from: data)
         
         return community
     }

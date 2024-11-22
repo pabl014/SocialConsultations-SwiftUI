@@ -10,7 +10,7 @@ import Foundation
 @MainActor
 final class CommunityDetailViewModel: ObservableObject {
     
-    @Published var community: Community?
+    @Published var community: CommunityDetail?
     @Published var isLoading = false
     @Published var user: User?
     @Published var joinRequestStatus: InviteStatus?
