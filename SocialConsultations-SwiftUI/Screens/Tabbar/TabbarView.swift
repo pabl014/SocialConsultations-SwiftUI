@@ -33,14 +33,14 @@ struct TabbarView: View {
             }
             .tag(1)
             
-            NavigationStack {
-                PollsView()
-            }
-            .tabItem {
-                Image(systemName: "chart.pie.fill")
-                Text("Polls")
-            }
-            .tag(2)
+//            NavigationStack {
+//                PollsView()
+//            }
+//            .tabItem {
+//                Image(systemName: "chart.pie.fill")
+//                Text("Polls")
+//            }
+//            .tag(2)
             
             NavigationStack {
                 CurrentUserProfileView(showSignInView: $showSignInView)
@@ -49,7 +49,7 @@ struct TabbarView: View {
                 Image(systemName: "person.fill")
                 Text("Profile")
             }
-            .tag(3)
+            .tag(2)
             
         }
     }

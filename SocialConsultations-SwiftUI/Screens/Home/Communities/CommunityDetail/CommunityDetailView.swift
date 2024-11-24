@@ -13,8 +13,6 @@ struct CommunityDetailView: View {
     
     @StateObject private var viewModel = CommunityDetailViewModel()
     
-    @State private var selectedCat: CategoryContext = .current
-    
     var body: some View {
         ZStack {
             if viewModel.isLoading {
@@ -54,20 +52,6 @@ struct CommunityDetailView: View {
                     if viewModel.isMember() || viewModel.isAdmin() {
                         
                         Issues
-                        
-                        // Issues
-                        VStack(spacing: 16) {
-                            Picker("Selected Category", selection: $selectedCat) {
-                                ForEach(CategoryContext.allCases) { content in
-                                    Text(content.title)
-                                }
-                            }
-                            .pickerStyle(SegmentedPickerStyle())
-                            .padding(.horizontal, 2)
-                            .padding(.bottom, 16)
-                        }
-                        .padding(.horizontal)
-                        .padding(.top, 4)
                         
                         ForEach(0..<5) { _ in
                             NavigationLink {
@@ -111,7 +95,7 @@ struct CommunityDetailView: View {
             RequestStatus(imageName: "bolt.shield", text: "Admin")
                 .foregroundStyle(.green)
         } else if viewModel.isMember() {
-            RequestStatus(imageName: "person", text: "member")
+            RequestStatus(imageName: "person", text: "Member")
                 .foregroundStyle(.green)
         } else if viewModel.hasPendingJoinRequest() {
             RequestStatus(imageName: "paperplane", text: "Sent")
@@ -167,18 +151,18 @@ struct CommunityHeader: View {
 
             VStack(alignment: .leading, spacing: 10) {
                 
-//                HStack {
-//                    if let admin = community.administrators.first {
-//                        
-//                        Text("Admin:")
-//                            .font(.callout)
-//                            .foregroundColor(.secondary)
-//                        
-//                        Text("\(admin.name) \(admin.surname)")
-//                            .font(.callout)
-//                            .foregroundColor(.secondary)
-//                    }
-//                }
+                HStack {
+                    if let admin = community.administrators.first {
+                        
+                        Text("Admin:")
+                            .font(.callout)
+                            .foregroundColor(.secondary)
+                        
+                        Text("\(admin.name) \(admin.surname)")
+                            .font(.callout)
+                            .foregroundColor(.secondary)
+                    }
+                }
                 
                 Text(community.description)
                     .font(.body)

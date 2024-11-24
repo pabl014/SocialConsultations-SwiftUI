@@ -103,6 +103,18 @@ struct MockData {
         isPublic: true
     )
     
+    //MARK: - Mock CommunityProfile
+    
+    static let mockCommunityProfile1 = CommunityProfile(
+        id: 971,
+        name: "Warsaw technology fans",
+        description: "A community for technology lovers to share and learn.",
+        avatar: mockImage2,
+        members: [mockUser1, mockUser2, mockUser3],
+        administrators: [mockUser1],
+        isPublic: true
+    )
+    
     
     //MARK: - Mock CommunityDetail
     

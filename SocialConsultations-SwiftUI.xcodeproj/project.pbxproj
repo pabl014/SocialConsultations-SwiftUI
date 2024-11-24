@@ -71,6 +71,13 @@
 		FEE06BCC2CEFE6040093BE3F /* CommunityHomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06BCB2CEFE6040093BE3F /* CommunityHomeResponse.swift */; };
 		FEE06BD12CEFFA230093BE3F /* CommunityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06BD02CEFFA1A0093BE3F /* CommunityDetail.swift */; };
 		FEE06BD32CEFFAA70093BE3F /* CommunityDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06BD22CEFFAA70093BE3F /* CommunityDetailResponse.swift */; };
+		FEE06BD62CF142A40093BE3F /* IssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06BD52CF142A40093BE3F /* IssueView.swift */; };
+		FEE06BD92CF3AD560093BE3F /* CommunityProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06BD82CF3AD500093BE3F /* CommunityProfile.swift */; };
+		FEE06BDD2CF3AD7A0093BE3F /* CommunityProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06BDC2CF3AD740093BE3F /* CommunityProfileResponse.swift */; };
+		FEE06BE02CF3BC140093BE3F /* CommunityCellProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06BDF2CF3BC140093BE3F /* CommunityCellProfileView.swift */; };
+		FEE06BE22CF3C38F0093BE3F /* CommunityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06BE12CF3C38F0093BE3F /* CommunityListView.swift */; };
+		FEE06BE42CF3C3E50093BE3F /* CommunityCategoryContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06BE32CF3C3E50093BE3F /* CommunityCategoryContext.swift */; };
+		FEE06BE62CF3C6AD0093BE3F /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06BE52CF3C6AD0093BE3F /* ProfileHeaderView.swift */; };
 		FEF735722CE76C5F00213E28 /* AdminRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF735712CE76C5F00213E28 /* AdminRowCell.swift */; };
 		FEF806F22CDE3F9500669E66 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F12CDE3F9500669E66 /* Link.swift */; };
 		FEF806F52CDE3FDC00669E66 /* CommunityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */; };
@@ -157,6 +164,13 @@
 		FEE06BCB2CEFE6040093BE3F /* CommunityHomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityHomeResponse.swift; sourceTree = "<group>"; };
 		FEE06BD02CEFFA1A0093BE3F /* CommunityDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetail.swift; sourceTree = "<group>"; };
 		FEE06BD22CEFFAA70093BE3F /* CommunityDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailResponse.swift; sourceTree = "<group>"; };
+		FEE06BD52CF142A40093BE3F /* IssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueView.swift; sourceTree = "<group>"; };
+		FEE06BD82CF3AD500093BE3F /* CommunityProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityProfile.swift; sourceTree = "<group>"; };
+		FEE06BDC2CF3AD740093BE3F /* CommunityProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityProfileResponse.swift; sourceTree = "<group>"; };
+		FEE06BDF2CF3BC140093BE3F /* CommunityCellProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCellProfileView.swift; sourceTree = "<group>"; };
+		FEE06BE12CF3C38F0093BE3F /* CommunityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityListView.swift; sourceTree = "<group>"; };
+		FEE06BE32CF3C3E50093BE3F /* CommunityCategoryContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCategoryContext.swift; sourceTree = "<group>"; };
+		FEE06BE52CF3C6AD0093BE3F /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		FEF735712CE76C5F00213E28 /* AdminRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRowCell.swift; sourceTree = "<group>"; };
 		FEF806F12CDE3F9500669E66 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityResponse.swift; sourceTree = "<group>"; };
@@ -280,6 +294,7 @@
 				FE19B4B12CD933F100FCD3A8 /* ProfileViewModel.swift */,
 				FE5C36012CBAEB9D00E84CCC /* CurrentUserProfileView.swift */,
 				FEF97F4A2CED352F0090B160 /* UserProfileView.swift */,
+				FEE06BDE2CF3BC000093BE3F /* Components */,
 				FE5C36002CBAEB9D00E84CCC /* Settings */,
 			);
 			path = Profile;
@@ -354,6 +369,7 @@
 				FE63C5F92CE4DB6500197B26 /* CommunityDetailViewModel.swift */,
 				FEF807602CDFE77B00669E66 /* CommunityDetailView.swift */,
 				FEF97F4E2CED4BD20090B160 /* JoinRequests */,
+				FEE06BD42CF1426F0093BE3F /* Issues */,
 			);
 			path = CommunityDetail;
 			sourceTree = "<group>";
@@ -448,6 +464,7 @@
 				FEE06BCE2CEFEE830093BE3F /* Home */,
 				FEE06BCF2CEFFA110093BE3F /* CommunityDetail */,
 				FEE06BCD2CEFED100093BE3F /* Search */,
+				FEE06BD72CF3AD390093BE3F /* CommunityProfile */,
 				FED917852CDD10B6008F908F /* FileData.swift */,
 				FED917862CDD10B6008F908F /* FileDataForCreationDto.swift */,
 				FED917872CDD10B6008F908F /* LoginRequestBody.swift */,
@@ -481,10 +498,38 @@
 		FEE06BCF2CEFFA110093BE3F /* CommunityDetail */ = {
 			isa = PBXGroup;
 			children = (
-				FEE06BD02CEFFA1A0093BE3F /* CommunityDetail.swift */,
 				FEE06BD22CEFFAA70093BE3F /* CommunityDetailResponse.swift */,
+				FEE06BD02CEFFA1A0093BE3F /* CommunityDetail.swift */,
 			);
 			path = CommunityDetail;
+			sourceTree = "<group>";
+		};
+		FEE06BD42CF1426F0093BE3F /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				FEE06BD52CF142A40093BE3F /* IssueView.swift */,
+			);
+			path = Issues;
+			sourceTree = "<group>";
+		};
+		FEE06BD72CF3AD390093BE3F /* CommunityProfile */ = {
+			isa = PBXGroup;
+			children = (
+				FEE06BDC2CF3AD740093BE3F /* CommunityProfileResponse.swift */,
+				FEE06BD82CF3AD500093BE3F /* CommunityProfile.swift */,
+			);
+			path = CommunityProfile;
+			sourceTree = "<group>";
+		};
+		FEE06BDE2CF3BC000093BE3F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FEE06BDF2CF3BC140093BE3F /* CommunityCellProfileView.swift */,
+				FEE06BE12CF3C38F0093BE3F /* CommunityListView.swift */,
+				FEE06BE32CF3C3E50093BE3F /* CommunityCategoryContext.swift */,
+				FEE06BE52CF3C6AD0093BE3F /* ProfileHeaderView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		FEF806F32CDE3FA300669E66 /* Community - nieuzywane */ = {
@@ -661,10 +706,13 @@
 				FED9178B2CDD10B6008F908F /* Community.swift in Sources */,
 				FEF8075E2CDFD96D00669E66 /* CommunityCellView.swift in Sources */,
 				FED917962CDD1308008F908F /* CommunityManager.swift in Sources */,
+				FEE06BD92CF3AD560093BE3F /* CommunityProfile.swift in Sources */,
 				FED9178C2CDD10B6008F908F /* FileData.swift in Sources */,
 				FED9178D2CDD10B6008F908F /* FileDataForCreationDto.swift in Sources */,
 				FED9178E2CDD10B6008F908F /* LoginRequestBody.swift in Sources */,
+				FEE06BE42CF3C3E50093BE3F /* CommunityCategoryContext.swift in Sources */,
 				FED9178F2CDD10B6008F908F /* User.swift in Sources */,
+				FEE06BDD2CF3AD7A0093BE3F /* CommunityProfileResponse.swift in Sources */,
 				FED917902CDD10B6008F908F /* UserRequest.swift in Sources */,
 				FEAD2DD42CD158CE005716D9 /* ErrorMessage.swift in Sources */,
 				FE5C36162CBAEB9D00E84CCC /* HomeCellView.swift in Sources */,
@@ -678,9 +726,11 @@
 				FEC79F132CBEBB5800956B15 /* Color+Ext.swift in Sources */,
 				FEFCFF2C2CC839030031119B /* TextFieldViewModifiers.swift in Sources */,
 				FED917602CDB893D008F908F /* ForgotPasswordViewModel.swift in Sources */,
+				FEE06BE02CF3BC140093BE3F /* CommunityCellProfileView.swift in Sources */,
 				FE5C36192CBAEB9D00E84CCC /* PollsView.swift in Sources */,
 				FEF735722CE76C5F00213E28 /* AdminRowCell.swift in Sources */,
 				FE5C361A2CBAEB9D00E84CCC /* SettingsView.swift in Sources */,
+				FEE06BD62CF142A40093BE3F /* IssueView.swift in Sources */,
 				FE461BEA2CCBBFA4004CDBEC /* DiscussionView.swift in Sources */,
 				FEF97F4B2CED352F0090B160 /* UserProfileView.swift in Sources */,
 				FE5C361B2CBAEB9D00E84CCC /* CurrentUserProfileView.swift in Sources */,
@@ -698,6 +748,7 @@
 				FEF806F52CDE3FDC00669E66 /* CommunityResponse.swift in Sources */,
 				FE5C361E2CBAEB9D00E84CCC /* Constants.swift in Sources */,
 				FEAD2DCA2CD13E46005716D9 /* Errors.swift in Sources */,
+				FEE06BE22CF3C38F0093BE3F /* CommunityListView.swift in Sources */,
 				FEF97F4D2CED3CAA0090B160 /* JoinRequestsView.swift in Sources */,
 				FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */,
 				FEF807562CDFD47700669E66 /* CommunityCardView.swift in Sources */,
@@ -705,6 +756,7 @@
 				FE5C361F2CBAEB9D00E84CCC /* GradientTest.swift in Sources */,
 				FEF97F452CECF3BD0090B160 /* AboutProjectView.swift in Sources */,
 				FE19B4B22CD933F100FCD3A8 /* ProfileViewModel.swift in Sources */,
+				FEE06BE62CF3C6AD0093BE3F /* ProfileHeaderView.swift in Sources */,
 				FEFCFF292CC830C80031119B /* ButtonViewModifiers.swift in Sources */,
 				FEF97F492CECF6630090B160 /* SectionViewModifier.swift in Sources */,
 				FE63C5FA2CE4DB6500197B26 /* CommunityDetailViewModel.swift in Sources */,

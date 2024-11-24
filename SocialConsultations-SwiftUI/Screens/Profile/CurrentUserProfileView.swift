@@ -12,41 +12,62 @@ struct CurrentUserProfileView: View {
     @Binding var showSignInView: Bool
     @StateObject private var viewModel = ProfileViewModel()
     @State private var isLoading = true
+    @State private var selectedCat: CommunityCategoryContext = .member
     
     var body: some View {
-        VStack {
-            if isLoading {
-                LoadingView()
-                    .frame(width: 100, height: 100)
-                    .padding()
-            } else {
-                ImageBase64View(base64String: viewModel.user?.avatar?.data)
-                    .clipShape(Circle())
-                    .frame(width: 100, height: 100)
-                    .padding()
-                
-                Text(viewModel.user?.name ?? "no name")
-                Text(viewModel.user?.surname ?? "no surname")
-                Text(viewModel.user?.email ?? "no email")
-                Text(viewModel.user?.birthDate.toPrettyDateString() ?? "no birth date")
+        ZStack {
+            Color(hex: "#F2F2F2")
+                .ignoresSafeArea()
+            
+            VStack {
+                if isLoading {
+                    LoadingView()
+                        .frame(width: 100, height: 100)
+                        .padding()
+                } else {
+                    ScrollView {
+                        
+                        ProfileHeaderView(user: viewModel.user)
+                        
+                        VStack(spacing: 16) {
+                            
+                            Picker("Selected Category", selection: $selectedCat) {
+                                ForEach(CommunityCategoryContext.allCases) { content in
+                                    Text(content.title)
+                                }
+                            }
+                            .pickerStyle(SegmentedPickerStyle())
+                            .padding(.horizontal, 2)
+                            .padding(.bottom, 16)
+                            
+                            if selectedCat == .member {
+                                CommunityListView(communities: viewModel.communitiesMember)
+                            } else if selectedCat == .admin {
+                                CommunityListView(communities: viewModel.communitiesAdmin)
+                            }
+                        }
+                        .padding(.horizontal)
+                        .padding(.top, 32)
+                    }
+                }
             }
-        }
-        .onAppear {
-            Task {
-                await viewModel.fetchCurrentUser()
-                isLoading = false
+            .onAppear {
+                Task {
+                    await viewModel.fetchCurrentUser()
+                    isLoading = false
+                }
             }
-        }
-        .navigationTitle("Profile")
-        .toolbar {
-            ToolbarItem(placement: .topBarTrailing) {
-                NavigationLink {
-                    SettingsView(showSignInView: $showSignInView)
-                } label: {
-                    HStack {
-                        Image(systemName: "gear")
-                            .font(.headline)
-                        Text("Settings")
+            .navigationTitle("Profile")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink {
+                        SettingsView(showSignInView: $showSignInView)
+                    } label: {
+                        HStack {
+                            Image(systemName: "gear")
+                                .font(.headline)
+                            Text("Settings")
+                        }
                     }
                 }
             }

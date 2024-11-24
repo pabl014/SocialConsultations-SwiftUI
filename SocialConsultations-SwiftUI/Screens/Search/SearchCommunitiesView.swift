@@ -13,48 +13,54 @@ struct SearchCommunitiesView: View {
     @State private var searchText: String = ""
     
     var body: some View {
-        VStack {
-            if viewModel.results.isEmpty {
-                if searchText.count < 3 {
-                    searchForCommunities
-                } else {
-                    noResults
-                }
-            } else {
-                
-                List(viewModel.results, id: \.id) { community in
-                    NavigationLink {
-                        CommunityDetailView(communityID: community.id)
-                    } label: {
-                        Text(community.name)
+        ZStack {
+            
+            Color(hex: "#F2F2F2")
+                .ignoresSafeArea()
+            
+            VStack {
+                if viewModel.results.isEmpty {
+                    if searchText.count < 3 {
+                        searchForCommunities
+                    } else {
+                        noResults
                     }
-                    .onAppear {
-                        if community == viewModel.results.last { // ostatni element
-                            Task {
-                                await viewModel.loadMoreResults(name: searchText)
+                } else {
+                    
+                    List(viewModel.results, id: \.id) { community in
+                        NavigationLink {
+                            CommunityDetailView(communityID: community.id)
+                        } label: {
+                            Text(community.name)
+                        }
+                        .onAppear {
+                            if community == viewModel.results.last { // ostatni element
+                                Task {
+                                    await viewModel.loadMoreResults(name: searchText)
+                                }
                             }
                         }
                     }
-                }
-                
-                if viewModel.isLoadingPage {
-                    ProgressView()
-                        .frame(maxWidth: .infinity)
-                }
-                
-            }
-        }
-        .searchable(text: $searchText)
-        .onChange(of: searchText) {
-            Task {
-                if !searchText.isEmpty && searchText.count >= 3 {
-                    await viewModel.search(name: searchText)
-                } else {
-                    viewModel.results.removeAll()
+                    
+                    if viewModel.isLoadingPage {
+                        ProgressView()
+                            .frame(maxWidth: .infinity)
+                    }
+                    
                 }
             }
+            .searchable(text: $searchText)
+            .onChange(of: searchText) {
+                Task {
+                    if !searchText.isEmpty && searchText.count >= 3 {
+                        await viewModel.search(name: searchText)
+                    } else {
+                        viewModel.results.removeAll()
+                    }
+                }
+            }
+            .navigationTitle("Search")
         }
-        .navigationTitle("Search")
     }
     
     

@@ -40,6 +40,31 @@ final class CommunityManager {
         return communities.value
     }
     
+    func fetchCommunities() async throws -> [CommunityProfile] {
+        
+        let urlString = "\(Secrets.communitiesURL)?Fields=Id,Name,Description,Avatar,Members,Administrators,IsPublic"
+        
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        
+        var request = URLRequest(url: url)
+        request.setValue("application/vnd.socialconsultations.community.full+json", forHTTPHeaderField: "Accept")
+        request.httpMethod = "GET"
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw URLError(.badServerResponse)
+        }
+        
+        let decoder = JSONDecoder()
+        let communities = try decoder.decode(CommunityProfileResponse.self, from: data)
+        
+        return communities.value
+        
+    }
+    
     func fetchClosestCommunities(at location: CLLocationCoordinate2D) async throws -> [CommunityHome] {
         
         let latitude: Double = Double(location.latitude)
