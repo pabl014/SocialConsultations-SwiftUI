@@ -15,6 +15,11 @@ final class CommunityDetailViewModel: ObservableObject {
     @Published var user: User?
     @Published var joinRequestStatus: InviteStatus?
     
+    @Published var issues: [Issue] = []
+    private var currentPage: Int = 1
+    private var canLoadMorePages: Bool = true
+    @Published var isLoadingIssues = false
+    
     func fetchCommunityDetails(id: Int) async {
         isLoading = true
         do {
@@ -77,5 +82,45 @@ final class CommunityDetailViewModel: ObservableObject {
     
     func canJoinCommunity() -> Bool {
         return !isAdmin() && !isMember() && !hasPendingJoinRequest()
+    }
+    
+    func fetchIssues(for communityID: Int) async {
+        
+        guard !isLoadingIssues && canLoadMorePages else { return }
+        
+        isLoadingIssues = true
+
+        do {
+            let fetchedIssues = try await IssueManager.shared.fetchIssues(communityID: communityID, pageNumber: currentPage, pageSize: 5)
+            
+            issues.append(contentsOf: fetchedIssues)
+            
+            canLoadMorePages = !fetchedIssues.isEmpty
+            
+            if fetchedIssues.isEmpty {
+                canLoadMorePages = false
+            } else {
+                // Dodaj tylko unikalne elementy
+                let newIssues = fetchedIssues.filter { newIssue in
+                    !issues.contains(where: { $0.id == newIssue.id })
+                }
+                issues.append(contentsOf: newIssues)
+                currentPage += 1
+            }
+        } catch {
+            print("Failed to fetch issues:", error)
+        }
+        isLoadingIssues = false
+    }
+    
+    func refreshIssues(for communityID: Int) async {
+        
+        guard !isLoadingIssues else { return }
+        
+        currentPage = 1
+        canLoadMorePages = true
+        issues = []
+        
+        await fetchIssues(for: communityID)
     }
 }

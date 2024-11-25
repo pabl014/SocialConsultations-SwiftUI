@@ -31,7 +31,7 @@ extension String {
         return self == other
     }
     
-    func toPrettyDateString() -> String {
+    func toPrettyDateString(showAge: Bool) -> String {
         
         let components = self.split { $0 == "-" || $0 == "T" }
         
@@ -51,19 +51,22 @@ extension String {
             let month = months[monthIndex - 1]
             let formattedDate = "\(day) \(month) \(year)"
             
-            // counting the age
-            if let birthYear = Int(year),
-               let birthMonth = Int(components[1]),
-               let birthDay = Int(day) {
-                
-                let calendar = Calendar.current
-                let now = Date()
-                let birthDateComponents = DateComponents(year: birthYear, month: birthMonth, day: birthDay)
-                
-                if let birthDate = calendar.date(from: birthDateComponents) {
-                    let ageComponents = calendar.dateComponents([.year], from: birthDate, to: now)
-                    if let age = ageComponents.year {
-                        return "\(formattedDate) (\(age))"
+            
+            if showAge {
+                // counting the age
+                if let birthYear = Int(year),
+                   let birthMonth = Int(components[1]),
+                   let birthDay = Int(day) {
+                    
+                    let calendar = Calendar.current
+                    let now = Date()
+                    let birthDateComponents = DateComponents(year: birthYear, month: birthMonth, day: birthDay)
+                    
+                    if let birthDate = calendar.date(from: birthDateComponents) {
+                        let ageComponents = calendar.dateComponents([.year], from: birthDate, to: now)
+                        if let age = ageComponents.year {
+                            return "\(formattedDate) (\(age))"
+                        }
                     }
                 }
             }

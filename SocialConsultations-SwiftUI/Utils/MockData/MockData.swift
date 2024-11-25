@@ -125,7 +125,7 @@ struct MockData {
         background: mockImage1,
         administrators: [mockUser1],
         members: [mockUser3],
-        issues: [mockIssue1],
+        //issues: [mockIssue1],
         joinRequests: [mockJoinRequest1, mockJoinRequest2],
         latitude: 53.1305,
         longitude: 23.1799,
@@ -134,7 +134,7 @@ struct MockData {
     
     //MARK: - Mock Issue
     
-    static let mockIssue1 = Issue(id: 3)
+   // static let mockIssue1 = Issue(id: 3)
     
     //MARK: - Mock JoinRequest
     

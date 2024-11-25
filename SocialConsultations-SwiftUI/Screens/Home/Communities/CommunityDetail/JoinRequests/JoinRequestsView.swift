@@ -100,11 +100,6 @@ struct JoinRequestCell: View {
         
         HStack(alignment: .center, spacing: 16) {
             if let user = request.user {
-                ImageBase64View(base64String: user.avatar?.data)
-                    .clipShape(Circle())
-                    .frame(width: 64, height: 64)
-                    .itemCornerRadius(12)
-                
                 VStack(alignment: .leading) {
                     Text("\(user.name) \(user.surname)")
                         .font(.headline)

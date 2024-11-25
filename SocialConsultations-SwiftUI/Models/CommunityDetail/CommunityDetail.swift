@@ -14,7 +14,7 @@ struct CommunityDetail: Codable {
     let background: FileData?
     let administrators: [User]
     let members: [User]
-    let issues: [Issue]
+   // let issues: [Issue]
     var joinRequests: [JoinRequest]
     let latitude: Double
     let longitude: Double

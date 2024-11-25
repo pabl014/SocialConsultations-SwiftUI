@@ -26,7 +26,7 @@ struct ProfileHeaderView : View {
             
             Text(user?.email ?? "no email")
                 .font(.subheadline)
-            Text(user?.birthDate.toPrettyDateString() ?? "no birth date")
+            Text(user?.birthDate.toPrettyDateString(showAge: true) ?? "no birth date")
                 .font(.subheadline)
         }
         

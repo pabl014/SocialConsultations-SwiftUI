@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct IssueView: View {
+    
+    let id: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("siema")
     }
 }
 
 #Preview {
-    IssueView()
+    //IssueView(issue: Issue(id: 56, title: "siema", description: "elson", issueStatus: .inProgress, createdAt: "hghg"))
 }

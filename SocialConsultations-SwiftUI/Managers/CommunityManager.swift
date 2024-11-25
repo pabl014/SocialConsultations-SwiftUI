@@ -134,7 +134,7 @@ final class CommunityManager {
     
     func fetchCommunityDetails(withId id: Int) async throws -> CommunityDetail {
         
-        let urlString = "\(Secrets.communitiesURL)/\(id)?Fields=Id,Name,Description,Background,Administrators,Members,Issues,JoinRequests,Latitude,Longitude,IsPublic"
+        let urlString = "\(Secrets.communitiesURL)/\(id)?Fields=Id,Name,Description,Background,Administrators,Members,JoinRequests,Latitude,Longitude,IsPublic"
         
         guard let url = URL(string: urlString) else {
             throw URLError(.badURL)

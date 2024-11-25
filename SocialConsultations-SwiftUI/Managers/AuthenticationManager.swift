@@ -51,7 +51,6 @@ final class AuthenticationManager {
                     throw AuthenticationError.invalidCredentials("Invalid login credentials")
                 }
             } catch {
-                print("nie dziaua")
                 throw AuthenticationError.failedToDecodeResponse
             }
         } catch {
