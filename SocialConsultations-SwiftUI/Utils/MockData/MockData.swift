@@ -132,9 +132,34 @@ struct MockData {
         isPublic: true
     )
     
-    //MARK: - Mock Issue
+    //MARK: - Mock IssueDetail
     
-   // static let mockIssue1 = Issue(id: 3)
+    static let mockIssueDetail = IssueDetail(
+        id: 198,
+        title: "Barcelona New Stadium",
+        description: "The stadium in Barcelona requires significant renovations to meet modern standards and enhance the fan experience. Upgrading the infrastructure will not only improve safety and comfort but also allow the venue to host a wider range of international events. These changes are crucial for boosting the club's revenue and maintaining its reputation as a world-class sports destination.",
+        community: nil,
+        communityId: 101,
+        files: [
+            FileData(id: 98, data: Base64examples.example64, description: "Photo", type: 0),
+            FileData(id: 1, data: Base64examples.pdf1_base64, description: "Major_document_1.pdf", type: 1),
+            FileData(id: 2, data: Base64examples.example64_3, description: "Photo1", type: 0),
+            FileData(id: 7, data: Base64examples.pdf2_base64, description: "form_2.pdf", type: 1)
+        ],
+        solutions: [
+            Solution(id: 19, title: "Reduce Maintenance Costs", description: "Implement energy-efficient systems and reduce unnecessary expenditures to lower the stadium's maintenance costs.", issueId: 198),
+            Solution(id: 20, title: "Improve Accessibility", description: "Enhance public transport options and create better parking facilities to improve accessibility to the stadium.", issueId: 198),
+            Solution(id: 21, title: "Increase Capacity", description: "Expand seating capacity to accommodate a growing fan base while maintaining safety and comfort.", issueId: 198)
+        ],
+        issueStatus: .gatheringInformation,
+        comments: [
+            Comment(id: 1),
+            Comment(id: 2)
+        ],
+        createdAt: "2024-11-24T08:00:00Z",
+        currentStateEndDate: "2024-12-31T23:59:59Z"
+    )
+        
     
     //MARK: - Mock JoinRequest
     

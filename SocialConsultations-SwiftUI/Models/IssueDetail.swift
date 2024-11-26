@@ -11,12 +11,12 @@ struct IssueDetail: Codable {
     let id: Int
     let title: String
     let description: String
-    let community: Community?
+    let community: String?
     let communityId: Int
     let files: [FileData]
     let solutions: [Solution]
-    let issueStatus: Int
+    let issueStatus: IssueStatus
     let comments: [Comment]
-    let createdAt: Date
-    let currentStateEndDate: Date
+    let createdAt: String
+    let currentStateEndDate: String
 }

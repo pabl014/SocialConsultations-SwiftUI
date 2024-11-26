@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FileData: Codable {
+struct FileData: Codable, Identifiable {
     let id: Int
     let data: String // base64 string zawsze
     let description: String

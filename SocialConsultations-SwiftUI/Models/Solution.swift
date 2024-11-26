@@ -9,4 +9,7 @@ import Foundation
 
 struct Solution: Codable {
     let id: Int
+    let title: String
+    let description: String
+    let issueId: Int
 }

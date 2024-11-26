@@ -49,7 +49,11 @@ struct IssueCell: View {
                 .padding(.leading, 4)
             }
         }
-        .sectionShadowStyle()
+        .padding()
+        .background(.white)
+        .itemCornerRadius(20)
+        .shadow(radius: 5)
+        .padding()
     }
     
 }

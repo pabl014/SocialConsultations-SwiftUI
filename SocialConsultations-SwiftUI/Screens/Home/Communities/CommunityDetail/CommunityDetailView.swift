@@ -56,7 +56,7 @@ struct CommunityDetailView: View {
                         LazyVStack(spacing: 4) {
                             ForEach(viewModel.issues, id: \.id) { issue in
                                 NavigationLink {
-                                    IssueView(id: issue.id)
+                                    IssueView(id: issue.id, isAdministrator: viewModel.isAdmin())
                                 } label: {
                                     IssueCell(issue: issue)
                                 }
