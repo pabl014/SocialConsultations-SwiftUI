@@ -153,13 +153,13 @@ struct MockData {
         ],
         issueStatus: .gatheringInformation,
         comments: [
-            Comment(id: 1),
-            Comment(id: 2)
+            //            Comment(id: 1),
+            //            Comment(id: 2)
         ],
         createdAt: "2024-11-24T08:00:00Z",
         currentStateEndDate: "2024-12-31T23:59:59Z"
     )
-        
+    
     
     //MARK: - Mock JoinRequest
     
@@ -176,4 +176,34 @@ struct MockData {
         userId: 9012,
         status: .accepted
     )
+    
+    //MARK: - Mock UserForUpvote
+    
+    static let mockUserForUpvote1 = UserForUpvote(
+        id: 178,
+        name: "Didier",
+        surname: "Drogba",
+        email: "drogba@ijgjg.com",
+        birthDate: "jjrgjrgrg",
+        confirmed: true
+    )
+    
+    //MARK: - Mock Comment
+    
+    static let mockComment1 = Comment(
+        id: 789,
+        author: mockUser2,
+        authorId: mockUser2.id,
+        issue: mockIssueForComment1,
+        content: "The new Barcelona stadium is a true marvel of modern architecture. It perfectly combines cutting-edge technology with the club's rich history, creating a space that will inspire players and fans for generations to come. A fitting home for one of the greatest football clubs in the world!",
+        upvotes: [mockUserForUpvote1],
+        createdAt: "2024-12-31T23:59:59Z",
+        issueStatus: .gatheringInformation
+    )
+    
+    //MARK: - Mock IssueForComment
+    
+    static let mockIssueForComment1 = IssueForComment(
+        id: 67, title: "siemson", description: "blabla", communityId: 6, issueStatus: .feedbackCollection, createdAt: "2024-10-31T23:59:59Z", currentStateEndDate: "2024-12-31T23:59:59Z")
+    
 }

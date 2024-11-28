@@ -60,13 +60,17 @@ struct PostCell: View {
             .foregroundColor(.gray)
         }
         .padding()
-        .background(Color(UIColor.secondarySystemBackground))
+        //.background(Color(UIColor.secondarySystemBackground))
+        .background(Color.white)
         .itemCornerRadius(20)
-        .shadow(color: Color.black.opacity(0.4), radius: 5, x: 5, y: 5)
+        //.shadow(color: Color.black.opacity(0.4), radius: 5, x: 5, y: 5)
+        .shadow(color: Color.black.opacity(0.4), radius: 5)
         .padding()
     }
 }
 
 #Preview {
+    PostCell()
+    PostCell()
     PostCell()
 }

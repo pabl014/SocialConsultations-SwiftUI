@@ -32,24 +32,12 @@ final class UserManager {
         // request.setValue("application/json", forHTTPHeaderField: "Accept")
         request.setValue("application/vnd.socialconsultations.user.full+json", forHTTPHeaderField: "Accept")
         
-        
-        
         let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
             throw URLError(.badServerResponse)
         }
-        
-//        // print JSON data to the console
-//        if let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
-//           let prettyData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted),
-//           let jsonString = String(data: prettyData, encoding: .utf8) {
-//            print("Received JSON data:\n\(jsonString)")
-//        } else {
-//            print("Could not parse JSON data")
-//        }
-        
-        
+
         let user = try JSONDecoder().decode(User.self, from: data)
         //print(user)
         print(authToken)

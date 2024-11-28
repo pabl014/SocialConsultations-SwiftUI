@@ -28,7 +28,7 @@ struct IssueView: View {
                     IssueHeader(issue: issue)
                     
                     NavigationLink {
-                        //JoinRequestsView(joinRequests: loadedCommunity.joinRequests, communityId: loadedCommunity.id)
+                        CommentsView(issueId: id, currentIssueStatus: issue.issueStatus)
                     } label: {
                         HStack {
                             VStack(spacing: 2) {
