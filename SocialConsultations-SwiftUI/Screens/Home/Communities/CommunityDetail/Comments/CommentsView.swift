@@ -16,6 +16,7 @@ struct CommentsView: View {
     
     @State private var isShowingAddCommentSheet = false
     @State private var newCommentText = ""
+    @State private var selectedSortOrder = "Id%20desc"
     
     
     var body: some View {
@@ -43,56 +44,7 @@ struct CommentsView: View {
             }
             
             if currentIssueStatus != .completed {
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            isShowingAddCommentSheet.toggle()
-                        }) {
-                            Image(systemName: "plus")
-                                .font(.system(size: 25))
-                                .foregroundStyle(.white)
-                                .padding()
-                                .background(Color.blue)
-                                .clipShape(Circle())
-                                .shadow(radius: 10)
-                        }
-                        .padding()
-                        .sheet(isPresented: $isShowingAddCommentSheet) {
-                            NavigationStack {
-                                VStack {
-                                    TextEditor(text: $newCommentText)
-                                        .frame(height: 250)
-                                        .padding()
-                                        .itemCornerRadius(20)
-                                    
-                                    Spacer()
-                                }
-                                .navigationBarTitle("New respond", displayMode: .inline)
-                                .toolbar {
-                                    ToolbarItem(placement: .topBarTrailing) {
-                                        Button("Submit") {
-                                            Task {
-                                                await viewModel.addComment(issueID: issueId, content: newCommentText, issueStatus: currentIssueStatus)
-                                                newCommentText = ""
-                                                isShowingAddCommentSheet = false
-                                            }
-                                        }
-                                        .padding()
-                                        .disabled(newCommentText.isEmpty)
-                                    }
-                                    
-                                    ToolbarItem(placement: .topBarLeading) {
-                                        Button("Cancel") {
-                                            isShowingAddCommentSheet = false
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+                addComment
             }
         }
         .onAppear {
@@ -106,6 +58,21 @@ struct CommentsView: View {
                 await viewModel.fetchComments(for: issueId)
             }
         }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Picker("Sort", selection: $selectedSortOrder) {
+                    Text("Newest").tag("Id%20desc")
+                    Text("Oldest").tag("Id%20asc")
+                }
+                .onChange(of: selectedSortOrder) {
+                    Task {
+                        viewModel.sortOrder = selectedSortOrder
+                        await viewModel.fetchComments(for: issueId)
+                    }
+                }
+                .pickerStyle(MenuPickerStyle())
+            }
+        }
     }
     
     
@@ -115,6 +82,63 @@ struct CommentsView: View {
             systemImage: "text.bubble",
             description: Text("Be the first to add a comment.")
         )
+    }
+    
+    var addComment: some View {
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Button(action: {
+                    isShowingAddCommentSheet.toggle()
+                }) {
+                    Image(systemName: "plus")
+                        .font(.system(size: 25))
+                        .foregroundStyle(.white)
+                        .padding()
+                        .background(Color.blue)
+                        .clipShape(Circle())
+                        .shadow(radius: 10)
+                }
+                .padding()
+                .sheet(isPresented: $isShowingAddCommentSheet) {
+                    NavigationStack {
+                        VStack {
+                            TextEditor(text: $newCommentText)
+                                .frame(height: 250)
+                                .padding()
+                                .itemCornerRadius(20)
+                            
+                            Spacer()
+                        }
+                        .navigationBarTitle("New respond", displayMode: .inline)
+                        .toolbar {
+                            ToolbarItem(placement: .topBarTrailing) {
+                                Button("Submit") {
+                                    Task {
+                                        await viewModel.addComment(
+                                            issueID: issueId,
+                                            content: newCommentText,
+                                            issueStatus: currentIssueStatus
+                                        )
+                                        newCommentText = ""
+                                        isShowingAddCommentSheet = false
+                                    }
+                                }
+                                .padding()
+                                .disabled(newCommentText.isEmpty)
+                            }
+                            
+                            ToolbarItem(placement: .topBarLeading) {
+                                Button("Cancel") {
+                                    isShowingAddCommentSheet = false
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

@@ -71,9 +71,9 @@ final class IssueManager {
     }
     
     
-    func fetchComments(issueID: Int) async throws -> [Comment] {
+    func fetchComments(issueID: Int, orderBy: String) async throws -> [Comment] {
         
-        let urlString = "\(Secrets.commentsURL)?issueId=\(issueID)&OrderBy=Id%20desc"
+        let urlString = "\(Secrets.commentsURL)?issueId=\(issueID)&OrderBy=\(orderBy)"
 //        print(urlString)
         guard let url = URL(string: urlString) else {
             throw URLError(.badURL)
@@ -162,10 +162,10 @@ final class IssueManager {
         
         let (_, response) = try await URLSession.shared.data(for: request)
         
-        if let httpResponse = response as? HTTPURLResponse {
-            print("Status code: \(httpResponse.statusCode)")
-        }
-        
+//        if let httpResponse = response as? HTTPURLResponse {
+//            print("Status code: \(httpResponse.statusCode)")
+//        }
+//        
         
         guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
             throw URLError(.badServerResponse)

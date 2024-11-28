@@ -13,6 +13,7 @@ final class CommentsViewModel: ObservableObject {
     @Published var comments: [Comment] = []
     @Published var user: User?
     @Published var isLoading = false
+    @Published var sortOrder: String = "Id%20desc"
     
     func fetchCurrentUser() async {
         do {
@@ -27,7 +28,7 @@ final class CommentsViewModel: ObservableObject {
         isLoading = true
         
         do {
-            self.comments = try await IssueManager.shared.fetchComments(issueID: issueID)
+            self.comments = try await IssueManager.shared.fetchComments(issueID: issueID, orderBy: sortOrder)
         } catch {
             print("Error in fetching comments in commentViewModel: \(error.localizedDescription)")
         }
