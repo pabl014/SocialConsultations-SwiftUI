@@ -70,6 +70,33 @@ final class IssueManager {
         return issue
     }
     
+    func createIssue(from data: IssueForCreationDTO) async throws {
+        
+        let urlString = Secrets.issuesURL
+        
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        
+        guard let authToken else {
+            throw URLError(.userAuthenticationRequired)
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        request.httpBody = try JSONEncoder().encode(data)
+        
+        let (_, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+            throw URLError(.badServerResponse)
+        }
+    }
+    
+    //MARK: - Comments
     
     func fetchComments(issueID: Int, orderBy: String) async throws -> [Comment] {
         

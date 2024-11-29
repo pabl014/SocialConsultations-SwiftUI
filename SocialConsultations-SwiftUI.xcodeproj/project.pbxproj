@@ -99,6 +99,10 @@
 		FEE06C2E2CF922340093BE3F /* CommentsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C2D2CF9222F0093BE3F /* CommentsResponse.swift */; };
 		FEE06C312CF923E70093BE3F /* IssueForComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C302CF923E10093BE3F /* IssueForComment.swift */; };
 		FEE06C332CF933BA0093BE3F /* MembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C322CF933BA0093BE3F /* MembersView.swift */; };
+		FEE06C352CF9EBF60093BE3F /* CreateIssueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C342CF9EBF60093BE3F /* CreateIssueView.swift */; };
+		FEE06C382CF9FFF10093BE3F /* CreateIssueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C372CF9FFE40093BE3F /* CreateIssueViewModel.swift */; };
+		FEE06C3A2CFA568A0093BE3F /* FilePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C392CFA568A0093BE3F /* FilePicker.swift */; };
+		FEE06C3C2CFA5D110093BE3F /* IssueForCreationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C3B2CFA5D110093BE3F /* IssueForCreationDTO.swift */; };
 		FEF735722CE76C5F00213E28 /* AdminRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF735712CE76C5F00213E28 /* AdminRowCell.swift */; };
 		FEF806F22CDE3F9500669E66 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F12CDE3F9500669E66 /* Link.swift */; };
 		FEF806F52CDE3FDC00669E66 /* CommunityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */; };
@@ -213,6 +217,10 @@
 		FEE06C2D2CF9222F0093BE3F /* CommentsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsResponse.swift; sourceTree = "<group>"; };
 		FEE06C302CF923E10093BE3F /* IssueForComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueForComment.swift; sourceTree = "<group>"; };
 		FEE06C322CF933BA0093BE3F /* MembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersView.swift; sourceTree = "<group>"; };
+		FEE06C342CF9EBF60093BE3F /* CreateIssueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIssueView.swift; sourceTree = "<group>"; };
+		FEE06C372CF9FFE40093BE3F /* CreateIssueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIssueViewModel.swift; sourceTree = "<group>"; };
+		FEE06C392CFA568A0093BE3F /* FilePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePicker.swift; sourceTree = "<group>"; };
+		FEE06C3B2CFA5D110093BE3F /* IssueForCreationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueForCreationDTO.swift; sourceTree = "<group>"; };
 		FEF735712CE76C5F00213E28 /* AdminRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRowCell.swift; sourceTree = "<group>"; };
 		FEF806F12CDE3F9500669E66 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityResponse.swift; sourceTree = "<group>"; };
@@ -412,6 +420,7 @@
 				FE63C5F92CE4DB6500197B26 /* CommunityDetailViewModel.swift */,
 				FEF807602CDFE77B00669E66 /* CommunityDetailView.swift */,
 				FEE06C322CF933BA0093BE3F /* MembersView.swift */,
+				FEE06C362CF9FFD40093BE3F /* CreateIssue */,
 				FEF97F4E2CED4BD20090B160 /* JoinRequests */,
 				FEE06BD42CF1426F0093BE3F /* Issues */,
 				FEE06C1F2CF655BE0093BE3F /* Comments */,
@@ -585,6 +594,7 @@
 				FEE06BED2CF4FB4F0093BE3F /* IssueResponse.swift */,
 				FEE06C042CF538070093BE3F /* IssueDetail.swift */,
 				FEE06BEB2CF4F5E70093BE3F /* IssueStatus.swift */,
+				FEE06C3B2CFA5D110093BE3F /* IssueForCreationDTO.swift */,
 			);
 			path = Issue;
 			sourceTree = "<group>";
@@ -641,6 +651,16 @@
 				FED917872CDD10B6008F908F /* LoginRequestBody.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		FEE06C362CF9FFD40093BE3F /* CreateIssue */ = {
+			isa = PBXGroup;
+			children = (
+				FEE06C372CF9FFE40093BE3F /* CreateIssueViewModel.swift */,
+				FEE06C342CF9EBF60093BE3F /* CreateIssueView.swift */,
+				FEE06C392CFA568A0093BE3F /* FilePicker.swift */,
+			);
+			path = CreateIssue;
 			sourceTree = "<group>";
 		};
 		FEF806F32CDE3FA300669E66 /* Community - nieuzywane */ = {
@@ -794,6 +814,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEE06C3C2CFA5D110093BE3F /* IssueForCreationDTO.swift in Sources */,
 				FEE06C212CF6569A0093BE3F /* CommentsView.swift in Sources */,
 				FE5C360F2CBAEB9D00E84CCC /* AuthenticationView.swift in Sources */,
 				FED917922CDD10D2008F908F /* JoinRequests.swift in Sources */,
@@ -806,6 +827,7 @@
 				FE63C5F32CE4C23D00197B26 /* SearchCommunitiesViewModel.swift in Sources */,
 				FEE06BEE2CF4FB540093BE3F /* IssueResponse.swift in Sources */,
 				FEE06C312CF923E70093BE3F /* IssueForComment.swift in Sources */,
+				FEE06C352CF9EBF60093BE3F /* CreateIssueView.swift in Sources */,
 				FE4E4FB92CD003BA00EDA659 /* Secrets.swift in Sources */,
 				FEC79F0E2CBE9ACC00956B15 /* CategoryContext.swift in Sources */,
 				FEE06C332CF933BA0093BE3F /* MembersView.swift in Sources */,
@@ -868,6 +890,7 @@
 				FE5C361C2CBAEB9D00E84CCC /* TabbarView.swift in Sources */,
 				FE5C36272CBAEFA500E84CCC /* View+Ext.swift in Sources */,
 				FED9175D2CDB88E5008F908F /* ForgotPasswordView.swift in Sources */,
+				FEE06C3A2CFA568A0093BE3F /* FilePicker.swift in Sources */,
 				FEF807612CDFE77B00669E66 /* CommunityDetailView.swift in Sources */,
 				FE5C361D2CBAEB9D00E84CCC /* RootView.swift in Sources */,
 				FEF806F52CDE3FDC00669E66 /* CommunityResponse.swift in Sources */,
@@ -889,6 +912,7 @@
 				FEFCFF292CC830C80031119B /* ButtonViewModifiers.swift in Sources */,
 				FEF97F492CECF6630090B160 /* SectionViewModifier.swift in Sources */,
 				FE63C5FA2CE4DB6500197B26 /* CommunityDetailViewModel.swift in Sources */,
+				FEE06C382CF9FFF10093BE3F /* CreateIssueViewModel.swift in Sources */,
 				FEB397052CD234DB00124200 /* Date+Ext.swift in Sources */,
 				FEB397082CD24C0D00124200 /* ActivateAccount.swift in Sources */,
 				FE5C36202CBAEB9D00E84CCC /* ContentView.swift in Sources */,

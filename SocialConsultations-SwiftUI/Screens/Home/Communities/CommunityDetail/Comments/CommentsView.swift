@@ -59,7 +59,7 @@ struct CommentsView: View {
             }
         }
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .topBarTrailing) {
                 Picker("Sort", selection: $selectedSortOrder) {
                     Text("Newest").tag("Id%20desc")
                     Text("Oldest").tag("Id%20asc")

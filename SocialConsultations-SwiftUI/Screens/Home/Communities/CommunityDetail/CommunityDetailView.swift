@@ -13,6 +13,8 @@ struct CommunityDetailView: View {
     
     @StateObject private var viewModel = CommunityDetailViewModel()
     
+    @State private var isShowingCreateIssueView = false
+    
     var body: some View {
         ZStack {
             if viewModel.isLoading {
@@ -87,6 +89,9 @@ struct CommunityDetailView: View {
                 await viewModel.refreshIssues(for: communityID)
             }
         }
+        .sheet(isPresented: $isShowingCreateIssueView) {
+            CreateIssueView(communityId: communityID)
+        }
     }
     
     
@@ -114,14 +119,30 @@ struct CommunityDetailView: View {
     }
     
     var Issues: some View {
-        VStack(alignment: .leading) {
-            Text("Issues")
-                .bold()
-                .font(.title2)
+        
+        HStack {
+            VStack(alignment: .leading) {
+                Text("Issues")
+                    .bold()
+                    .font(.title2)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(.horizontal, 24)
+            .padding(.top, 10)
+            
+            Spacer()
+            
+            if viewModel.isAdmin() {
+                Button {
+                    isShowingCreateIssueView.toggle()
+                } label: {
+                    Image(systemName: "plus")
+                        .font(.title2)
+                }
+                .padding()
+                .padding(.trailing, 24)
+            }
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(.horizontal, 24)
-        .padding(.top, 10)
     }
 }
 
