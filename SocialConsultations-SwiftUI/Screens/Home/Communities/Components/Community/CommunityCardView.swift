@@ -47,7 +47,7 @@ struct CommunityCardView: View {
                         
                         Image(systemName: "person.3.fill")
                             .foregroundColor(.gray)
-                        Text(String(community.members.count)) // Możesz zastąpić to dynamiczną liczbą wiadomości, jeśli jest dostępna w modelu
+                        Text(String(community.members.count))
                             .font(.subheadline)
                             .foregroundColor(.gray)
                     }

@@ -59,6 +59,12 @@ struct IssueCell: View {
 }
 
 #Preview {
-    IssueCell(issue: Issue(id: 5, title: "Barcelona new pavement in city center", description: "Barcelona has introduced a new pavement design in the city center, aimed at enhancing pedestrian safety and accessibility. The project incorporates sustainable materials and innovative patterns to improve aesthetics while reducing environmental impact. This initiative aligns with the city's commitment to modernizing urban infrastructure and promoting eco-friendly urban planning.", issueStatus: .inProgress, createdAt: "2024-11-25T17:19:13.8704545"))
+    IssueCell(issue: Issue(
+        id: 5,
+        title: "Barcelona new pavement in city center",
+        description: "Barcelona has introduced a new pavement design in the city center, aimed at enhancing pedestrian safety and accessibility. The project incorporates sustainable materials and innovative patterns to improve aesthetics while reducing environmental impact. This initiative aligns with the city's commitment to modernizing urban infrastructure and promoting eco-friendly urban planning.",
+        issueStatus: .inProgress,
+        createdAt: "2024-11-25T17:19:13.8704545")
+    )
 }
 

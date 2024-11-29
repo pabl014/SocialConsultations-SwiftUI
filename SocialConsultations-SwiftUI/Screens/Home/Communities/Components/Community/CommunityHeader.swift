@@ -23,15 +23,23 @@ struct CommunityHeader: View {
                 HStack {
                     if let admin = community.administrators.first {
                         
-                        Text("Admin:")
-                            .font(.callout)
-                            .foregroundColor(.secondary)
-                        
-                        Text("\(admin.name) \(admin.surname)")
-                            .font(.callout)
-                            .foregroundColor(.secondary)
+                        NavigationLink(destination: UserProfileView(userId: admin.id)) {
+                            
+                            VStack(alignment: .leading, spacing: 2) {
+                                
+                                Text("\(admin.name) \(admin.surname)")
+                                    .font(.callout)
+                                    .foregroundColor(.secondary)
+                                
+                                Text("Administrator")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                            }
+                        }
                     }
                 }
+                
+                Divider()
                 
                 Text(community.description)
                     .font(.body)

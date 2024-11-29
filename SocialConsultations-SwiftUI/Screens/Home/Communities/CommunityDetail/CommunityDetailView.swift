@@ -21,22 +21,6 @@ struct CommunityDetailView: View {
                 ScrollView(.vertical) {
                     CommunityHeader(community: loadedCommunity)
                     
-                    //                    VStack(alignment: .leading, spacing: 10) {
-                    //
-                    //                        Administrators
-                    //
-                    //                        ScrollView(.horizontal){
-                    //                            HStack(spacing: 20) {
-                    //                                ForEach(loadedCommunity.administrators, id: \.id) { admin in
-                    //                                    AdminRowCell(admin: admin)
-                    //                                }
-                    //                            }
-                    //                            .padding(.horizontal, 24)
-                    //                        }
-                    //                        .frame(maxWidth: .infinity, alignment: .leading)
-                    //                        .scrollIndicators(.hidden)
-                    //                    }
-                    
                     ExpandableMapView(lat: Double(loadedCommunity.latitude), long: Double(loadedCommunity.longitude))
                     
                     if viewModel.isAdmin() {
@@ -44,10 +28,18 @@ struct CommunityDetailView: View {
                             JoinRequestsView(joinRequests: loadedCommunity.joinRequests, communityId: loadedCommunity.id)
                         } label: {
                             Text("See join requests")
-                                .secondaryButtonStyle()
+                                .defaultButtonStyle()
                         }
                     }
                     
+                    if viewModel.isAdmin() || viewModel.isMember() {
+                        NavigationLink {
+                            MembersView(members: loadedCommunity.members)
+                        } label: {
+                            Text("See members")
+                                .defaultButtonStyle()
+                        }
+                    }
                     
                     if viewModel.isMember() || viewModel.isAdmin() {
                         
@@ -71,7 +63,6 @@ struct CommunityDetailView: View {
                             }
                         }
                     }
-                    
                 }
             } else {
                 Text("Community details could not be loaded.")
@@ -122,14 +113,6 @@ struct CommunityDetailView: View {
         }
     }
     
-    //   var Administrators: some View {
-    //        Text("Administrators")
-    //            .font(.title2)
-    //            .bold()
-    //            .padding(.top, 10)
-    //            .padding(.horizontal, 24)
-    //    }
-        
     var Issues: some View {
         VStack(alignment: .leading) {
             Text("Issues")

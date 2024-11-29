@@ -98,6 +98,7 @@
 		FEE06C2B2CF7498E0093BE3F /* CommentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C2A2CF7498E0093BE3F /* CommentRequest.swift */; };
 		FEE06C2E2CF922340093BE3F /* CommentsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C2D2CF9222F0093BE3F /* CommentsResponse.swift */; };
 		FEE06C312CF923E70093BE3F /* IssueForComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C302CF923E10093BE3F /* IssueForComment.swift */; };
+		FEE06C332CF933BA0093BE3F /* MembersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C322CF933BA0093BE3F /* MembersView.swift */; };
 		FEF735722CE76C5F00213E28 /* AdminRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF735712CE76C5F00213E28 /* AdminRowCell.swift */; };
 		FEF806F22CDE3F9500669E66 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F12CDE3F9500669E66 /* Link.swift */; };
 		FEF806F52CDE3FDC00669E66 /* CommunityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */; };
@@ -211,6 +212,7 @@
 		FEE06C2A2CF7498E0093BE3F /* CommentRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentRequest.swift; sourceTree = "<group>"; };
 		FEE06C2D2CF9222F0093BE3F /* CommentsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsResponse.swift; sourceTree = "<group>"; };
 		FEE06C302CF923E10093BE3F /* IssueForComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueForComment.swift; sourceTree = "<group>"; };
+		FEE06C322CF933BA0093BE3F /* MembersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersView.swift; sourceTree = "<group>"; };
 		FEF735712CE76C5F00213E28 /* AdminRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRowCell.swift; sourceTree = "<group>"; };
 		FEF806F12CDE3F9500669E66 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityResponse.swift; sourceTree = "<group>"; };
@@ -409,6 +411,7 @@
 			children = (
 				FE63C5F92CE4DB6500197B26 /* CommunityDetailViewModel.swift */,
 				FEF807602CDFE77B00669E66 /* CommunityDetailView.swift */,
+				FEE06C322CF933BA0093BE3F /* MembersView.swift */,
 				FEF97F4E2CED4BD20090B160 /* JoinRequests */,
 				FEE06BD42CF1426F0093BE3F /* Issues */,
 				FEE06C1F2CF655BE0093BE3F /* Comments */,
@@ -805,6 +808,7 @@
 				FEE06C312CF923E70093BE3F /* IssueForComment.swift in Sources */,
 				FE4E4FB92CD003BA00EDA659 /* Secrets.swift in Sources */,
 				FEC79F0E2CBE9ACC00956B15 /* CategoryContext.swift in Sources */,
+				FEE06C332CF933BA0093BE3F /* MembersView.swift in Sources */,
 				FED9175B2CDB87BE008F908F /* EditProfileSheet.swift in Sources */,
 				FE5C36112CBAEB9D00E84CCC /* SignUpView.swift in Sources */,
 				FEE06BF72CF52A350093BE3F /* CommunityHeader.swift in Sources */,
