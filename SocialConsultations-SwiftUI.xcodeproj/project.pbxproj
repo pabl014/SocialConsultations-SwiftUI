@@ -103,6 +103,9 @@
 		FEE06C382CF9FFF10093BE3F /* CreateIssueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C372CF9FFE40093BE3F /* CreateIssueViewModel.swift */; };
 		FEE06C3A2CFA568A0093BE3F /* FilePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C392CFA568A0093BE3F /* FilePicker.swift */; };
 		FEE06C3C2CFA5D110093BE3F /* IssueForCreationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C3B2CFA5D110093BE3F /* IssueForCreationDTO.swift */; };
+		FEE06C3E2CFA63000093BE3F /* CreateCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C3D2CFA63000093BE3F /* CreateCommunityView.swift */; };
+		FEE06C422CFBB59D0093BE3F /* CreateCommunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C412CFBB59D0093BE3F /* CreateCommunityViewModel.swift */; };
+		FEE06C462CFBBE750093BE3F /* CommunityForCreationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C452CFBBE6C0093BE3F /* CommunityForCreationDTO.swift */; };
 		FEF735722CE76C5F00213E28 /* AdminRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF735712CE76C5F00213E28 /* AdminRowCell.swift */; };
 		FEF806F22CDE3F9500669E66 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F12CDE3F9500669E66 /* Link.swift */; };
 		FEF806F52CDE3FDC00669E66 /* CommunityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */; };
@@ -221,6 +224,9 @@
 		FEE06C372CF9FFE40093BE3F /* CreateIssueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIssueViewModel.swift; sourceTree = "<group>"; };
 		FEE06C392CFA568A0093BE3F /* FilePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePicker.swift; sourceTree = "<group>"; };
 		FEE06C3B2CFA5D110093BE3F /* IssueForCreationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueForCreationDTO.swift; sourceTree = "<group>"; };
+		FEE06C3D2CFA63000093BE3F /* CreateCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommunityView.swift; sourceTree = "<group>"; };
+		FEE06C412CFBB59D0093BE3F /* CreateCommunityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommunityViewModel.swift; sourceTree = "<group>"; };
+		FEE06C452CFBBE6C0093BE3F /* CommunityForCreationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityForCreationDTO.swift; sourceTree = "<group>"; };
 		FEF735712CE76C5F00213E28 /* AdminRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminRowCell.swift; sourceTree = "<group>"; };
 		FEF806F12CDE3F9500669E66 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityResponse.swift; sourceTree = "<group>"; };
@@ -515,6 +521,7 @@
 		FED9178A2CDD10B6008F908F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				FEE06C452CFBBE6C0093BE3F /* CommunityForCreationDTO.swift */,
 				FEE06BCE2CEFEE830093BE3F /* Home */,
 				FEE06BCF2CEFFA110093BE3F /* CommunityDetail */,
 				FEE06BCD2CEFED100093BE3F /* Search */,
@@ -663,6 +670,15 @@
 			path = CreateIssue;
 			sourceTree = "<group>";
 		};
+		FEE06C472CFBCB5F0093BE3F /* CreateCommunity */ = {
+			isa = PBXGroup;
+			children = (
+				FEE06C412CFBB59D0093BE3F /* CreateCommunityViewModel.swift */,
+				FEE06C3D2CFA63000093BE3F /* CreateCommunityView.swift */,
+			);
+			path = CreateCommunity;
+			sourceTree = "<group>";
+		};
 		FEF806F32CDE3FA300669E66 /* Community - nieuzywane */ = {
 			isa = PBXGroup;
 			children = (
@@ -678,6 +694,7 @@
 			children = (
 				FEF807532CDFD30B00669E66 /* CommunitiesViewModel.swift */,
 				FEF807512CDFD2FB00669E66 /* CommunitiesView.swift */,
+				FEE06C472CFBCB5F0093BE3F /* CreateCommunity */,
 				FE63C5EE2CE4BF3500197B26 /* CommunityDetail */,
 				FEF97F472CECF44C0090B160 /* Components */,
 			);
@@ -837,6 +854,7 @@
 				FEAD2DE22CD18167005716D9 /* SignUpViewModel.swift in Sources */,
 				FE63C5F72CE4C9E800197B26 /* CommunityResponseDTO.swift in Sources */,
 				FE5C36132CBAEB9D00E84CCC /* ImageBase64View.swift in Sources */,
+				FEE06C462CFBBE750093BE3F /* CommunityForCreationDTO.swift in Sources */,
 				FED917622CDBA715008F908F /* CheckEmailView.swift in Sources */,
 				FE5C36142CBAEB9D00E84CCC /* ForumView.swift in Sources */,
 				FE5C36152CBAEB9D00E84CCC /* HeaderCardView.swift in Sources */,
@@ -881,6 +899,7 @@
 				FE5C361B2CBAEB9D00E84CCC /* CurrentUserProfileView.swift in Sources */,
 				FEAD2DCF2CD14293005716D9 /* SignInViewModel.swift in Sources */,
 				FEC79F112CBEA64C00956B15 /* PostCell.swift in Sources */,
+				FEE06C3E2CFA63000093BE3F /* CreateCommunityView.swift in Sources */,
 				FEF8075A2CDFD5A000669E66 /* MockData.swift in Sources */,
 				FEE06C292CF661070093BE3F /* UserForUpvote.swift in Sources */,
 				FE19B4AE2CD931ED00FCD3A8 /* UserManager.swift in Sources */,
@@ -911,6 +930,7 @@
 				FEE06BE62CF3C6AD0093BE3F /* ProfileHeaderView.swift in Sources */,
 				FEFCFF292CC830C80031119B /* ButtonViewModifiers.swift in Sources */,
 				FEF97F492CECF6630090B160 /* SectionViewModifier.swift in Sources */,
+				FEE06C422CFBB59D0093BE3F /* CreateCommunityViewModel.swift in Sources */,
 				FE63C5FA2CE4DB6500197B26 /* CommunityDetailViewModel.swift in Sources */,
 				FEE06C382CF9FFF10093BE3F /* CreateIssueViewModel.swift in Sources */,
 				FEB397052CD234DB00124200 /* Date+Ext.swift in Sources */,

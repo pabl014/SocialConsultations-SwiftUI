@@ -11,6 +11,8 @@ struct CommunitiesView: View {
     
     @StateObject private var viewModel = CommunitiesViewModel()
     
+    @State private var isShowingCreateCommunitySheet: Bool = false
+    
     var body: some View {
         ZStack {
             Color(hex: "#F2F2F2")
@@ -72,15 +74,12 @@ struct CommunitiesView: View {
                 Task {
                     await viewModel.loadCommunities()
                 }
-                Task {
-                    await viewModel.loadClosestCommunities()
-                }
             }
         }
         .navigationTitle("Communities")
         .navigationBarTitleDisplayMode(.automatic)
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
+            ToolbarItem(placement: .topBarTrailing) {
                 NavigationLink {
                     AboutProjectView()
                 } label: {
@@ -91,10 +90,25 @@ struct CommunitiesView: View {
                     .font(.subheadline)
                 }
             }
+            
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    isShowingCreateCommunitySheet.toggle()
+                } label: {
+                    HStack {
+                        Image(systemName: "plus")
+                    }
+                    .font(.headline)
+                }
+            }
+        }
+        .sheet(isPresented: $isShowingCreateCommunitySheet) {
+            CreateCommunityView(location: viewModel.lastKnownLocation)
         }
         .onAppear {
             viewModel.initializeLocationServices()
         }
+        
     }
     
     var blankSpace: some View {
