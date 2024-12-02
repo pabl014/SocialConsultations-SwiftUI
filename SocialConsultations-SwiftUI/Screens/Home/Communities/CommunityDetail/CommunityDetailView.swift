@@ -36,10 +36,13 @@ struct CommunityDetailView: View {
                     
                     if viewModel.isAdmin() || viewModel.isMember() {
                         NavigationLink {
-                            MembersView(members: loadedCommunity.members)
+                            MembersView(communityId: loadedCommunity.id, isAdmin: viewModel.isAdmin())
                         } label: {
-                            Text("See members")
-                                .defaultButtonStyle()
+                            HStack(spacing: 2) {
+                                Text("See Members")
+                                Text("(\(loadedCommunity.members.count))")
+                            }
+                            .defaultButtonStyle()
                         }
                     }
                     

@@ -38,6 +38,8 @@
 		FE63C5F52CE4C4DE00197B26 /* CommunityDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63C5F42CE4C4DE00197B26 /* CommunityDTO.swift */; };
 		FE63C5F72CE4C9E800197B26 /* CommunityResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63C5F62CE4C9DA00197B26 /* CommunityResponseDTO.swift */; };
 		FE63C5FA2CE4DB6500197B26 /* CommunityDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE63C5F92CE4DB6500197B26 /* CommunityDetailViewModel.swift */; };
+		FE6712682CFCC61500B0EDE8 /* MembersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712672CFCC61500B0EDE8 /* MembersViewModel.swift */; };
+		FE67126A2CFE0C0600B0EDE8 /* Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712692CFE0C0600B0EDE8 /* Members.swift */; };
 		FE76CD492CBD71830087B7CB /* ConsultationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76CD482CBD71830087B7CB /* ConsultationsView.swift */; };
 		FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */; };
 		FEAD2DC62CD1368A005716D9 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */; };
@@ -158,6 +160,8 @@
 		FE63C5F42CE4C4DE00197B26 /* CommunityDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDTO.swift; sourceTree = "<group>"; };
 		FE63C5F62CE4C9DA00197B26 /* CommunityResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityResponseDTO.swift; sourceTree = "<group>"; };
 		FE63C5F92CE4DB6500197B26 /* CommunityDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityDetailViewModel.swift; sourceTree = "<group>"; };
+		FE6712672CFCC61500B0EDE8 /* MembersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersViewModel.swift; sourceTree = "<group>"; };
+		FE6712692CFE0C0600B0EDE8 /* Members.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Members.swift; sourceTree = "<group>"; };
 		FE76CD482CBD71830087B7CB /* ConsultationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsultationsView.swift; sourceTree = "<group>"; };
 		FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsDetailView.swift; sourceTree = "<group>"; };
 		FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
@@ -425,6 +429,7 @@
 			children = (
 				FE63C5F92CE4DB6500197B26 /* CommunityDetailViewModel.swift */,
 				FEF807602CDFE77B00669E66 /* CommunityDetailView.swift */,
+				FE6712672CFCC61500B0EDE8 /* MembersViewModel.swift */,
 				FEE06C322CF933BA0093BE3F /* MembersView.swift */,
 				FEE06C362CF9FFD40093BE3F /* CreateIssue */,
 				FEF97F4E2CED4BD20090B160 /* JoinRequests */,
@@ -561,6 +566,7 @@
 			children = (
 				FEE06BD22CEFFAA70093BE3F /* CommunityDetailResponse.swift */,
 				FEE06BD02CEFFA1A0093BE3F /* CommunityDetail.swift */,
+				FE6712692CFE0C0600B0EDE8 /* Members.swift */,
 			);
 			path = CommunityDetail;
 			sourceTree = "<group>";
@@ -831,6 +837,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE6712682CFCC61500B0EDE8 /* MembersViewModel.swift in Sources */,
 				FEE06C3C2CFA5D110093BE3F /* IssueForCreationDTO.swift in Sources */,
 				FEE06C212CF6569A0093BE3F /* CommentsView.swift in Sources */,
 				FE5C360F2CBAEB9D00E84CCC /* AuthenticationView.swift in Sources */,
@@ -911,6 +918,7 @@
 				FED9175D2CDB88E5008F908F /* ForgotPasswordView.swift in Sources */,
 				FEE06C3A2CFA568A0093BE3F /* FilePicker.swift in Sources */,
 				FEF807612CDFE77B00669E66 /* CommunityDetailView.swift in Sources */,
+				FE67126A2CFE0C0600B0EDE8 /* Members.swift in Sources */,
 				FE5C361D2CBAEB9D00E84CCC /* RootView.swift in Sources */,
 				FEF806F52CDE3FDC00669E66 /* CommunityResponse.swift in Sources */,
 				FE5C361E2CBAEB9D00E84CCC /* Constants.swift in Sources */,

@@ -9,37 +9,56 @@ import SwiftUI
 
 struct MembersView: View {
     
-    let members: [User]
+    let communityId: Int
+    let isAdmin: Bool
+    
+    @State private var selectedMember: User?
+    @State private var showAlert = false
+    
+    @StateObject private var viewModel = MembersViewModel()
     
     var body: some View {
-        if members.isEmpty {
-            noMembers
-        } else {
-            List(members, id: \.id) { member in
-                
-                NavigationLink(destination: UserProfileView(userId: member.id)) {
-                    VStack(alignment: .leading) {
-                        Text("\(member.name) \(member.surname)")
-                            .font(.headline)
-                            .foregroundColor(.primary)
-                        
-                        Text(member.email)
-                            .font(.subheadline)
-                    }
-                }
+        
+        Group {
+            if viewModel.isLoading {
+                ProgressView("Loading Members...")
+            } else if viewModel.members.isEmpty {
+                noMembers
+            } else {
+                membersList
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    HStack {
-                        Image(systemName: imageName(for: members.count))
-                            .foregroundColor(.gray)
-                        Text(String(members.count))
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                    }
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                HStack {
+                    Image(systemName: imageName(for: viewModel.members.count))
+                        .foregroundColor(.gray)
+                    Text(String(viewModel.members.count))
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
                 }
             }
         }
+        .alert("Confirm Removal", isPresented: $showAlert, actions: {
+            Button("Remove", role: .destructive) {
+                if let member = selectedMember {
+                    Task {
+                        await viewModel.deleteMember(member, communityId: communityId)
+                    }
+                }
+            }
+            Button("Cancel", role: .cancel, action: {})
+        }, message: {
+            if let member = selectedMember {
+                Text("Are you sure you want to remove \(member.name) \(member.surname)?")
+            }
+        })
+        .onAppear {
+            Task {
+                await viewModel.fetchMembers(for: communityId)
+            }
+        }
+        
     }
     
     var noMembers: some View {
@@ -47,6 +66,33 @@ struct MembersView: View {
             "No members",
             systemImage: "person.slash.fill"
         )
+    }
+    
+    var membersList: some View {
+        
+        List(viewModel.members, id: \.id) { member in
+            
+            NavigationLink(destination: UserProfileView(userId: member.id)) {
+                VStack(alignment: .leading) {
+                    Text("\(member.name) \(member.surname)")
+                        .font(.headline)
+                        .foregroundColor(.primary)
+                    
+                    Text(member.email)
+                        .font(.subheadline)
+                }
+            }
+            .contextMenu {
+                if isAdmin {
+                    Button(role: .destructive) {
+                        selectedMember = member
+                        showAlert = true
+                    } label: {
+                        Label("Remove", systemImage: "trash")
+                    }
+                }
+            }
+        }
     }
     
     private func imageName(for count: Int) -> String {
@@ -63,6 +109,6 @@ struct MembersView: View {
 
 #Preview {
     NavigationStack {
-        MembersView(members: [MockData.mockUser1, MockData.mockUser2])
+        MembersView(communityId: 77, isAdmin: true)
     }
 }

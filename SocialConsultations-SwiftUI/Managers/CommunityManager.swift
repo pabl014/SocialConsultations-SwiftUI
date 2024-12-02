@@ -144,6 +144,11 @@ final class CommunityManager {
         request.setValue("application/vnd.socialconsultations.community.full+json", forHTTPHeaderField: "Accept")
         request.httpMethod = "GET"
         
+        #warning("no-cache fetchCommunityDetails")
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
+        request.setValue("no-cache", forHTTPHeaderField: "Pragma")
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        
         let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
@@ -213,6 +218,59 @@ final class CommunityManager {
         guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
             throw URLError(.badServerResponse)
         }
+    }
+    
+    func getMembers(communityId: Int) async throws -> [User] {
+        
+        let urlString = "\(Secrets.communitiesURL)/\(communityId)?Fields=Members"
+        
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        
+        var request = URLRequest(url: url)
+        request.setValue("application/vnd.socialconsultations.community.full+json", forHTTPHeaderField: "Accept")
+        request.httpMethod = "GET"
+        
+        #warning("no-cache getMembers")
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
+        request.setValue("no-cache", forHTTPHeaderField: "Pragma")
+        request.cachePolicy = .reloadIgnoringLocalCacheData
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            throw URLError(.badServerResponse)
+        }
+        
+        let decoder = JSONDecoder()
+        let members = try decoder.decode(Members.self, from: data)
+        
+        return members.members
+    }
+    
+    func removeMember(communityId: Int, userId: Int) async throws {
+        
+        let urlString = "\(Secrets.baseURL)/\(communityId)/members/\(userId)"
+        
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        
+        guard let authToken else {
+            throw URLError(.userAuthenticationRequired)
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
+
+        let (_, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+            throw URLError(.badServerResponse)
+        }   
     }
     
     func createCommunity(from data: CommunityForCreationDTO) async throws {
