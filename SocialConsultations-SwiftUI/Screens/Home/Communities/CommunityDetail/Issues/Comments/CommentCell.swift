@@ -11,8 +11,7 @@ struct CommentCell: View {
     
     let comment: Comment
     let currentUserId: Int
-    let onLike: (Comment) -> Void
-    //let onImageClick: (Int) -> Void
+    let onLike: (Comment) async -> Bool
     
     @State private var isLiked: Bool = false
     
@@ -48,9 +47,15 @@ struct CommentCell: View {
                 Spacer()
                 
                 Button(action: {
-                    if !isLiked {
-                        isLiked = true // Zablokuj ponowne polubienie
-                        onLike(comment) // Wywołanie logiki nadrzędnej
+//                    if !isLiked {
+//                        isLiked = true // Zablokuj ponowne polubienie
+//                        onLike(comment) // Wywołanie logiki nadrzędnej
+//                    }
+                    Task {
+                        let success = await onLike(comment)
+                        if success {
+                            isLiked = true // change to blue color if success
+                        }
                     }
                 }) {
                     HStack {
@@ -93,8 +98,9 @@ struct CommentCell: View {
                 CommentCell(
                     comment: MockData.mockComment1, currentUserId: 4,
                     onLike: { comment in
-                        print("Liked comment with ID: \(comment.id)")
-                    } 
+                        //print("Liked comment with ID: \(comment.id)")
+                        return true
+                    }
                 )
             }
         }

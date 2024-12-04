@@ -33,9 +33,7 @@ struct CommentsView: View {
                                 comment: comment,
                                 currentUserId: viewModel.user?.id ?? -1,
                                 onLike: { likedComment in
-                                    Task {
-                                        await viewModel.upvoteComment(commentId: likedComment.id)
-                                    }
+                                    await viewModel.upvoteComment(commentId: likedComment.id)
                                 }
                             )
                         }
@@ -58,6 +56,13 @@ struct CommentsView: View {
                 await viewModel.fetchComments(for: issueId)
             }
         }
+        .alert(item: $viewModel.errorMessage) { errorMessage in
+            Alert(
+                title: Text("Error"),
+                message: Text(errorMessage.message),
+                dismissButton: .default(Text("OK"))
+            )
+        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Picker("Sort", selection: $selectedSortOrder) {
@@ -73,6 +78,7 @@ struct CommentsView: View {
                 .pickerStyle(MenuPickerStyle())
             }
         }
+        .navigationTitle("Comments")
     }
     
     

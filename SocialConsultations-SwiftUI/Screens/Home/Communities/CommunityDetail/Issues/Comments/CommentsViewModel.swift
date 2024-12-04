@@ -14,6 +14,7 @@ final class CommentsViewModel: ObservableObject {
     @Published var user: User?
     @Published var isLoading = false
     @Published var sortOrder: String = "Id%20desc"
+    @Published var errorMessage: ErrorMessage?
     
     func fetchCurrentUser() async {
         do {
@@ -52,7 +53,7 @@ final class CommentsViewModel: ObservableObject {
         }
     }
     
-    func upvoteComment(commentId: Int) async {
+    func upvoteComment(commentId: Int) async -> Bool {
         do {
             try await IssueManager.shared.upvoteComment(commentId: commentId)
             print("Successfully upvoted comment with ID: \(commentId)")
@@ -67,8 +68,13 @@ final class CommentsViewModel: ObservableObject {
                     confirmed: true
                 ))
             }
+            
+            return true
+            
         } catch {
             print("Failed to upvote comment with ID: \(commentId): \(error.localizedDescription)")
+            errorMessage = ErrorMessage(message: "Failed to like the comment. \n The operation couldn’t be completed.")
+            return false
         }
     }
 }
