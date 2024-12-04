@@ -14,105 +14,101 @@ struct IssueHeader: View {
     
     var body: some View {
         
-        ScrollView {
-            VStack(alignment: .leading, spacing: 4) {
-                VStack(alignment: .leading, spacing: 16) {
-                    Text(issue.title)
-                        .font(.title)
-                        .bold()
-                    Text(issue.description)
-                        .font(.body)
-                    
-                    Text("Created at: \(issue.createdAt.toPrettyDateString(showAge: false))")
-                        .font(.footnote)
-                    
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .sectionShadowStyle()
+        VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: 16) {
+                Text(issue.title)
+                    .font(.title)
+                    .bold()
+                Text(issue.description)
+                    .font(.body)
                 
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Current Status")
-                        .font(.headline)
+                Text("Created at: \(issue.createdAt.toPrettyDateString(showAge: false))")
+                    .font(.footnote)
+                
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .sectionShadowStyle()
+            
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Current Status")
+                    .font(.headline)
+                    .foregroundColor(.secondary)
+                
+                Text("\(issue.issueStatus)")
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.blue)
+                
+                HStack {
+                    Text("Ends on:")
                         .foregroundColor(.secondary)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
                     
-                    Text("\(issue.issueStatus)")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(.blue)
-                    
-                    HStack {
-                        Text("Ends on:")
-                            .foregroundColor(.secondary)
-                            .font(.footnote)
-                            .fontWeight(.semibold)
-                        
-                        Text(issue.currentStateEndDate.toPrettyDateString(showAge: false))
-                            .foregroundColor(.secondary)
-                            .font(.footnote)
-                            .fontWeight(.semibold)
+                    Text(issue.currentStateEndDate.toPrettyDateString(showAge: false))
+                        .foregroundColor(.secondary)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                }
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .sectionShadowStyle()
+            
+            
+            
+            if !imageFiles.isEmpty {
+                
+                Images
+                
+                TabView {
+                    ForEach(imageFiles, id: \.id) { file in
+                        ImageBase64View(base64String: file.data)
+                            .frame(height: 250)
+                            .clipped()
+                            .itemCornerRadius(20)
                     }
                 }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .sectionShadowStyle()
+                .frame(height: 250)
+                .tabViewStyle(PageTabViewStyle())
+                .itemCornerRadius(20)
+                .padding()
+            }
+            
+            if !documentFiles.isEmpty {
                 
+                Documents
                 
-                
-                if !imageFiles.isEmpty {
-                    
-                    Images
-                    
-                    TabView {
-                        ForEach(imageFiles, id: \.id) { file in
-                            ImageBase64View(base64String: file.data)
-                                .frame(height: 250)
-                                .clipped()
-                                .itemCornerRadius(20)
-                        }
-                    }
-                    .frame(height: 250)
-                    .tabViewStyle(PageTabViewStyle())
-                    .itemCornerRadius(20)
-                    .padding()
-                }
-                
-                if !documentFiles.isEmpty {
-                    
-                    Documents
-                    
-                    ScrollView(.horizontal) {
-                        HStack{
-                            ForEach(documentFiles, id: \.id) { file in
-                                
-                                Button {
-                                    selectedFile = file
-                                } label: {
-                                    VStack(spacing: 4) {
-                                        Image(systemName: "text.document.fill")
-                                            .font(.system(size: 60))
-                                            .padding(.top)
-                                        
-                                        Text(file.description)
-                                            .font(.subheadline)
-                                            .lineLimit(2)
-                                            .padding()
-                                    }
-                                    .frame(width: 120, height: 100)
-                                    .sectionShadowStyle()
+                ScrollView(.horizontal) {
+                    HStack(spacing: 2){
+                        ForEach(documentFiles, id: \.id) { file in
+                            
+                            Button {
+                                selectedFile = file
+                            } label: {
+                                VStack(spacing: 2) {
+                                    Image(systemName: "text.document.fill")
+                                        .font(.system(size: 40))
+                                        .padding(.top)
                                     
+                                    Text(file.description)
+                                        .font(.footnote)
+                                        .lineLimit(2)
+                                        .padding()
                                 }
-                                .sheet(item: $selectedFile) { file in
-                                    PdfView(base64String: file.data)
-                                }
+                                .frame(width: 100, height: 70)
+                                .sectionShadowStyle()
+                                
+                            }
+                            .sheet(item: $selectedFile) { file in
+                                PdfView(base64String: file.data)
                             }
                         }
                     }
-                    .scrollIndicators(.hidden)
                 }
-                
-                ExpandableSolutionsView(solutions: issue.solutions)
-                    .padding()
+                .scrollIndicators(.hidden)
             }
         }
+        
     }
     
     private var imageFiles: [FileData] {
@@ -147,7 +143,9 @@ struct IssueHeader: View {
 }
 
 #Preview {
-    IssueHeader(issue: MockData.mockIssueDetail)
+    NavigationStack {
+        IssueHeader(issue: MockData.mockIssueDetail)
+    }
 }
 
 

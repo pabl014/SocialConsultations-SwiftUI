@@ -25,7 +25,32 @@ struct IssueView: View {
             } else if let issue = viewModel.issue {
                 
                 VStack {
-                    IssueHeader(issue: issue)
+                    ScrollView {
+                        IssueHeader(issue: issue)
+                        
+                        NavigationLink {
+                            SolutionsView(issueId: id, currentIssueStatus: issue.issueStatus)
+                        } label: {
+                            VStack {
+                                HStack {
+                                    Text("See Solutions")
+                                        .font(.headline)
+                                    
+                                    Spacer()
+                                    
+                                    Image(systemName: "chevron.right")
+                                        .imageScale(.large)
+                                        .foregroundStyle(.tint)
+                                }
+                                .padding()
+                            }
+                            .background(.white)
+                            .itemCornerRadius(10)
+                            .shadow(radius: 10)
+                            .padding(.horizontal)
+                            .padding(.bottom)
+                        }
+                    }
                     
                     NavigationLink {
                         CommentsView(issueId: id, currentIssueStatus: issue.issueStatus)
@@ -39,17 +64,18 @@ struct IssueView: View {
                             }
                             
                             Image(systemName: "chevron.right")
-                            
-                            
-                            
                         }
                         .defaultButtonStyle()
                     }
                 }
-                
             }
         }
         .onAppear {
+            Task {
+                await viewModel.loadIssueDetails(from: id)
+            }
+        }
+        .refreshable {
             Task {
                 await viewModel.loadIssueDetails(from: id)
             }

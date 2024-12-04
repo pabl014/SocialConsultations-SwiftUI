@@ -7,9 +7,12 @@
 
 import Foundation
 
-struct Solution: Codable {
+struct Solution: Codable, Identifiable {
     let id: Int
     let title: String
     let description: String
+    let files: [FileData]
+    var userVotes: [UserForUpvote]
     let issueId: Int
 }
+

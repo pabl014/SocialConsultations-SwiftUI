@@ -87,14 +87,16 @@ struct CommentCell: View {
 }
 
 #Preview {
-    ScrollView(.vertical) {
-        ForEach(0...5, id: \.self) { _ in
-            CommentCell(
-                comment: MockData.mockComment1, currentUserId: 4,
-                onLike: { comment in
-                    print("Liked comment with ID: \(comment.id)")
-                } 
-            )
+    NavigationStack {
+        ScrollView(.vertical) {
+            ForEach(0...5, id: \.self) { _ in
+                CommentCell(
+                    comment: MockData.mockComment1, currentUserId: 4,
+                    onLike: { comment in
+                        print("Liked comment with ID: \(comment.id)")
+                    } 
+                )
+            }
         }
     }
 }

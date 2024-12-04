@@ -17,5 +17,3 @@ struct Comment: Codable {
     let createdAt: String
     let issueStatus: IssueStatus
 }
-
-

@@ -147,9 +147,17 @@ struct MockData {
             FileData(id: 7, data: Base64examples.pdf2_base64, description: "form_2.pdf", type: 1)
         ],
         solutions: [
-            Solution(id: 19, title: "Reduce Maintenance Costs", description: "Implement energy-efficient systems and reduce unnecessary expenditures to lower the stadium's maintenance costs.", issueId: 198),
-            Solution(id: 20, title: "Improve Accessibility", description: "Enhance public transport options and create better parking facilities to improve accessibility to the stadium.", issueId: 198),
-            Solution(id: 21, title: "Increase Capacity", description: "Expand seating capacity to accommodate a growing fan base while maintaining safety and comfort.", issueId: 198)
+            Solution(id: 19,
+                     title: "Reduce Maintenance Costs",
+                     description: "Implement energy-efficient systems and reduce unnecessary expenditures to lower the stadium's maintenance costs.",
+                     files: [
+                        FileData(id: 987, data: Base64examples.example64_3, description: "Photo_solution_1", type: 0),
+                        FileData(id: 1, data: Base64examples.pdf1_base64, description: "Major_document_1.pdf", type: 1),
+                     ],
+                     userVotes: [],
+                     issueId: 198),
+            Solution(id: 20, title: "Improve Accessibility", description: "Enhance public transport options and create better parking facilities to improve accessibility to the stadium.", files: [], userVotes: [], issueId: 198),
+            Solution(id: 21, title: "Increase Capacity", description: "Expand seating capacity to accommodate a growing fan base while maintaining safety and comfort.", files: [], userVotes: [], issueId: 198)
         ],
         issueStatus: .gatheringInformation,
         comments: [
@@ -206,4 +214,33 @@ struct MockData {
     static let mockIssueForComment1 = IssueForComment(
         id: 67, title: "siemson", description: "blabla", communityId: 6, issueStatus: .feedbackCollection, createdAt: "2024-10-31T23:59:59Z", currentStateEndDate: "2024-12-31T23:59:59Z")
     
+    //MARK: - Mock Solution
+    
+    static let mockSolution1 = Solution(
+        id: 19,
+        title: "Reduce Maintenance Costs",
+        description: "Implement energy-efficient systems and reduce unnecessary expenditures to lower the stadium's maintenance costs.",
+        files: [
+            FileData(id: 987, data: Base64examples.example64_3, description: "Photo_solution_1", type: 0),
+            FileData(id: 1, data: Base64examples.pdf1_base64, description: "Major_document_1.pdf", type: 1),
+            FileData(id: 98, data: Base64examples.example64, description: "Photo", type: 0),
+            FileData(id: 7, data: Base64examples.pdf2_base64, description: "form_2.pdf", type: 1),
+            FileData(id: 7, data: Base64examples.pdf2_base64, description: "form_2.pdf", type: 1),
+            FileData(id: 7, data: Base64examples.pdf2_base64, description: "form_2.pdf", type: 1),
+            FileData(id: 7, data: Base64examples.pdf2_base64, description: "form_2.pdf", type: 1),
+            FileData(id: 7, data: Base64examples.pdf2_base64, description: "form_2.pdf", type: 1)
+        ], userVotes: [],
+        issueId: 198
+    )
+    
+    static let mockSolution2 = Solution(
+        id: 24,
+        title: "Hire Leo Messi",
+        description: "Leo Messi, footballer born in argentina is a world-class player and a great ambassador for the club.",
+        files: [
+            FileData(id: 987, data: Base64examples.example64_3, description: "Photo_solution_1", type: 0),
+            FileData(id: 1, data: Base64examples.pdf1_base64, description: "Major_document_1.pdf", type: 1),
+        ], userVotes: [],
+        issueId: 198
+    )
 }
