@@ -1,20 +1,11 @@
 //
-//  JoinRequests.swift
+//  InviteStatus.swift
 //  SocialConsultations-SwiftUI
 //
-//  Created by Paweł Rudnik on 07/11/2024.
+//  Created by Paweł Rudnik on 05/12/2024.
 //
 
 import Foundation
-
-struct JoinRequest: Codable {
-    let id: Int
-    let user: User?
-    let userId: Int
-    //let community: Community?
-    var status: InviteStatus
-    
-}
 
 enum InviteStatus: Int, Codable, CaseIterable {
     case pending = 0
@@ -29,4 +20,3 @@ enum InviteStatus: Int, Codable, CaseIterable {
         }
     }
 }
-

@@ -14,8 +14,6 @@ struct TabbarView: View {
     var body: some View {
         TabView {
             NavigationStack {
-                // HomeView()
-                //TestHomeView()
                 CommunitiesView()
             }
             .tabItem {
@@ -33,15 +31,6 @@ struct TabbarView: View {
             }
             .tag(1)
             
-//            NavigationStack {
-//                PollsView()
-//            }
-//            .tabItem {
-//                Image(systemName: "chart.pie.fill")
-//                Text("Polls")
-//            }
-//            .tag(2)
-            
             NavigationStack {
                 CurrentUserProfileView(showSignInView: $showSignInView)
             }
@@ -50,7 +39,6 @@ struct TabbarView: View {
                 Text("Profile")
             }
             .tag(2)
-            
         }
     }
 }

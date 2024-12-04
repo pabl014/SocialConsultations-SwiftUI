@@ -37,6 +37,8 @@
 		FE6712712CFF203600B0EDE8 /* SolutionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712702CFF203600B0EDE8 /* SolutionsView.swift */; };
 		FE6712742CFF34B500B0EDE8 /* SolutionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712732CFF34B500B0EDE8 /* SolutionsViewModel.swift */; };
 		FE6712762D00833B00B0EDE8 /* SolutionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712752D00833B00B0EDE8 /* SolutionResponse.swift */; };
+		FE6712782D011D2100B0EDE8 /* GradientTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712772D011D2100B0EDE8 /* GradientTestView.swift */; };
+		FE67127C2D011F6900B0EDE8 /* InviteStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67127B2D011F6900B0EDE8 /* InviteStatus.swift */; };
 		FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */; };
 		FEAD2DC62CD1368A005716D9 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */; };
 		FEAD2DCA2CD13E46005716D9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DC92CD13E3E005716D9 /* Errors.swift */; };
@@ -53,7 +55,6 @@
 		FED9175D2CDB88E5008F908F /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9175C2CDB88E5008F908F /* ForgotPasswordView.swift */; };
 		FED917602CDB893D008F908F /* ForgotPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED9175F2CDB893D008F908F /* ForgotPasswordViewModel.swift */; };
 		FED917622CDBA715008F908F /* CheckEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917612CDBA715008F908F /* CheckEmailView.swift */; };
-		FED9178B2CDD10B6008F908F /* Community.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917842CDD10B6008F908F /* Community.swift */; };
 		FED9178C2CDD10B6008F908F /* FileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917852CDD10B6008F908F /* FileData.swift */; };
 		FED9178D2CDD10B6008F908F /* FileDataForCreationDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917862CDD10B6008F908F /* FileDataForCreationDto.swift */; };
 		FED9178E2CDD10B6008F908F /* LoginRequestBody.swift in Sources */ = {isa = PBXBuildFile; fileRef = FED917872CDD10B6008F908F /* LoginRequestBody.swift */; };
@@ -101,8 +102,6 @@
 		FEE06C3E2CFA63000093BE3F /* CreateCommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C3D2CFA63000093BE3F /* CreateCommunityView.swift */; };
 		FEE06C422CFBB59D0093BE3F /* CreateCommunityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C412CFBB59D0093BE3F /* CreateCommunityViewModel.swift */; };
 		FEE06C462CFBBE750093BE3F /* CommunityForCreationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE06C452CFBBE6C0093BE3F /* CommunityForCreationDTO.swift */; };
-		FEF806F22CDE3F9500669E66 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F12CDE3F9500669E66 /* Link.swift */; };
-		FEF806F52CDE3FDC00669E66 /* CommunityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */; };
 		FEF807522CDFD2FB00669E66 /* CommunitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF807512CDFD2FB00669E66 /* CommunitiesView.swift */; };
 		FEF807542CDFD30B00669E66 /* CommunitiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF807532CDFD30B00669E66 /* CommunitiesViewModel.swift */; };
 		FEF807562CDFD47700669E66 /* CommunityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF807552CDFD47700669E66 /* CommunityCardView.swift */; };
@@ -151,6 +150,8 @@
 		FE6712702CFF203600B0EDE8 /* SolutionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionsView.swift; sourceTree = "<group>"; };
 		FE6712732CFF34B500B0EDE8 /* SolutionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionsViewModel.swift; sourceTree = "<group>"; };
 		FE6712752D00833B00B0EDE8 /* SolutionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionResponse.swift; sourceTree = "<group>"; };
+		FE6712772D011D2100B0EDE8 /* GradientTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTestView.swift; sourceTree = "<group>"; };
+		FE67127B2D011F6900B0EDE8 /* InviteStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteStatus.swift; sourceTree = "<group>"; };
 		FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsDetailView.swift; sourceTree = "<group>"; };
 		FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		FEAD2DC92CD13E3E005716D9 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
@@ -168,7 +169,6 @@
 		FED9175C2CDB88E5008F908F /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		FED9175F2CDB893D008F908F /* ForgotPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModel.swift; sourceTree = "<group>"; };
 		FED917612CDBA715008F908F /* CheckEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckEmailView.swift; sourceTree = "<group>"; };
-		FED917842CDD10B6008F908F /* Community.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Community.swift; sourceTree = "<group>"; };
 		FED917852CDD10B6008F908F /* FileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileData.swift; sourceTree = "<group>"; };
 		FED917862CDD10B6008F908F /* FileDataForCreationDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDataForCreationDto.swift; sourceTree = "<group>"; };
 		FED917872CDD10B6008F908F /* LoginRequestBody.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequestBody.swift; sourceTree = "<group>"; };
@@ -216,8 +216,6 @@
 		FEE06C3D2CFA63000093BE3F /* CreateCommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommunityView.swift; sourceTree = "<group>"; };
 		FEE06C412CFBB59D0093BE3F /* CreateCommunityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCommunityViewModel.swift; sourceTree = "<group>"; };
 		FEE06C452CFBBE6C0093BE3F /* CommunityForCreationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityForCreationDTO.swift; sourceTree = "<group>"; };
-		FEF806F12CDE3F9500669E66 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
-		FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityResponse.swift; sourceTree = "<group>"; };
 		FEF807512CDFD2FB00669E66 /* CommunitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesView.swift; sourceTree = "<group>"; };
 		FEF807532CDFD30B00669E66 /* CommunitiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunitiesViewModel.swift; sourceTree = "<group>"; };
 		FEF807552CDFD47700669E66 /* CommunityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityCardView.swift; sourceTree = "<group>"; };
@@ -297,6 +295,7 @@
 		FE5C35FE2CBAEB9D00E84CCC /* Polls */ = {
 			isa = PBXGroup;
 			children = (
+				FEC79F0D2CBE9AC600956B15 /* CategoryContext.swift */,
 				FE5C35FD2CBAEB9D00E84CCC /* PollsView.swift */,
 				FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */,
 			);
@@ -353,7 +352,6 @@
 				FEAD2DD22CD158B6005716D9 /* Errors */,
 				FE4E4FB82CD003BA00EDA659 /* Secrets.swift */,
 				FE5C36072CBAEB9D00E84CCC /* Constants.swift */,
-				FEC79F0D2CBE9AC600956B15 /* CategoryContext.swift */,
 				FE5C36252CBAEF8E00E84CCC /* Extensions */,
 			);
 			path = Utils;
@@ -367,6 +365,7 @@
 				FE5C360C2CBAEB9D00E84CCC /* OnboardingView.swift */,
 				FE5C360A2CBAEB9D00E84CCC /* Assets.xcassets */,
 				FED9178A2CDD10B6008F908F /* Models */,
+				FEE06C282CF660EB0093BE3F /* UserForUpvote.swift */,
 				FE5866562CCFF3A20023A364 /* Managers */,
 				FE5C36062CBAEB9D00E84CCC /* Screens */,
 				FE5C35F42CBAEB9D00E84CCC /* Components */,
@@ -437,6 +436,24 @@
 			path = Solutions;
 			sourceTree = "<group>";
 		};
+		FE6712792D011EDD00B0EDE8 /* FileData */ = {
+			isa = PBXGroup;
+			children = (
+				FED917862CDD10B6008F908F /* FileDataForCreationDto.swift */,
+				FED917852CDD10B6008F908F /* FileData.swift */,
+			);
+			path = FileData;
+			sourceTree = "<group>";
+		};
+		FE67127A2D011F4600B0EDE8 /* JoinRequests */ = {
+			isa = PBXGroup;
+			children = (
+				FED917912CDD10D2008F908F /* JoinRequests.swift */,
+				FE67127B2D011F6900B0EDE8 /* InviteStatus.swift */,
+			);
+			path = JoinRequests;
+			sourceTree = "<group>";
+		};
 		FEAD2DCD2CD1427C005716D9 /* SignInView */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,14 +517,11 @@
 				FEE06BCD2CEFED100093BE3F /* Search */,
 				FEE06BD72CF3AD390093BE3F /* CommunityProfile */,
 				FEE06C2F2CF9225D0093BE3F /* User */,
-				FED917852CDD10B6008F908F /* FileData.swift */,
-				FED917862CDD10B6008F908F /* FileDataForCreationDto.swift */,
-				FEE06C282CF660EB0093BE3F /* UserForUpvote.swift */,
-				FED917912CDD10D2008F908F /* JoinRequests.swift */,
+				FE6712792D011EDD00B0EDE8 /* FileData */,
+				FE67127A2D011F4600B0EDE8 /* JoinRequests */,
 				FEE06C032CF537D60093BE3F /* Issue */,
 				FEE06C2C2CF921FD0093BE3F /* Comments */,
 				FE6712722CFF341A00B0EDE8 /* Solutions */,
-				FEF806F32CDE3FA300669E66 /* Community - nieuzywane */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -656,16 +670,6 @@
 			path = CreateCommunity;
 			sourceTree = "<group>";
 		};
-		FEF806F32CDE3FA300669E66 /* Community - nieuzywane */ = {
-			isa = PBXGroup;
-			children = (
-				FEF806F42CDE3FDC00669E66 /* CommunityResponse.swift */,
-				FED917842CDD10B6008F908F /* Community.swift */,
-				FEF806F12CDE3F9500669E66 /* Link.swift */,
-			);
-			path = "Community - nieuzywane";
-			sourceTree = "<group>";
-		};
 		FEF807502CDFD2D500669E66 /* Communities */ = {
 			isa = PBXGroup;
 			children = (
@@ -684,6 +688,7 @@
 				FE5C35FE2CBAEB9D00E84CCC /* Polls */,
 				FEF807622CDFECDE00669E66 /* Base64examples.swift */,
 				FEF807592CDFD5A000669E66 /* MockData.swift */,
+				FE6712772D011D2100B0EDE8 /* GradientTestView.swift */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -803,7 +808,6 @@
 				FE5C360F2CBAEB9D00E84CCC /* AuthenticationView.swift in Sources */,
 				FED917922CDD10D2008F908F /* JoinRequests.swift in Sources */,
 				FE5C36102CBAEB9D00E84CCC /* SignInView.swift in Sources */,
-				FEF806F22CDE3F9500669E66 /* Link.swift in Sources */,
 				FEAD2DD12CD1540C005716D9 /* String+Ext.swift in Sources */,
 				FE63C5F52CE4C4DE00197B26 /* CommunityDTO.swift in Sources */,
 				FE63C5F32CE4C23D00197B26 /* SearchCommunitiesViewModel.swift in Sources */,
@@ -822,11 +826,11 @@
 				FEE06C462CFBBE750093BE3F /* CommunityForCreationDTO.swift in Sources */,
 				FED917622CDBA715008F908F /* CheckEmailView.swift in Sources */,
 				FEAD2DD62CD168F3005716D9 /* SettingsViewModel.swift in Sources */,
-				FED9178B2CDD10B6008F908F /* Community.swift in Sources */,
 				FEF8075E2CDFD96D00669E66 /* CommunityCellView.swift in Sources */,
 				FED917962CDD1308008F908F /* CommunityManager.swift in Sources */,
 				FEE06BD92CF3AD560093BE3F /* CommunityProfile.swift in Sources */,
 				FED9178C2CDD10B6008F908F /* FileData.swift in Sources */,
+				FE67127C2D011F6900B0EDE8 /* InviteStatus.swift in Sources */,
 				FED9178D2CDD10B6008F908F /* FileDataForCreationDto.swift in Sources */,
 				FED9178E2CDD10B6008F908F /* LoginRequestBody.swift in Sources */,
 				FEE06BE42CF3C3E50093BE3F /* CommunityCategoryContext.swift in Sources */,
@@ -857,6 +861,7 @@
 				FEF97F4B2CED352F0090B160 /* UserProfileView.swift in Sources */,
 				FE5C361B2CBAEB9D00E84CCC /* CurrentUserProfileView.swift in Sources */,
 				FEAD2DCF2CD14293005716D9 /* SignInViewModel.swift in Sources */,
+				FE6712782D011D2100B0EDE8 /* GradientTestView.swift in Sources */,
 				FEE06C3E2CFA63000093BE3F /* CreateCommunityView.swift in Sources */,
 				FEF8075A2CDFD5A000669E66 /* MockData.swift in Sources */,
 				FEE06C292CF661070093BE3F /* UserForUpvote.swift in Sources */,
@@ -871,7 +876,6 @@
 				FEF807612CDFE77B00669E66 /* CommunityDetailView.swift in Sources */,
 				FE67126A2CFE0C0600B0EDE8 /* Members.swift in Sources */,
 				FE5C361D2CBAEB9D00E84CCC /* RootView.swift in Sources */,
-				FEF806F52CDE3FDC00669E66 /* CommunityResponse.swift in Sources */,
 				FE5C361E2CBAEB9D00E84CCC /* Constants.swift in Sources */,
 				FEAD2DCA2CD13E46005716D9 /* Errors.swift in Sources */,
 				FE6712742CFF34B500B0EDE8 /* SolutionsViewModel.swift in Sources */,

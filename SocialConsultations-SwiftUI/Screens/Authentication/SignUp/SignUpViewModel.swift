@@ -33,8 +33,6 @@ final class SignUpViewModel: ObservableObject {
         do {
             try await AuthenticationManager.shared.createUser(from: newUser)
             isSignUpSuccessful = true
-            // clearTextFields()
-            
         } catch {
             errorMessage = ErrorMessage(message: error.localizedDescription)
         }
@@ -85,17 +83,6 @@ final class SignUpViewModel: ObservableObject {
         errorMessage = nil
         return true
     }
-    
-//    private func clearTextFields() {
-//         email = ""
-//         name = ""
-//         surname = ""
-//         password = ""
-//         confirmPassword = ""
-//         birthDate = Date()
-//    }
-    
-    
     
     //MARK: - Do testowania offline:
     

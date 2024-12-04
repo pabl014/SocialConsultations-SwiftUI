@@ -41,7 +41,7 @@ final class CommunitiesViewModel: NSObject, ObservableObject {
         isLoading = true
         
         do {
-            let communitiesBlock = try await CommunityManager.shared.fetchCommunities(pageNumber: currentPage, pageSize: 3)
+            let communitiesBlock = try await CommunityManager.shared.fetchCommunities(pageNumber: currentPage, pageSize: 10)
             self.communities.append(contentsOf: communitiesBlock)
             canLoadMorePages = !communitiesBlock.isEmpty
             if canLoadMorePages {

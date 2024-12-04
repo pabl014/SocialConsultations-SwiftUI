@@ -24,7 +24,7 @@ struct AuthenticationView: View {
                     .frame(width: 200, height: 200)
                     .foregroundStyle(.blue)
                 
-                Text("Social Consultations")
+                Text("Dialogue Bridge")
                     .font(.title)
                     .bold()
                     .padding(.bottom, 50)
