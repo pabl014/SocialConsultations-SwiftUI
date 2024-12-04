@@ -13,12 +13,8 @@ struct CreateIssueView: View {
     let communityId: Int
     
     @Environment(\.dismiss) private var dismiss
-    @StateObject private var viewModel: CreateIssueViewModel
+    @StateObject private var viewModel = CreateIssueViewModel()
     
-    init(communityId: Int) {
-        self.communityId = communityId
-        _viewModel = StateObject(wrappedValue: CreateIssueViewModel(communityId: communityId))
-    }
     
     @State private var isShowingFilePicker: Bool = false
     
@@ -99,7 +95,7 @@ struct CreateIssueView: View {
                         } else {
                             Button("Submit Issue") {
                                 Task {
-                                    await viewModel.createIssue()
+                                    await viewModel.createIssue(for: communityId)
                                     dismiss()
                                 }
                             }

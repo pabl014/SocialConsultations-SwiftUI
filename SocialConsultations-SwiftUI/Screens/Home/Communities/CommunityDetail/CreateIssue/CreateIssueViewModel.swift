@@ -23,11 +23,6 @@ final class CreateIssueViewModel: ObservableObject {
     
     @Published var isSubmitting: Bool = false
     
-    let communityId: Int
-    
-    init(communityId: Int) {
-        self.communityId = communityId
-    }
     
     func addUniqueFiles(from urls: [URL]) {
         
@@ -50,7 +45,7 @@ final class CreateIssueViewModel: ObservableObject {
         }
     }
     
-    func prepareIssueData() async throws -> IssueForCreationDTO {
+    func prepareIssueData(for communityId: Int) async throws -> IssueForCreationDTO {
         
         // Add images
         let imagesData = try images.map { image -> FileDataForCreationDto in
@@ -84,12 +79,12 @@ final class CreateIssueViewModel: ObservableObject {
         )
     }
     
-    func createIssue() async {
+    func createIssue(for communityId: Int) async {
         
         isSubmitting = true
         
         do {
-            let issueData = try await prepareIssueData()
+            let issueData = try await prepareIssueData(for: communityId)
             try await IssueManager.shared.createIssue(from: issueData)
         } catch {
             print("Error submitting issue: \(error.localizedDescription)")
