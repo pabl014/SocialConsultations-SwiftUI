@@ -19,7 +19,7 @@ struct SolutionsView: View {
             if viewModel.isLoading {
                 ProgressView("Loading solutions...")
             } else if viewModel.solutions.isEmpty {
-                
+                noSolutions
             } else {
                 ScrollView {
                     
@@ -94,7 +94,7 @@ struct SolutionsView: View {
         ContentUnavailableView(
             "No solutions",
             systemImage: "xmark",
-            description: Text("Solutions will be added by admin in the future")
+            description: Text("Solutions will be added by admin \n in the future")
         )
     }
 }
