@@ -1,19 +1,18 @@
 //
-//  CreateIssueView.swift
+//  AddSolutionSheet.swift
 //  SocialConsultations-SwiftUI
 //
-//  Created by Paweł Rudnik on 29/11/2024.
+//  Created by Paweł Rudnik on 06/12/2024.
 //
 
 import SwiftUI
 import PhotosUI
 
-struct CreateIssueView: View {
+struct AddSolutionSheet: View {
     
-    let communityId: Int
+    @Environment(\.dismiss) var dismiss
     
-    @Environment(\.dismiss) private var dismiss
-    @StateObject private var viewModel = CreateIssueViewModel()
+    @ObservedObject var viewModel: IssueViewModel
     
     @State private var selectedPhotos: [PhotosPickerItem] = []
     @State private var isShowingFilePicker: Bool = false
@@ -22,7 +21,7 @@ struct CreateIssueView: View {
         
         NavigationStack {
             Form {
-                Section(header: Text("Issue Title")) {
+                Section(header: Text("Title")) {
                     TextField("Enter title", text: $viewModel.title)
                 }
                 
@@ -39,7 +38,7 @@ struct CreateIssueView: View {
                         HStack {
                             Image(systemName: "photo")
                             Text("Select Photos")
-                        }
+                         }
                     }
                     .onChange(of: selectedPhotos) {
                         Task {
@@ -78,24 +77,14 @@ struct CreateIssueView: View {
                     }
                 }
                 
-                Section(header: Text("Current State End Date")) {
-                    DatePicker(
-                        "Select date:",
-                        selection: $viewModel.currentStateEndDate,
-                        in: Date()...,
-                        displayedComponents: .date
-                    )
-                    .padding(.horizontal, 20)
-                }
-                
                 Section {
                     VStack {
                         if viewModel.isSubmitting {
                             ProgressView("Submitting...")
                         } else {
-                            Button("Submit Issue") {
+                            Button("Submit Solution") {
                                 Task {
-                                    await viewModel.createIssue(for: communityId)
+                                    await viewModel.createSolution()
                                     dismiss()
                                 }
                             }
@@ -118,11 +107,5 @@ struct CreateIssueView: View {
                 }
             }
         }
-    }
-}
-
-#Preview {
-    NavigationStack {
-        CreateIssueView(communityId: 89)
     }
 }

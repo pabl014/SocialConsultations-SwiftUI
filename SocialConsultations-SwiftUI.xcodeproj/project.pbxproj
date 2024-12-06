@@ -41,6 +41,8 @@
 		FE67127C2D011F6900B0EDE8 /* InviteStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67127B2D011F6900B0EDE8 /* InviteStatus.swift */; };
 		FE67127E2D03305700B0EDE8 /* EditIssueStatusSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67127D2D03304500B0EDE8 /* EditIssueStatusSheet.swift */; };
 		FE6712822D03421700B0EDE8 /* EditIssueDescriptionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712812D03421700B0EDE8 /* EditIssueDescriptionSheet.swift */; };
+		FE6712842D034F0A00B0EDE8 /* AddSolutionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712832D034F0A00B0EDE8 /* AddSolutionSheet.swift */; };
+		FE6712862D03574600B0EDE8 /* SolutionForCreationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712852D03573B00B0EDE8 /* SolutionForCreationDTO.swift */; };
 		FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */; };
 		FEAD2DC62CD1368A005716D9 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */; };
 		FEAD2DCA2CD13E46005716D9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DC92CD13E3E005716D9 /* Errors.swift */; };
@@ -155,6 +157,8 @@
 		FE67127B2D011F6900B0EDE8 /* InviteStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteStatus.swift; sourceTree = "<group>"; };
 		FE67127D2D03304500B0EDE8 /* EditIssueStatusSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIssueStatusSheet.swift; sourceTree = "<group>"; };
 		FE6712812D03421700B0EDE8 /* EditIssueDescriptionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIssueDescriptionSheet.swift; sourceTree = "<group>"; };
+		FE6712832D034F0A00B0EDE8 /* AddSolutionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSolutionSheet.swift; sourceTree = "<group>"; };
+		FE6712852D03573B00B0EDE8 /* SolutionForCreationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionForCreationDTO.swift; sourceTree = "<group>"; };
 		FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsDetailView.swift; sourceTree = "<group>"; };
 		FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		FEAD2DC92CD13E3E005716D9 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
@@ -432,6 +436,7 @@
 		FE6712722CFF341A00B0EDE8 /* Solutions */ = {
 			isa = PBXGroup;
 			children = (
+				FE6712852D03573B00B0EDE8 /* SolutionForCreationDTO.swift */,
 				FE6712752D00833B00B0EDE8 /* SolutionResponse.swift */,
 				FEE06C082CF5385F0093BE3F /* Solution.swift */,
 			);
@@ -565,6 +570,7 @@
 				FEE06C0E2CF5E3570093BE3F /* IssueHeader.swift */,
 				FE67127D2D03304500B0EDE8 /* EditIssueStatusSheet.swift */,
 				FE6712812D03421700B0EDE8 /* EditIssueDescriptionSheet.swift */,
+				FE6712832D034F0A00B0EDE8 /* AddSolutionSheet.swift */,
 				FE67126C2CFE326400B0EDE8 /* Solutions */,
 				FEE06C1F2CF655BE0093BE3F /* Comments */,
 			);
@@ -659,7 +665,6 @@
 			children = (
 				FEE06C372CF9FFE40093BE3F /* CreateIssueViewModel.swift */,
 				FEE06C342CF9EBF60093BE3F /* CreateIssueView.swift */,
-				FEE06C392CFA568A0093BE3F /* FilePicker.swift */,
 			);
 			path = CreateIssue;
 			sourceTree = "<group>";
@@ -707,6 +712,7 @@
 		FEF97F472CECF44C0090B160 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FEE06C392CFA568A0093BE3F /* FilePicker.swift */,
 				FEE06C0D2CF5E33F0093BE3F /* Issue */,
 				FEE06C0C2CF5E3230093BE3F /* Community */,
 			);
@@ -845,6 +851,7 @@
 				FEE06C072CF538370093BE3F /* Comment.swift in Sources */,
 				FEE06C0F2CF5E3570093BE3F /* IssueHeader.swift in Sources */,
 				FEF97F502CED4BF00090B160 /* JoinRequestsViewModel.swift in Sources */,
+				FE6712842D034F0A00B0EDE8 /* AddSolutionSheet.swift in Sources */,
 				FEE06C092CF5386A0093BE3F /* Solution.swift in Sources */,
 				FEF97F412CE8DC7D0090B160 /* ExpandableMapView.swift in Sources */,
 				FEE06BD12CEFFA230093BE3F /* CommunityDetail.swift in Sources */,
@@ -889,6 +896,7 @@
 				FEE06BE82CF4F3880093BE3F /* IssueCell.swift in Sources */,
 				FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */,
 				FEF807562CDFD47700669E66 /* CommunityCardView.swift in Sources */,
+				FE6712862D03574600B0EDE8 /* SolutionForCreationDTO.swift in Sources */,
 				FED917942CDD12AD008F908F /* Issue.swift in Sources */,
 				FEE06C0B2CF53C0C0093BE3F /* IssueViewModel.swift in Sources */,
 				FEF97F452CECF3BD0090B160 /* AboutProjectView.swift in Sources */,

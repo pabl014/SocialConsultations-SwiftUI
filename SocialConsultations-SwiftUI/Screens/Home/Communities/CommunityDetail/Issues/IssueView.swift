@@ -16,6 +16,7 @@ struct IssueView: View {
     
     @State private var isShowingEditStatusSheet = false
     @State private var isShowingEditDescriptionSheet = false
+    @State private var isSHowingAddSolutionSheet = false
     
     var body: some View {
         ZStack {
@@ -115,7 +116,7 @@ struct IssueView: View {
                     
                     if viewModel.isGatheringInformation() {
                         Button(action: {
-                            // Akcja do dodania rozwiązania
+                            isSHowingAddSolutionSheet.toggle()
                             print("Add solution tapped")
                         }) {
                             VStack {
@@ -135,6 +136,9 @@ struct IssueView: View {
         .sheet(isPresented: $isShowingEditDescriptionSheet) {
             EditIssueDescriptionSheet(viewModel: viewModel)
                 .presentationDetents([.fraction(0.6)])
+        }
+        .sheet(isPresented: $isSHowingAddSolutionSheet) {
+            AddSolutionSheet(viewModel: viewModel)
         }
     }
 }

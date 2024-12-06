@@ -14,7 +14,6 @@ final class CreateIssueViewModel: ObservableObject {
     @Published var title: String = ""
     @Published var description: String = ""
     
-    @Published var selectedPhotos: [PhotosPickerItem] = []
     @Published var images: [UIImage] = []
     
     @Published var selectedFiles: [URL] = []
