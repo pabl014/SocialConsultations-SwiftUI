@@ -40,6 +40,7 @@
 		FE6712782D011D2100B0EDE8 /* GradientTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712772D011D2100B0EDE8 /* GradientTestView.swift */; };
 		FE67127C2D011F6900B0EDE8 /* InviteStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67127B2D011F6900B0EDE8 /* InviteStatus.swift */; };
 		FE67127E2D03305700B0EDE8 /* EditIssueStatusSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67127D2D03304500B0EDE8 /* EditIssueStatusSheet.swift */; };
+		FE6712822D03421700B0EDE8 /* EditIssueDescriptionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712812D03421700B0EDE8 /* EditIssueDescriptionSheet.swift */; };
 		FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */; };
 		FEAD2DC62CD1368A005716D9 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */; };
 		FEAD2DCA2CD13E46005716D9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DC92CD13E3E005716D9 /* Errors.swift */; };
@@ -153,6 +154,7 @@
 		FE6712772D011D2100B0EDE8 /* GradientTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTestView.swift; sourceTree = "<group>"; };
 		FE67127B2D011F6900B0EDE8 /* InviteStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteStatus.swift; sourceTree = "<group>"; };
 		FE67127D2D03304500B0EDE8 /* EditIssueStatusSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIssueStatusSheet.swift; sourceTree = "<group>"; };
+		FE6712812D03421700B0EDE8 /* EditIssueDescriptionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIssueDescriptionSheet.swift; sourceTree = "<group>"; };
 		FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsDetailView.swift; sourceTree = "<group>"; };
 		FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		FEAD2DC92CD13E3E005716D9 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 				FEE06BD52CF142A40093BE3F /* IssueView.swift */,
 				FEE06C0E2CF5E3570093BE3F /* IssueHeader.swift */,
 				FE67127D2D03304500B0EDE8 /* EditIssueStatusSheet.swift */,
+				FE6712812D03421700B0EDE8 /* EditIssueDescriptionSheet.swift */,
 				FE67126C2CFE326400B0EDE8 /* Solutions */,
 				FEE06C1F2CF655BE0093BE3F /* Comments */,
 			);
@@ -855,6 +858,7 @@
 				FE5C361A2CBAEB9D00E84CCC /* SettingsView.swift in Sources */,
 				FEE06BEA2CF4F4530093BE3F /* IssueManager.swift in Sources */,
 				FEE06C2E2CF922340093BE3F /* CommentsResponse.swift in Sources */,
+				FE6712822D03421700B0EDE8 /* EditIssueDescriptionSheet.swift in Sources */,
 				FEE06C272CF65EFD0093BE3F /* CommentCell.swift in Sources */,
 				FEE06BD62CF142A40093BE3F /* IssueView.swift in Sources */,
 				FEF97F4B2CED352F0090B160 /* UserProfileView.swift in Sources */,

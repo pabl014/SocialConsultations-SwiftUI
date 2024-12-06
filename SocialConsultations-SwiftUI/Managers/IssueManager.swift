@@ -141,6 +141,43 @@ final class IssueManager {
         }
     }
     
+    func updateIssueDescription(issueId: Int, description: String) async throws {
+        
+        let urlString = "\(Secrets.issuesURL)/\(issueId)"
+        
+        guard let authToken else {
+            throw URLError(.userAuthenticationRequired)
+        }
+        
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PATCH"
+        request.setValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json-patch+json", forHTTPHeaderField: "Content-Type")
+        
+        var body: [[String: Any]] = []
+        
+        body.append([
+            "operationType": 0,
+            "path": "/description",
+            "op": "replace",
+            "from": "",
+            "value": description
+        ])
+        
+        let jsonData = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
+        request.httpBody = jsonData
+        
+        let (_, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else { // tutaj oczekiwany 204
+            throw URLError(.badServerResponse)
+        }
+    }
+    
     //MARK: - Solutions
     
     func fetchSolutions(issueID: Int) async throws -> [Solution] {

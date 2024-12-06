@@ -28,15 +28,16 @@ final class IssueViewModel: ObservableObject {
         isLoading = false
     }
     
-    func showAddSolution() -> Bool {
+    func isGatheringInformation() -> Bool {
         
         guard let issue else { return false }
+        return issue.issueStatus == .gatheringInformation
+    }
+    
+    func isCompleted() -> Bool {
         
-        if issue.issueStatus != .gatheringInformation {
-            return false
-        } else {
-            return true
-        }
+        guard let issue else { return false }
+        return issue.issueStatus == .completed
     }
     
     func updateIssueStatus(newStatus: Int, completionDate: Date) async {
@@ -57,6 +58,20 @@ final class IssueViewModel: ObservableObject {
             )
         } catch {
             print("failed to update issue status in viewModel")
+        }
+    }
+    
+    func updateDescription(description: String) async {
+        
+        guard let issue else { return }
+        
+        do {
+            try await IssueManager.shared.updateIssueDescription(
+                issueId: issue.id,
+                description: description
+            )
+        } catch {
+            print("failed to update issue description in viewModel")
         }
     }
 }

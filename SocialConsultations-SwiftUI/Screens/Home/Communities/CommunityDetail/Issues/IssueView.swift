@@ -15,6 +15,7 @@ struct IssueView: View {
     @StateObject private var viewModel = IssueViewModel()
     
     @State private var isShowingEditStatusSheet = false
+    @State private var isShowingEditDescriptionSheet = false
     
     var body: some View {
         ZStack {
@@ -85,29 +86,34 @@ struct IssueView: View {
         .toolbar {
             if isAdministrator {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    Button(action: {
-                        isShowingEditStatusSheet.toggle()
-                        print("Edit status tapped")
-                    }) {
-                        VStack {
-                            Image(systemName: "pencil.circle")
-                            Text("Status")
-                                .font(.footnote)
+                    
+                    if !viewModel.isCompleted() {
+                        Button(action: {
+                            isShowingEditStatusSheet.toggle()
+                            print("Edit status tapped")
+                        }) {
+                            VStack {
+                                Image(systemName: "pencil.circle")
+                                Text("Status")
+                                    .font(.footnote)
+                            }
+                        }
+                    }
+
+                    if !viewModel.isCompleted() {
+                        Button(action: {
+                            isShowingEditDescriptionSheet.toggle()
+                            print("Edit description tapped")
+                        }) {
+                            VStack {
+                                Image(systemName: "text.insert")
+                                Text("Description")
+                                    .font(.footnote)
+                            }
                         }
                     }
                     
-                    Button(action: {
-                        // Akcja do edycji opisu
-                        print("Edit description tapped")
-                    }) {
-                        VStack {
-                            Image(systemName: "text.insert")
-                            Text("Description")
-                                .font(.footnote)
-                        }
-                    }
-                    
-                    if viewModel.showAddSolution() {
+                    if viewModel.isGatheringInformation() {
                         Button(action: {
                             // Akcja do dodania rozwiązania
                             print("Add solution tapped")
@@ -124,6 +130,10 @@ struct IssueView: View {
         }
         .sheet(isPresented: $isShowingEditStatusSheet) {
             EditIssueStatusSheet(viewModel: viewModel)
+                .presentationDetents([.fraction(0.6)])
+        }
+        .sheet(isPresented: $isShowingEditDescriptionSheet) {
+            EditIssueDescriptionSheet(viewModel: viewModel)
                 .presentationDetents([.fraction(0.6)])
         }
     }
