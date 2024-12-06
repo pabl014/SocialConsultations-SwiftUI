@@ -96,6 +96,51 @@ final class IssueManager {
         }
     }
     
+    func updateIssueStatus(issueId: Int, newStatus: Int, completionDate: String) async throws {
+        
+        let urlString = "\(Secrets.issuesURL)/\(issueId)"
+        
+        guard let authToken else {
+            throw URLError(.userAuthenticationRequired)
+        }
+        
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "PATCH"
+        request.setValue("Bearer \(authToken)", forHTTPHeaderField: "Authorization")
+        request.setValue("application/json-patch+json", forHTTPHeaderField: "Content-Type")
+        
+        var body: [[String: Any]] = []
+        
+        body.append([
+            "operationType": 0,
+            "path": "/issueStatus",
+            "op": "replace",
+            "from": "",
+            "value": "\(newStatus)"
+        ])
+        
+        body.append([
+            "operationType": 0,
+            "path": "/currentStateEndDate",
+            "op": "replace",
+            "from": "",
+            "value": completionDate
+        ])
+        
+        let jsonData = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
+        request.httpBody = jsonData
+        
+        let (_, response) = try await URLSession.shared.data(for: request)
+        
+        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else { // tutaj oczekiwany 204
+            throw URLError(.badServerResponse)
+        }
+    }
+    
     //MARK: - Solutions
     
     func fetchSolutions(issueID: Int) async throws -> [Solution] {

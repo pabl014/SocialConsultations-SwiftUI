@@ -14,6 +14,8 @@ struct IssueView: View {
     
     @StateObject private var viewModel = IssueViewModel()
     
+    @State private var isShowingEditStatusSheet = false
+    
     var body: some View {
         ZStack {
             
@@ -79,6 +81,50 @@ struct IssueView: View {
             Task {
                 await viewModel.loadIssueDetails(from: id)
             }
+        }
+        .toolbar {
+            if isAdministrator {
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        isShowingEditStatusSheet.toggle()
+                        print("Edit status tapped")
+                    }) {
+                        VStack {
+                            Image(systemName: "pencil.circle")
+                            Text("Status")
+                                .font(.footnote)
+                        }
+                    }
+                    
+                    Button(action: {
+                        // Akcja do edycji opisu
+                        print("Edit description tapped")
+                    }) {
+                        VStack {
+                            Image(systemName: "text.insert")
+                            Text("Description")
+                                .font(.footnote)
+                        }
+                    }
+                    
+                    if viewModel.showAddSolution() {
+                        Button(action: {
+                            // Akcja do dodania rozwiązania
+                            print("Add solution tapped")
+                        }) {
+                            VStack {
+                                Image(systemName: "plus.circle")
+                                Text("Solution")
+                                    .font(.footnote)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .sheet(isPresented: $isShowingEditStatusSheet) {
+            EditIssueStatusSheet(viewModel: viewModel)
+                .presentationDetents([.fraction(0.6)])
         }
     }
 }

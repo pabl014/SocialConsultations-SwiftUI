@@ -27,4 +27,38 @@ final class IssueViewModel: ObservableObject {
         
         isLoading = false
     }
+    
+    func showAddSolution() -> Bool {
+        
+        guard let issue else { return false }
+        
+        if issue.issueStatus != .gatheringInformation {
+            return false
+        } else {
+            return true
+        }
+    }
+    
+    func updateIssueStatus(newStatus: Int, completionDate: Date) async {
+        
+        guard let issue else { return }
+        
+        let dateString = completionDate.toISO8601String()
+        
+        guard dateString != issue.currentStateEndDate else {
+            return
+        }
+        
+        do {
+            try await IssueManager.shared.updateIssueStatus(
+                issueId: issue.id,
+                newStatus: newStatus,
+                completionDate: dateString
+            )
+        } catch {
+            print("failed to update issue status in viewModel")
+        }
+    }
 }
+
+        

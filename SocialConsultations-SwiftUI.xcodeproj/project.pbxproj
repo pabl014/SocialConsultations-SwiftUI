@@ -39,6 +39,7 @@
 		FE6712762D00833B00B0EDE8 /* SolutionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712752D00833B00B0EDE8 /* SolutionResponse.swift */; };
 		FE6712782D011D2100B0EDE8 /* GradientTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE6712772D011D2100B0EDE8 /* GradientTestView.swift */; };
 		FE67127C2D011F6900B0EDE8 /* InviteStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67127B2D011F6900B0EDE8 /* InviteStatus.swift */; };
+		FE67127E2D03305700B0EDE8 /* EditIssueStatusSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE67127D2D03304500B0EDE8 /* EditIssueStatusSheet.swift */; };
 		FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */; };
 		FEAD2DC62CD1368A005716D9 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */; };
 		FEAD2DCA2CD13E46005716D9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEAD2DC92CD13E3E005716D9 /* Errors.swift */; };
@@ -152,6 +153,7 @@
 		FE6712752D00833B00B0EDE8 /* SolutionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionResponse.swift; sourceTree = "<group>"; };
 		FE6712772D011D2100B0EDE8 /* GradientTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientTestView.swift; sourceTree = "<group>"; };
 		FE67127B2D011F6900B0EDE8 /* InviteStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InviteStatus.swift; sourceTree = "<group>"; };
+		FE67127D2D03304500B0EDE8 /* EditIssueStatusSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIssueStatusSheet.swift; sourceTree = "<group>"; };
 		FE76CD4A2CBD87B60087B7CB /* PollsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollsDetailView.swift; sourceTree = "<group>"; };
 		FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		FEAD2DC92CD13E3E005716D9 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
@@ -560,6 +562,8 @@
 			children = (
 				FEE06C0A2CF53C0C0093BE3F /* IssueViewModel.swift */,
 				FEE06BD52CF142A40093BE3F /* IssueView.swift */,
+				FEE06C0E2CF5E3570093BE3F /* IssueHeader.swift */,
+				FE67127D2D03304500B0EDE8 /* EditIssueStatusSheet.swift */,
 				FE67126C2CFE326400B0EDE8 /* Solutions */,
 				FEE06C1F2CF655BE0093BE3F /* Comments */,
 			);
@@ -614,7 +618,6 @@
 		FEE06C0D2CF5E33F0093BE3F /* Issue */ = {
 			isa = PBXGroup;
 			children = (
-				FEE06C0E2CF5E3570093BE3F /* IssueHeader.swift */,
 				FEE06C1D2CF646B50093BE3F /* ExpandableSolutionsView.swift */,
 			);
 			path = Issue;
@@ -881,6 +884,7 @@
 				FE6712742CFF34B500B0EDE8 /* SolutionsViewModel.swift in Sources */,
 				FEE06BE22CF3C38F0093BE3F /* CommunityListView.swift in Sources */,
 				FEE06BEC2CF4F5EB0093BE3F /* IssueStatus.swift in Sources */,
+				FE67127E2D03305700B0EDE8 /* EditIssueStatusSheet.swift in Sources */,
 				FEF97F4D2CED3CAA0090B160 /* JoinRequestsView.swift in Sources */,
 				FEE06BE82CF4F3880093BE3F /* IssueCell.swift in Sources */,
 				FE76CD4B2CBD87B60087B7CB /* PollsDetailView.swift in Sources */,

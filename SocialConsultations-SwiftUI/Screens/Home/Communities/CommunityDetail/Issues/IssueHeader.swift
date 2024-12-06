@@ -30,6 +30,7 @@ struct IssueHeader: View {
             .sectionShadowStyle()
             
             VStack(alignment: .leading, spacing: 8) {
+                
                 Text("Current Status")
                     .font(.headline)
                     .foregroundColor(.secondary)
