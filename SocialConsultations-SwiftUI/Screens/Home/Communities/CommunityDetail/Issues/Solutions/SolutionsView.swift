@@ -59,9 +59,9 @@ struct SolutionsView: View {
                                 solution: solution,
                                 currentUserId: viewModel.user?.id ?? -1,
                                 currentIssueStatus: currentIssueStatus,
+                                isHighestVoted: viewModel.isHighestVotedAndAfterVoting(solution, issueStatus: currentIssueStatus),
                                 onVote: { votedSolution in
-//                                    print("Voted for solution with id: \(votedSolution.id)")
-                                        await viewModel.voteForSolution(solutionId: votedSolution.id)
+                                    await viewModel.voteForSolution(solutionId: votedSolution.id)
                                 }
                             )
                         }

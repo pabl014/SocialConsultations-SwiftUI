@@ -12,6 +12,7 @@ struct SolutionCell: View {
     let solution: Solution
     let currentUserId: Int
     let currentIssueStatus: IssueStatus
+    let isHighestVoted: Bool
     let onVote: (Solution) async -> Bool
     
     @State private var selectedFile: FileData? = nil
@@ -93,8 +94,7 @@ struct SolutionCell: View {
                                             .padding(.horizontal, 8)
                                     }
                                     .frame(width: 80, height: 80)
-                                    .background(GradientTestGold())
-                                    //.background(Color.white)
+                                    .background(cellBackgroundColor)
                                     .itemCornerRadius(8)
                                 }
                                 .sheet(item: $selectedFile) { file in
@@ -111,8 +111,7 @@ struct SolutionCell: View {
             .padding(.top)
         }
         .padding()
-        //.background(Color.white)
-        .background(GradientTestGold())
+        .background(cellBackgroundColor)
         .itemCornerRadius(20)
         .shadow(color: Color.black.opacity(0.4), radius: 5)
         .padding(.horizontal, 16)
@@ -128,18 +127,46 @@ struct SolutionCell: View {
     private var documentFiles: [FileData] {
         solution.files.filter { $0.type == 1 }
     }
+    
+    
+    private var cellBackgroundColor: some View {
+        Group {
+            if isHighestVoted {
+                GoldAnimatingGradientView()
+            } else {
+                Color.white
+            }
+        }
+    }
 }
 
 #Preview {
-    SolutionCell(
-        solution: MockData.mockSolution1,
-        currentUserId: 101,
-        currentIssueStatus: .voting,
-        onVote: { solution in
-            print("Liked solution with id: \(solution.id)")
-            return true 
+    ScrollView {
+        LazyVStack(spacing: 20) {
+            SolutionCell(
+                solution: MockData.mockSolution1,
+                currentUserId: 101,
+                currentIssueStatus: .inProgress,
+                isHighestVoted: true,
+                onVote: { solution in
+                    print("Liked solution with id: \(solution.id)")
+                    return true
+                }
+            )
+            
+            SolutionCell(
+                solution: MockData.mockSolution1,
+                currentUserId: 101,
+                currentIssueStatus: .gatheringInformation,
+                isHighestVoted: false,
+                onVote: { solution in
+                    print("Liked solution with id: \(solution.id)")
+                    return true
+                }
+            )
         }
-    )
+    }
+    
 }
 
 

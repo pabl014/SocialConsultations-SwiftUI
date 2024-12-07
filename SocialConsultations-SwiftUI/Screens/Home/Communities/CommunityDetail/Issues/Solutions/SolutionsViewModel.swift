@@ -16,6 +16,13 @@ final class SolutionsViewModel: ObservableObject {
     @Published var isLoading: Bool = false
     @Published var errorMessage: ErrorMessage?
     
+    private var maxVotes: Int {
+        solutions.max(by: { $0.userVotes.count < $1.userVotes.count })?.userVotes.count ?? 0
+    }
+    
+    func isHighestVotedAndAfterVoting(_ solution: Solution, issueStatus: IssueStatus) -> Bool {
+        solution.userVotes.count == maxVotes && issueStatus.rawValue > 1
+    }
     
     func fetchCurrentUser() async {
         do {
@@ -32,6 +39,7 @@ final class SolutionsViewModel: ObservableObject {
         do {
             let fetchedSolutions = try await IssueManager.shared.fetchSolutions(issueID: issueId)
             self.solutions = fetchedSolutions
+                .sorted { $0.userVotes.count > $1.userVotes.count }
         } catch {
             print("Error fetching solutions: \(error.localizedDescription)")
         }
