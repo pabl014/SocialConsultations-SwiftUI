@@ -91,7 +91,6 @@ struct IssueView: View {
                     if !viewModel.isCompleted() {
                         Button(action: {
                             isShowingEditStatusSheet.toggle()
-                            print("Edit status tapped")
                         }) {
                             VStack {
                                 Image(systemName: "pencil.circle")
@@ -104,7 +103,6 @@ struct IssueView: View {
                     if !viewModel.isCompleted() {
                         Button(action: {
                             isShowingEditDescriptionSheet.toggle()
-                            print("Edit description tapped")
                         }) {
                             VStack {
                                 Image(systemName: "text.insert")
@@ -117,7 +115,6 @@ struct IssueView: View {
                     if viewModel.isGatheringInformation() {
                         Button(action: {
                             isSHowingAddSolutionSheet.toggle()
-                            print("Add solution tapped")
                         }) {
                             VStack {
                                 Image(systemName: "plus.circle")
@@ -141,10 +138,6 @@ struct IssueView: View {
             AddSolutionSheet(viewModel: viewModel)
         }
     }
-}
-
-#Preview {
-    //IssueView(issue: Issue(id: 56, title: "siema", description: "elson", issueStatus: .inProgress, createdAt: "hghg"))
 }
 
 

@@ -119,18 +119,6 @@ extension CommunitiesViewModel: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-//        guard let location = locations.first else { return }
-//        
-//        let latitude = location.coordinate.latitude
-//        let longitude = location.coordinate.longitude
-//        
-//        lastKnownLocation = location.coordinate
-//        
-//        isLocationSet = true
-//        manager.stopUpdatingLocation()
-//        
-//        print("Latitude: \(latitude), Longitude: \(longitude)")
-        
         guard let location = locations.first else { return }
         
         // Sprawdź, czy różnica jest znacząca (np. > 900 metrów)

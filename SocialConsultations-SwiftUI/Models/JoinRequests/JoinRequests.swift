@@ -12,7 +12,6 @@ struct JoinRequest: Codable {
     let user: User?
     let userId: Int
     var status: InviteStatus
-    
 }
 
 

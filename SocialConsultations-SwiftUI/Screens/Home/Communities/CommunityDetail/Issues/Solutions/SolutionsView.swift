@@ -98,7 +98,3 @@ struct SolutionsView: View {
         )
     }
 }
-
-#Preview {
-    SolutionsView(issueId: MockData.mockSolution2.issueId, currentIssueStatus: .voting)
-}

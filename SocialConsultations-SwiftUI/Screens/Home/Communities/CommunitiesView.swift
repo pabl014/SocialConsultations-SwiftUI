@@ -162,9 +162,3 @@ struct CommunitiesView: View {
         .padding(.horizontal)
     }
 }
-
-#Preview {
-//    NavigationStack {
-//        CommunitiesView()
-//    }
-}

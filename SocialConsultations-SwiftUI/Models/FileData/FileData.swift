@@ -11,5 +11,5 @@ struct FileData: Codable, Identifiable {
     let id: Int
     let data: String // base64 string zawsze
     let description: String
-    let type: Int // 0 -> image, 1-> other
+    let type: Int    // 0 -> image, 1-> other
 }

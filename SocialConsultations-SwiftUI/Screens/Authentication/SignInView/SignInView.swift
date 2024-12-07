@@ -14,7 +14,7 @@ struct SignInView: View {
     
     var body: some View {
         ZStack {
-            Color(hex: Constants.SCWhite)
+            Color(hex: "#F2F2F2")
                 .ignoresSafeArea()
             
             VStack(alignment: .leading, spacing: 16) {

@@ -5,6 +5,8 @@
 //  Created by Paweł Rudnik on 25/11/2024.
 //
 
+import Foundation
+
 enum IssueStatus: Int, Codable, CustomStringConvertible, CaseIterable {
     case gatheringInformation = 0   // commenting, adding files, adding solutions
     case voting = 1                 // commenting, adding files, voting

@@ -91,6 +91,4 @@ final class CreateIssueViewModel: ObservableObject {
         
         isSubmitting = false
     }
-    
-    
 }

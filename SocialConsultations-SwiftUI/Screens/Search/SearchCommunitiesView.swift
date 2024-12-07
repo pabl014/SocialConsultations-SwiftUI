@@ -14,7 +14,6 @@ struct SearchCommunitiesView: View {
     
     var body: some View {
         ZStack {
-            
             Color(hex: "#F2F2F2")
                 .ignoresSafeArea()
             

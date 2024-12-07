@@ -24,9 +24,11 @@ final class SearchCommunitiesViewModel: ObservableObject {
     }
     
     func loadMoreResults(name: String) async {
+        
         guard !isLoadingPage && canLoadMorePages else { return }
         
         isLoadingPage = true
+        
         do {
             let newResults = try await CommunityManager.shared.searchCommunities(withName: name, pageNumber: currentPage, pageSize: 10)
             
@@ -39,6 +41,7 @@ final class SearchCommunitiesViewModel: ObservableObject {
             print("Error loading more results:", error)
             canLoadMorePages = false
         }
+        
         isLoadingPage = false
     }
 }

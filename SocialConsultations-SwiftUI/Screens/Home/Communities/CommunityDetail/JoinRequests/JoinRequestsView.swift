@@ -12,7 +12,6 @@ struct JoinRequestsView: View {
     let joinRequests: [JoinRequest]
     let communityId: Int
     
-    
     @StateObject private var viewModel = JoinRequestsViewModel()
     @State private var selectedStatus: InviteStatus? = .pending
     
@@ -57,8 +56,6 @@ struct JoinRequestsView: View {
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 Picker("Filter", selection: $selectedStatus) {
-                    //                    Text("All")
-                    //                        .tag(nil as InviteStatus?) // Tag for showing all statuses
                     ForEach(InviteStatus.allCases, id: \.self) { status in
                         Text(status.displayName)
                             .tag(status as InviteStatus?) // Tag for individual statuses
@@ -80,7 +77,6 @@ struct JoinRequestsView: View {
         ContentUnavailableView(
             "No join requests",
             systemImage: "xmark"
-            //description: Text("You need to write at least 3 letters to start searching")
         )
     }
 }

@@ -24,6 +24,4 @@ struct UserRequest: Codable {
    "email": "user@example.com",
    "birthDate": "2024-10-30T00:23:59.714Z"
  }
- 
- 
  */

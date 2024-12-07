@@ -47,10 +47,6 @@ struct CommentCell: View {
                 Spacer()
                 
                 Button(action: {
-//                    if !isLiked {
-//                        isLiked = true // Zablokuj ponowne polubienie
-//                        onLike(comment) // Wywołanie logiki nadrzędnej
-//                    }
                     Task {
                         let success = await onLike(comment)
                         if success {
@@ -98,7 +94,6 @@ struct CommentCell: View {
                 CommentCell(
                     comment: MockData.mockComment1, currentUserId: 4,
                     onLike: { comment in
-                        //print("Liked comment with ID: \(comment.id)")
                         return true
                     }
                 )

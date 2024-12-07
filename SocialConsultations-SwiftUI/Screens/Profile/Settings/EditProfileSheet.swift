@@ -16,7 +16,7 @@ struct EditProfileSheet: View {
     @State private var newName: String = ""
     @State private var newSurname: String = ""
     @State private var newBirthDate: Date = Date()
-    @State private var avatarItem: PhotosPickerItem? = nil // Binding for PhotosPickerItem
+    @State private var avatarItem: PhotosPickerItem? = nil 
     @State private var avatarData: Data? = nil // Stores selected image data
     @State private var avatarFileData: FileDataForCreationDto? = nil // Stores FileDataForCreationDto object for avatar on submit
     @State private var newDescription: String = ""

@@ -149,9 +149,3 @@ struct CommunityDetailView: View {
     }
 }
 
-#Preview {
-    NavigationStack {
-        CommunityDetailView(communityID: MockData.mockCommunityDetail.id)
-    }
-}
-
