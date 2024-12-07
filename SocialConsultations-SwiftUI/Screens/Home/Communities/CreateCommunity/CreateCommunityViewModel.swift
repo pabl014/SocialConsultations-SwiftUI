@@ -26,8 +26,6 @@ final class CreateCommunityViewModel: ObservableObject {
     
     @Published var isSubmitting: Bool = false
     
-    @Published var isPublic: Bool = true
-    
     func createCommunity() async {
         
         guard validateInputs() else { return }
@@ -76,8 +74,7 @@ final class CreateCommunityViewModel: ObservableObject {
             avatar: avatarFileData,
             Background: backgroundFileData,
             latitude: latitude,
-            longitude: longitude,
-            isPublic: isPublic
+            longitude: longitude
         )
     }
     

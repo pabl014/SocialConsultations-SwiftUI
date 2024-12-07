@@ -17,5 +17,4 @@ struct CommunityDetail: Codable {
     var joinRequests: [JoinRequest]
     let latitude: Double
     let longitude: Double
-    let isPublic: Bool
 }

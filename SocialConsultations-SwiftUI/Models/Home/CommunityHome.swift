@@ -15,7 +15,6 @@ struct CommunityHome: Codable, Equatable {
     let members: [User]
     let latitude: Double
     let longitude: Double
-    let isPublic: Bool
     
     static func == (lhs: CommunityHome, rhs: CommunityHome) -> Bool {
         return lhs.id == rhs.id

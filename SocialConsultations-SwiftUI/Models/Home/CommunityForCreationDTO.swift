@@ -14,5 +14,4 @@ struct CommunityForCreationDTO: Codable {
     let Background: FileDataForCreationDto
     let latitude: Double
     let longitude: Double
-    let isPublic: Bool
 }

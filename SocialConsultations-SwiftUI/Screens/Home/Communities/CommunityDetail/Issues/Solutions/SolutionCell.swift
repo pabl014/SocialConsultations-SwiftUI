@@ -93,7 +93,8 @@ struct SolutionCell: View {
                                             .padding(.horizontal, 8)
                                     }
                                     .frame(width: 80, height: 80)
-                                    .background(Color.white)
+                                    .background(GradientTestGold())
+                                    //.background(Color.white)
                                     .itemCornerRadius(8)
                                 }
                                 .sheet(item: $selectedFile) { file in
@@ -110,7 +111,8 @@ struct SolutionCell: View {
             .padding(.top)
         }
         .padding()
-        .background(Color.white)
+        //.background(Color.white)
+        .background(GradientTestGold())
         .itemCornerRadius(20)
         .shadow(color: Color.black.opacity(0.4), radius: 5)
         .padding(.horizontal, 16)

@@ -14,5 +14,4 @@ struct CommunityProfile: Codable {
     let avatar: FileData?
     let members: [User]
     let administrators: [User]
-    let isPublic: Bool
 }

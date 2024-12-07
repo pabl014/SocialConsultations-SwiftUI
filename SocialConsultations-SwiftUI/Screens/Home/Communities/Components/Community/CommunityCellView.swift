@@ -33,16 +33,6 @@ struct CommunityCellView: View {
                             .font(.system(size: 20, weight: .semibold))
                             .lineLimit(2)
                         
-                        if community.isPublic {
-                            Text("Public")
-                                .font(.subheadline)
-                                .foregroundColor(.green)
-                        } else {
-                            Text("Private")
-                                .font(.subheadline)
-                                .foregroundColor(.red)
-                        }
-                        
                         VStack {
                             HStack {
                                 Image(systemName: "person.3.fill")

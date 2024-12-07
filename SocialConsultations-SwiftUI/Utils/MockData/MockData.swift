@@ -77,8 +77,7 @@ struct MockData {
         avatar: mockImage2,
         members: [mockUser1, mockUser2, mockUser3],
         latitude: 52.237049,
-        longitude: 21.017523,
-        isPublic: true
+        longitude: 21.017523
     )
     
     static let mockCommunityHome2 = CommunityHome(
@@ -88,8 +87,7 @@ struct MockData {
         avatar: mockImage1,
         members: [mockUser1, mockUser2],
         latitude: 53.1333,
-        longitude: 23.16433,
-        isPublic: false
+        longitude: 23.16433
     )
     
     static let mockCommunityHome3 = CommunityHome(
@@ -99,8 +97,7 @@ struct MockData {
         avatar: nil,
         members: [mockUser1, mockUser2],
         latitude: 37.7749,
-        longitude: -122.4194,
-        isPublic: true
+        longitude: -122.4194
     )
     
     //MARK: - Mock CommunityProfile
@@ -111,8 +108,7 @@ struct MockData {
         description: "A community for technology lovers to share and learn.",
         avatar: mockImage2,
         members: [mockUser1, mockUser2, mockUser3],
-        administrators: [mockUser1],
-        isPublic: true
+        administrators: [mockUser1]
     )
     
     
@@ -128,8 +124,7 @@ struct MockData {
         //issues: [mockIssue1],
         joinRequests: [mockJoinRequest1, mockJoinRequest2],
         latitude: 53.1305,
-        longitude: 23.1799,
-        isPublic: true
+        longitude: 23.1799
     )
     
     //MARK: - Mock IssueDetail

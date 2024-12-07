@@ -33,18 +33,6 @@ struct CommunityCardView: View {
                     }
                     
                     HStack {
-                        if community.isPublic {
-                            Text("Public")
-                                .font(.subheadline)
-                                .foregroundColor(.green)
-                        } else {
-                            Text("Private")
-                                .font(.subheadline)
-                                .foregroundColor(.red)
-                        }
-                        
-                        Spacer()
-                        
                         Image(systemName: "person.3.fill")
                             .foregroundColor(.gray)
                         Text(String(community.members.count))

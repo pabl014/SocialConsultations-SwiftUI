@@ -127,12 +127,6 @@ struct CreateCommunityView: View {
                     }
                 }
                 
-                Section(header: Text("Privacy")) {
-                    Toggle(isOn: $viewModel.isPublic) {
-                        Text("is Public: ")
-                    }
-                }
-                
                 Section {
                     VStack {
                         if viewModel.isSubmitting {

@@ -18,7 +18,7 @@ final class CommunityManager {
     
     func fetchCommunities(pageNumber: Int, pageSize: Int) async throws -> [CommunityHome] {
         
-        let urlString = "\(Secrets.communitiesURL)?PageNumber=\(pageNumber)&PageSize=\(pageSize)&Fields=Id,Name,Description,Avatar,Members,Latitude,Longitude,IsPublic"
+        let urlString = "\(Secrets.communitiesURL)?PageNumber=\(pageNumber)&PageSize=\(pageSize)&Fields=Id,Name,Description,Avatar,Members,Latitude,Longitude"
         
         guard let url = URL(string: urlString) else {
             throw URLError(.badURL)
@@ -42,7 +42,7 @@ final class CommunityManager {
     
     func fetchCommunities() async throws -> [CommunityProfile] {
         
-        let urlString = "\(Secrets.communitiesURL)?Fields=Id,Name,Description,Avatar,Members,Administrators,IsPublic"
+        let urlString = "\(Secrets.communitiesURL)?Fields=Id,Name,Description,Avatar,Members,Administrators"
         
         guard let url = URL(string: urlString) else {
             throw URLError(.badURL)
@@ -84,7 +84,7 @@ final class CommunityManager {
             "longitude": longitude,
             "latitude": latitude,
             "maxDistanceKm": 100,
-            "fields": ["Id", "Name", "Description", "Avatar", "Members", "Latitude", "Longitude", "IsPublic"]
+            "fields": ["Id", "Name", "Description", "Avatar", "Members", "Latitude", "Longitude"]
         ]
         
         do {
@@ -134,7 +134,7 @@ final class CommunityManager {
     
     func fetchCommunityDetails(withId id: Int) async throws -> CommunityDetail {
         
-        let urlString = "\(Secrets.communitiesURL)/\(id)?Fields=Id,Name,Description,Background,Administrators,Members,JoinRequests,Latitude,Longitude,IsPublic"
+        let urlString = "\(Secrets.communitiesURL)/\(id)?Fields=Id,Name,Description,Background,Administrators,Members,JoinRequests,Latitude,Longitude"
         
         guard let url = URL(string: urlString) else {
             throw URLError(.badURL)
