@@ -43,7 +43,8 @@ struct MockData {
         email: "josemourinho@jkhabhdyg.com",
         confirmed: true,
         confirmationCode: "eaaisjgi12",
-        avatar: mockImage1
+        avatar: mockImage1,
+        description: nil
     )
     
     static let mockUser2 = User(
@@ -54,7 +55,8 @@ struct MockData {
         email: "drogba@ijgjg.com",
         confirmed: true,
         confirmationCode: "jjrgjrgrg",
-        avatar: mockImage2
+        avatar: mockImage2,
+        description: "A resident of Barcelona for over 30 years, devoted husband, and proud father of three. As a seasoned lawyer, I’m passionate about contributing to meaningful discussions and shaping decisions that impact our community. Believer in the power of dialogue, transparency, and collaboration to drive positive change."
     )
     
     static let mockUser3 = User(
@@ -65,7 +67,8 @@ struct MockData {
         email: "franek123@lgkrkgr.com",
         confirmed: true,
         confirmationCode: "pzpolejk246",
-        avatar: mockImage3
+        avatar: mockImage3,
+        description: "Living in Barcelona for over three decades, I’m a dedicated husband and father of three. With a background in law, I’m committed to fostering constructive conversations and empowering communities to create lasting change. Passionate about building a better future through collaboration and shared responsibility."
     )
     
     //MARK: - Mock CommunityHome

@@ -47,7 +47,6 @@ struct CurrentUserProfileView: View {
                             }
                         }
                         .padding(.horizontal)
-                        .padding(.top, 32)
                     }
                 }
             }

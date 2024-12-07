@@ -68,7 +68,7 @@ final class UserManager {
     }
     
     
-    func updateUserProfile(userId: Int, name: String?, surname: String?, birthDate: String?, avatar: FileDataForCreationDto?) async throws {
+    func updateUserProfile(userId: Int, name: String?, surname: String?, birthDate: String?, avatar: FileDataForCreationDto?, description: String?) async throws {
         
         let endpoint = Secrets.usersURL + "/" + String(userId)
         
@@ -131,34 +131,25 @@ final class UserManager {
             ])
         }
         
+        if let description = description {
+            body.append([
+                "operationType": 0,
+                "path": "/description",
+                "op": "replace",
+                "from": "",
+                "value": description
+            ])
+        }
+        
         let jsonData = try JSONSerialization.data(withJSONObject: body, options: .prettyPrinted)
-        
-//        if let jsonString = String(data: jsonData, encoding: .utf8) {
-//            print("Wysyłane body: \(jsonString)")
-//        }
-        
-        request.httpBody = jsonData// konwersja obiektu body (tablica slownikow [String:Any] na dane JSON, ktore moga byc uzyte do httpBody
-        
-//        print("PROBA ZMIANY")
+
+        request.httpBody = jsonData
         
         let (_, response) = try await URLSession.shared.data(for: request)
         
-//        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-//            print("bad response")
-//            throw URLError(.badServerResponse)
-//        }
-        if let httpResponse = response as? HTTPURLResponse {
-            print("Response status code: \(httpResponse.statusCode)")
-            guard httpResponse.statusCode == 200 else {
-                print("Bad response with status code: \(httpResponse.statusCode)")
-                throw URLError(.badServerResponse)
-            }
-        } else {
-            print("Failed to cast response to HTTPURLResponse")
+        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
             throw URLError(.badServerResponse)
         }
-        
-//        print("Kod statusu odpowiedzi: \(httpResponse.statusCode)")
     }
     
 }

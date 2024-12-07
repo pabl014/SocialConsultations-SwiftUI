@@ -19,6 +19,7 @@ struct EditProfileSheet: View {
     @State private var avatarItem: PhotosPickerItem? = nil // Binding for PhotosPickerItem
     @State private var avatarData: Data? = nil // Stores selected image data
     @State private var avatarFileData: FileDataForCreationDto? = nil // Stores FileDataForCreationDto object for avatar on submit
+    @State private var newDescription: String = ""
     
     var body: some View {
         NavigationStack {
@@ -29,6 +30,12 @@ struct EditProfileSheet: View {
                     TextField("New surname...", text: $newSurname)
                         .autocorrectionDisabled()
                     DatePicker("Birthday", selection: $newBirthDate, in: ...Date(), displayedComponents: .date)
+                }
+                
+                Section(header: Text("Description")) {
+                    TextEditor(text: $newDescription)
+                        .autocorrectionDisabled()
+                        .frame(height: 150)
                 }
                 
                 Section(header: Text("Avatar")) {
@@ -89,7 +96,7 @@ struct EditProfileSheet: View {
                     Button("Save") {
                         Task {
                             let birthDateString = newBirthDate.toISO8601String()
-                            await viewModel.updateUserProfileIfNeeded(name: newName, surname: newSurname, birthDate: birthDateString, avatar: avatarFileData)
+                            await viewModel.updateUserProfileIfNeeded(name: newName, surname: newSurname, birthDate: birthDateString, avatar: avatarFileData, description: newDescription)
                         }
                         dismiss()
                     }
@@ -104,6 +111,10 @@ struct EditProfileSheet: View {
             if let avatar = viewModel.user?.avatar {
                 // Decode `FileData` from API
                 avatarData = Data(base64Encoded: avatar.data)
+            }
+            
+            if let description = viewModel.user?.description {
+                newDescription = description
             }
         }
         .alert(item: $viewModel.errorMessage) { errorMessage in

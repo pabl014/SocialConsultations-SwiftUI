@@ -28,6 +28,14 @@ struct ProfileHeaderView : View {
                 .font(.subheadline)
             Text(user?.birthDate.toPrettyDateString(showAge: true) ?? "no birth date")
                 .font(.subheadline)
+            
+            if let description = user?.description {
+                Text(description)
+                    .font(.body)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 25)
+                    .padding(.vertical, 10)
+            }
         }
         
     }
@@ -35,5 +43,5 @@ struct ProfileHeaderView : View {
 
 
 #Preview {
-    ProfileHeaderView(user: MockData.mockUser1)
+    ProfileHeaderView(user: MockData.mockUser2)
 }

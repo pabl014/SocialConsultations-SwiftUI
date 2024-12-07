@@ -69,7 +69,7 @@ struct UserProfileView_Preview: View {
         VStack {
             ScrollView {
                 
-                ProfileHeaderView(user: MockData.mockUser1)
+                ProfileHeaderView(user: MockData.mockUser2)
                 
                 VStack(spacing: 16) {
                     
@@ -89,7 +89,6 @@ struct UserProfileView_Preview: View {
                     }
                 }
                 .padding(.horizontal)
-                .padding(.top, 32)
             }
         }
         .navigationTitle("User Profile")
