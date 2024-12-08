@@ -14,6 +14,7 @@ struct MembersView: View {
     
     @State private var selectedMember: User?
     @State private var showAlert = false
+    @State private var searchText = ""
     
     @StateObject private var viewModel = MembersViewModel()
     
@@ -28,6 +29,7 @@ struct MembersView: View {
                 membersList
             }
         }
+        .searchable(text: $searchText, prompt: "Search by surname")
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {
                 HStack {
@@ -70,7 +72,7 @@ struct MembersView: View {
     
     var membersList: some View {
         
-        List(viewModel.members, id: \.id) { member in
+        List(filteredMembers, id: \.id) { member in
             
             NavigationLink(destination: UserProfileView(userId: member.id)) {
                 VStack(alignment: .leading) {
@@ -103,6 +105,14 @@ struct MembersView: View {
             return "person.2.fill"
         default:
             return "person.3.fill"
+        }
+    }
+    
+    private var filteredMembers: [User] {
+        if searchText.isEmpty {
+            return viewModel.members
+        } else {
+            return viewModel.members.filter { $0.surname.lowercased().hasPrefix(searchText.lowercased()) }
         }
     }
 }
