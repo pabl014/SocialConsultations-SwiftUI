@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-@MainActor
 final class SignInViewModel: ObservableObject {
     
     @Published var email: String = ""
@@ -51,6 +50,10 @@ final class SignInViewModel: ObservableObject {
         
         errorMessage = nil
         return true
+    }
+    
+    func testValidateInputs() -> Bool {
+        return ValidateInputs()
     }
 }
 
