@@ -117,6 +117,16 @@
 		FEFCFF2C2CC839030031119B /* TextFieldViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FE8B7DD22D0B40DC00094958 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FECD35362CB568DA002A0777 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FECD353D2CB568DA002A0777;
+			remoteInfo = "SocialConsultations-SwiftUI";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		FE19B4AD2CD931ED00FCD3A8 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		FE19B4B12CD933F100FCD3A8 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
@@ -151,6 +161,7 @@
 		FE6712832D034F0A00B0EDE8 /* AddSolutionSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSolutionSheet.swift; sourceTree = "<group>"; };
 		FE6712852D03573B00B0EDE8 /* SolutionForCreationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolutionForCreationDTO.swift; sourceTree = "<group>"; };
 		FE6712872D04FE8900B0EDE8 /* GoldAnimatingGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldAnimatingGradientView.swift; sourceTree = "<group>"; };
+		FE8B7DCE2D0B40DC00094958 /* SocialConsultations-SwiftUI_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SocialConsultations-SwiftUI_Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEAD2DC52CD1368A005716D9 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
 		FEAD2DC92CD13E3E005716D9 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		FEAD2DCE2CD14293005716D9 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
@@ -229,7 +240,22 @@
 		FEFCFF2B2CC839030031119B /* TextFieldViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldViewModifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		FE8B7DCF2D0B40DC00094958 /* SocialConsultations-SwiftUI_Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "SocialConsultations-SwiftUI_Tests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
+		FE8B7DCB2D0B40DC00094958 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FECD353B2CB568DA002A0777 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -473,6 +499,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5C360E2CBAEB9D00E84CCC /* SocialConsultations-SwiftUI */,
+				FE8B7DCF2D0B40DC00094958 /* SocialConsultations-SwiftUI_Tests */,
 				FECD353F2CB568DA002A0777 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -481,6 +508,7 @@
 			isa = PBXGroup;
 			children = (
 				FECD353E2CB568DA002A0777 /* SocialConsultations-SwiftUI.app */,
+				FE8B7DCE2D0B40DC00094958 /* SocialConsultations-SwiftUI_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -710,6 +738,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		FE8B7DCD2D0B40DC00094958 /* SocialConsultations-SwiftUI_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE8B7DD62D0B40DC00094958 /* Build configuration list for PBXNativeTarget "SocialConsultations-SwiftUI_Tests" */;
+			buildPhases = (
+				FE8B7DCA2D0B40DC00094958 /* Sources */,
+				FE8B7DCB2D0B40DC00094958 /* Frameworks */,
+				FE8B7DCC2D0B40DC00094958 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE8B7DD32D0B40DC00094958 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				FE8B7DCF2D0B40DC00094958 /* SocialConsultations-SwiftUI_Tests */,
+			);
+			name = "SocialConsultations-SwiftUI_Tests";
+			packageProductDependencies = (
+			);
+			productName = "SocialConsultations-SwiftUI_Tests";
+			productReference = FE8B7DCE2D0B40DC00094958 /* SocialConsultations-SwiftUI_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FECD353D2CB568DA002A0777 /* SocialConsultations-SwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FECD354C2CB568DB002A0777 /* Build configuration list for PBXNativeTarget "SocialConsultations-SwiftUI" */;
@@ -736,9 +787,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1600;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1600;
 				TargetAttributes = {
+					FE8B7DCD2D0B40DC00094958 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = FECD353D2CB568DA002A0777;
+					};
 					FECD353D2CB568DA002A0777 = {
 						CreatedOnToolsVersion = 16.0;
 					};
@@ -759,11 +814,19 @@
 			projectRoot = "";
 			targets = (
 				FECD353D2CB568DA002A0777 /* SocialConsultations-SwiftUI */,
+				FE8B7DCD2D0B40DC00094958 /* SocialConsultations-SwiftUI_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		FE8B7DCC2D0B40DC00094958 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FECD353C2CB568DA002A0777 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -776,6 +839,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		FE8B7DCA2D0B40DC00094958 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FECD353A2CB568DA002A0777 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -891,7 +961,53 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		FE8B7DD32D0B40DC00094958 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FECD353D2CB568DA002A0777 /* SocialConsultations-SwiftUI */;
+			targetProxy = FE8B7DD22D0B40DC00094958 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		FE8B7DD42D0B40DC00094958 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z458N49ZH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pawelrudnik.SocialConsultations-SwiftUI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialConsultations-SwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SocialConsultations-SwiftUI";
+			};
+			name = Debug;
+		};
+		FE8B7DD52D0B40DC00094958 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4Z458N49ZH;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pawelrudnik.SocialConsultations-SwiftUI-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SocialConsultations-SwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SocialConsultations-SwiftUI";
+			};
+			name = Release;
+		};
 		FECD354A2CB568DB002A0777 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1074,6 +1190,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		FE8B7DD62D0B40DC00094958 /* Build configuration list for PBXNativeTarget "SocialConsultations-SwiftUI_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE8B7DD42D0B40DC00094958 /* Debug */,
+				FE8B7DD52D0B40DC00094958 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FECD35392CB568DA002A0777 /* Build configuration list for PBXProject "SocialConsultations-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

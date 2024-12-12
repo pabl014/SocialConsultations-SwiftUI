@@ -7,8 +7,6 @@
 
 import Foundation
 
-
-@MainActor
 final class SignUpViewModel: ObservableObject {
     
     @Published var email: String = ""
@@ -82,6 +80,10 @@ final class SignUpViewModel: ObservableObject {
         
         errorMessage = nil
         return true
+    }
+    
+    func testValidateInputs() -> Bool {
+        return ValidateInputs()
     }
     
     //MARK: - Do testowania offline:
