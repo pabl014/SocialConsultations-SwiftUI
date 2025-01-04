@@ -26,7 +26,7 @@ struct SolutionCell: View {
                 
                 Text(solution.title)
                     .font(.title2)
-                    .lineLimit(1)
+                    .lineLimit(2)
                     .bold()
 
                 Text(solution.description)
@@ -70,6 +70,8 @@ struct SolutionCell: View {
                     .frame(width: 340, height: 200)
                     .tabViewStyle(PageTabViewStyle())
                     .itemCornerRadius(20)
+                    .padding(.top)
+                    .shadow(radius: 10)
                 }
             }
             .padding(.horizontal, 4)

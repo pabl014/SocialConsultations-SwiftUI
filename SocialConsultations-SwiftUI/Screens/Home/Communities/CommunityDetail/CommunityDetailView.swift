@@ -125,7 +125,7 @@ struct CommunityDetailView: View {
         
         HStack {
             VStack(alignment: .leading) {
-                Text("Issues")
+                Text("Consultations")
                     .bold()
                     .font(.title2)
             }

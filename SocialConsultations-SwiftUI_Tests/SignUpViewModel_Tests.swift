@@ -8,6 +8,7 @@
 import XCTest
 @testable import SocialConsultations_SwiftUI
 
+@MainActor
 final class SignUpViewModel_Tests: XCTestCase {
     
     var viewModel: SignUpViewModel!

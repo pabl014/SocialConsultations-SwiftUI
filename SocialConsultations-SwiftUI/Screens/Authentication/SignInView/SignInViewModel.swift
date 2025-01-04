@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+@MainActor
 final class SignInViewModel: ObservableObject {
     
     @Published var email: String = ""
