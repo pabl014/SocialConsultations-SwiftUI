@@ -41,7 +41,6 @@ struct SignInView: View {
                             showSignInView = false
                         }
                     }
-                    // showSignInView = false
                 }) {
                     Text("Log In")
                         .defaultButtonStyle()

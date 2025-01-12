@@ -24,18 +24,6 @@ struct SettingsView: View {
                 Text("Log out")
             }
             
-//            if let token = authToken {
-//                Text("Auth Token: \(token)")
-//                    .font(.footnote)
-//                    .foregroundColor(.gray)
-//            } else {
-//                Text("No Auth Token found")
-//                    .font(.footnote)
-//                    .foregroundColor(.gray)
-//            }
-            
-//            Text(viewModel.user?.name ?? "no name")
-            
             Button {
                 isShowingEditProfileSheet.toggle()
             } label: {

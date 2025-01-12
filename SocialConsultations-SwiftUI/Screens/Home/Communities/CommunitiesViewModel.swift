@@ -27,7 +27,6 @@ final class CommunitiesViewModel: NSObject, ObservableObject {
             }
         }
     }
-    //@Published var lastKnownLocation: CLLocationCoordinate2D?
     @Published var locationAccessGranted: Bool = false
     
     private let manager = CLLocationManager()

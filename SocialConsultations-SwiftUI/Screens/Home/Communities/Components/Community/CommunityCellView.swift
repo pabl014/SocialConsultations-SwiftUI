@@ -29,7 +29,6 @@ struct CommunityCellView: View {
                     
                     VStack(alignment: .leading, spacing: 12) {
                         Text(community.name)
-                            //.font(.headline)
                             .font(.system(size: 20, weight: .semibold))
                             .lineLimit(2)
                         

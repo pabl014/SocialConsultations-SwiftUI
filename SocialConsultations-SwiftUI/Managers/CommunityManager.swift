@@ -144,7 +144,6 @@ final class CommunityManager {
         request.setValue("application/vnd.socialconsultations.community.full+json", forHTTPHeaderField: "Accept")
         request.httpMethod = "GET"
         
-        #warning("no-cache fetchCommunityDetails")
         request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
         request.setValue("no-cache", forHTTPHeaderField: "Pragma")
         request.cachePolicy = .reloadIgnoringLocalCacheData
@@ -232,7 +231,6 @@ final class CommunityManager {
         request.setValue("application/vnd.socialconsultations.community.full+json", forHTTPHeaderField: "Accept")
         request.httpMethod = "GET"
         
-        #warning("no-cache getMembers")
         request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
         request.setValue("no-cache", forHTTPHeaderField: "Pragma")
         request.cachePolicy = .reloadIgnoringLocalCacheData

@@ -61,7 +61,6 @@ struct JoinRequestsView: View {
                             .tag(status as InviteStatus?) // Tag for individual statuses
                     }
                 }
-                //.pickerStyle(MenuPickerStyle())
                 .pickerStyle(NavigationLinkPickerStyle())
             }
         }

@@ -148,8 +148,4 @@ struct CommentsView: View {
     }
 }
 
-#Preview {
-    //CommentsView(issueId: <#Int#>, currentIssueStatus: <#IssueStatus#>)
-}
-
 
