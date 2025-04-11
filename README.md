@@ -47,10 +47,11 @@ This repository focuses on the mobile component, which is built using SwiftUI an
 
 ## Testing
 
-- **Unit Testing:** Conducted tests to ensure the correct functionality of user login and registration methods. Verified proper handling of ISO 8601 date conversions to and from `String`. Key areas tested include:
-      - **Login:** Ensured no errors occur with valid input, and verified appropriate error messages for missing or invalid email/password combinations.
-      - **Registration:** Validated input fields for correct email format, name length, password requirements, and password confirmation.
-      - **Date Operations:** Tested ISO 8601 date-to-`Date` and `Date`-to-ISO 8601 string conversions, as well as formatting dates for display.
+**Unit Testing:** Conducted tests to ensure the correct functionality of user login and registration methods. Verified proper handling of ISO 8601 date conversions to and from `String`. Key areas tested include:
+
+- **Login:** Ensured no errors occur with valid input, and verified appropriate error messages for missing or invalid email/password combinations.
+- **Registration:** Validated input fields for correct email format, name length, password requirements, and password confirmation.
+- **Date Operations:** Tested ISO 8601 date-to-`Date` and `Date`-to-ISO 8601 string conversions, as well as formatting dates for display.
 
 ## Gallery
 
